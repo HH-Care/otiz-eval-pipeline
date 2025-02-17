@@ -94,6 +94,26 @@ otiz_schema ={
       },
       "diagnosis": {
         "type": "string",
+        "enum": [
+          "HSV/Herpes",
+          "Syphilis",
+          "HPV",
+          "Chlamydia",
+          "Gonorrhea",
+          "Trich",
+          "Penile cancer",
+          "Fungal infection",
+          "Eczema",
+          "Psoriasis",
+          "Dermatitis",
+          "Lichen sclerosus",
+          "Balanitis",
+          "Inanimate object",
+          "Contact dermatitis",
+          "Normal",
+          "Pearly papules",
+          "Skin Tag",
+          "Medical emergency"],
         "description": "The most likely diagnosis based on final reasoning based on all information.Strictly provide a midical term, not a description."
       },
       "advice": {

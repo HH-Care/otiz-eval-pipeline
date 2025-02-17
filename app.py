@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import boto3
@@ -18,14 +19,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# --- Configuration ---
 st.set_page_config(page_title="Patient Details", layout="wide")
-
-# --- Constants ---
-llm_agentic_model = "gpt-4o"
-llm_max_retries = "3"
-llm_temperature = "0.7"
-llm_max_tokens = "4000"
 
 def parse_key_value(text):
     """
@@ -91,15 +85,12 @@ class OpenAIService:
         
     async def get_vlm_completion(self,
                                 prompt: str,
-                                model: str = llm_agentic_model,
-                                max_retries: int = int(llm_max_retries),
-                                temperature: float = float(llm_temperature),
-                                max_tokens: int = int(llm_max_tokens),
+                                model: str = "gpt-4o",
+                                max_retries: int = 3,
+                                temperature: float = 0.7,
+                                max_tokens: int = 4000,
                                 output_json_schema=None,
                                 image_data: str = None):
-        """
-        Calls OpenAI to generate a VLM report based on the provided image and prompt.
-        """
         def is_json(content):
             try:
                 json.loads(content)
@@ -277,66 +268,48 @@ async def process_image(openai_service: OpenAIService, image_data: bytes, s3_url
 def main():
     st.title("OTIZ Evaluation Dashboard")
 
-    # -------------------------
-    # 1) Session State Init
-    # -------------------------
+    # Initialize session state for condition stats
     if "condition_stats" not in st.session_state:
-        # Will hold { condition_string: {"total": X, "accurate": Y}, ... }
         st.session_state["condition_stats"] = {}
 
-    # -------------------------
-    # 2) Single Accuracy Table
-    #    and "Currently processing"
-    # -------------------------
     accuracy_placeholder = st.empty()
 
     def render_accuracy_info(current_patient_id: str):
-        """Render 'Currently processing' + the accuracy stats table."""
         with accuracy_placeholder.container():
             st.markdown(f"### Currently processing: Patient ID **{current_patient_id}**")
-
-            # Build stats table
             stats_table = []
+            total_cases = 0
+            total_accurate = 0
+
             for cond, val in st.session_state["condition_stats"].items():
                 stats_table.append({
                     "Condition": cond,
                     "Total Cases": val["total"],
                     "Accurate Predictions": val["accurate"]
                 })
+                total_cases += val["total"]
+                total_accurate += val["accurate"]
 
-            # Display
             if stats_table:
                 df_stats = pd.DataFrame(stats_table)
                 st.table(df_stats)
+
+                overall_accuracy = total_accurate / total_cases if total_cases > 0 else 0
+                st.markdown(f"### Overall Accuracy: {overall_accuracy:.2%}")
+                st.markdown(f"**Total Cases:** {total_cases}")
+                st.markdown(f"**Total Correct Predictions:** {total_accurate}")
             else:
                 st.info("No cases processed yet.")
 
-    # Initialize OpenAI service
     openai_service = OpenAIService()
 
-    # -------------------------
-    # 3) Read CSV with patients
-    # -------------------------
     try:
         df = pd.read_csv("patients.csv")
-    except UnicodeDecodeError:
-        try:
-            df = pd.read_csv("patients.csv", encoding='latin-1')
-        except Exception as e:
-            st.error(f"Error reading CSV file: {str(e)}")
-            st.stop()
-    except FileNotFoundError:
-        st.error("patients.csv file not found. Please ensure it exists.")
-        st.stop()
     except Exception as e:
-        st.error(f"An error occurred while reading the CSV file: {str(e)}")
+        st.error(f"Error reading CSV file: {str(e)}")
         st.stop()
 
-    # -------------------------
-    # 4) Iterate over patients
-    # -------------------------
     for _, row in df.iterrows():
-        # Attempt to load S3 image
         try:
             s3_bucket, s3_key = parse_s3_url(row["image_url"])
             image_data = get_s3_image(s3_bucket, s3_key)
@@ -344,51 +317,43 @@ def main():
             st.warning(f"Could not load image from {row['image_url']}: {e}")
             image_data = None
 
-        # Process (CV + VLM + OTIZ)
         cv_report, vlm_report, otiz_report = asyncio.run(
             process_image(openai_service, image_data, row["image_url"], row["History"])
         )
         
-        # -------------------------
-        # 5) Accuracy Check
-        # -------------------------
         ground_truth = row['original condition (simulated)']
 
-        # Ensure we have the dict entry
+        # Update stats for the condition
         stats = st.session_state["condition_stats"].setdefault(
             ground_truth, {"total": 0, "accurate": 0}
         )
-        # Increment total
         stats["total"] += 1
-        
+
+        # Determine match indicator for this patient
+        match_indicator = None
         if otiz_report and "Error" not in otiz_report:
             try:
                 otiz_data = json.loads(otiz_report)
-                # Use the diagnosis field directly
                 if otiz_data.get('diagnosis'):
                     predicted_condition = otiz_data['diagnosis']
                 else:
                     predicted_condition = "Unknown"
 
-                # Accuracy check
                 accuracy_json = asyncio.run(
                     openai_service.get_accuracy_report(predicted_condition, ground_truth)
                 )
                 acc_data = json.loads(accuracy_json)
                 if acc_data.get("match") is True:
                     stats["accurate"] += 1
+                    match_indicator = True
+                else:
+                    match_indicator = False
             except Exception as e:
                 st.error(f"Error parsing OTIZ output or matching for patient {row['Patient ID']}: {e}")
 
-        # -------------------------------------
-        # 6) Re-render "Currently processing" 
-        #    + accuracy table at the top
-        # -------------------------------------
         render_accuracy_info(row["Patient ID"])
 
-        # -------------------------------------
-        # 7) Show patient details below
-        # -------------------------------------
+        # Display patient details and reports
         with st.container():
             col1, col2, col3 = st.columns([1, 1, 1])
 
@@ -398,7 +363,15 @@ def main():
                 else:
                     st.warning("No image to display.")
                 st.markdown(f"**Patient ID:** {row['Patient ID']}")
-                
+                # Display indicator for match status
+                if match_indicator is not None:
+                    if match_indicator:
+                        st.markdown("<span style='color: green; font-size:24px;'>&#x2705;</span>", unsafe_allow_html=True)
+                    else:
+                        st.markdown("<span style='color: red; font-size:24px;'>&#x274C;</span>", unsafe_allow_html=True)
+                else:
+                    st.info("No prediction match data available.")
+
                 with st.expander("Attribution Guide", expanded=True):
                     data = parse_key_value(row['Attribution Guide'])
                     df_attr = pd.DataFrame(list(data.items()), columns=['Key', 'Value'])
@@ -408,13 +381,12 @@ def main():
                 st.markdown("### Original Condition")
                 st.markdown(f"**Ground Truth:** {ground_truth}")
 
-                st.markdown("###Diagnosis")
+                st.markdown("### Diagnosis")
                 if otiz_report and "Error" not in otiz_report:
                     try:
                         otiz_data = json.loads(otiz_report)
                         if otiz_data.get('diagnosis'):
                             st.markdown(f"**Final Diagnosis:** {otiz_data['diagnosis']}")
-
                             st.markdown("\n**Differential Diagnoses:**")
                             if otiz_data.get('differential_diagnosis'):
                                 for dd in otiz_data['differential_diagnosis']:

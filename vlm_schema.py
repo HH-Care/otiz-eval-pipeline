@@ -107,6 +107,27 @@ vlm_schema = {
           "properties": {
             "condition": {
               "type": "string",
+              "enum": [
+          "HSV/Herpes",
+          "Syphilis",
+          "HPV",
+          "Chlamydia",
+          "Gonorrhea",
+          "Trich",
+          "Penile cancer",
+          "Fungal infection",
+          "Eczema",
+          "Psoriasis",
+          "Dermatitis",
+          "Lichen sclerosus",
+          "Balanitis",
+          "Inanimate object",
+          "Contact dermatitis",
+          "Normal",
+          "Pearly papules",
+          "Skin Tag",
+          "Medical emergency"
+        ],
               "description": "Condition being considered (e.g., 'Tinea Corporis', 'Secondary Syphilis', 'Herpes Zoster')"
             },
             "confidenceLevel": {
