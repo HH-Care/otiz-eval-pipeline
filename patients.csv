@@ -6,12 +6,12 @@ Had unprotected sex 3 weeks before
 Duration of Symptoms: 
 Symptoms started last week
 Symptoms: 
-• Body ache
-• Pain or itching around the genitals
-•Small bumps or blisters around the penis
-•Discharge from the urethra
-• Painful urination
-Image: typical HSV penile ulcer image","I'm 21 and had unprotected sex three weeks ago. Last week, I started feeling body aches, itching, and pain around my genitals. Now, I see small bumps or blisters on my penis, have discharge from my urethra, and it hurts when I pee.",s3://otiz-image-test/test-version1/Patient 001.jpg,HSV/Herpes,
+â€¢ Body ache
+â€¢ Pain or itching around the genitals
+â€¢ Small bumps or blisters around the penis
+â€¢ Discharge from the urethra
+â€¢ Painful urination
+Image: Typical HSV penile lesion","I'm 21 and had unprotected sex three weeks ago. Last week, I started feeling body aches, itching, and pain around my genitals. Now, I see small bumps or blisters on my penis, have discharge from my urethra, and it hurts when I pee.",s3://otiz-image-test/test-version1/Patient 001.jpg,HSV/Herpes,Pending
 Patient 002,"Age: 28
 Sex: Male
 Sexual Partner History:
@@ -19,11 +19,11 @@ Had sex within this month
 Duration of Symptoms:
 4 days
 Symptoms: 
-•Discharge from the urethra
-• Painful urination
-• Headache
+â€¢ Discharge from the urethra
+â€¢ Painful urination
+â€¢ Headache
 Image: typical HSV penile ulcer image
-","I'm 28 and had sex earlier this month. Four days ago, I started feeling off—first a headache, then a burning sensation when I pee. Now, I’ve got some discharge from my urethra, and it's really uncomfortable",s3://otiz-image-test/test-version1/Patient 002.jpg,HSV/Herpes,
+","I'm 28 and had sex earlier this month. Four days ago, I started feeling offfirst a headache, then a burning sensation when I pee. Now, Ive got some discharge from my urethra, and it's really uncomfortable",s3://otiz-image-test/test-version1/Patient 002.jpg,HSV/Herpes,
 Patient 003,"Age: 32
 Sex:Male
 Sexual Partner History:
@@ -31,39 +31,39 @@ active sex life, had sex few days before
 Duration of Symptoms: 
 few days ( 2-3 days)
 Symptoms: 
-• Fever
-• Swollen lymph nodes in the groin
-• Pain or itching around the penis
-Image: typical HSV penile ulcer","I'm 32 and have an active sex life, last had sex a few days ago. In the past two to three days, I’ve had a fever, swollen lymph nodes in my groin, and an itchy, painful sensation around my penis",s3://otiz-image-test/test-version1/Patient 003.jpg,HSV/Herpes,
+â€¢ Fever
+â€¢ Swollen lymph nodes in the groin
+â€¢ Pain or itching around the penis
+Image: typical HSV penile ulcer","I'm 32 and have an active sex life, last had sex a few days ago. In the past two to three days, Iï¿½ve had a fever, swollen lymph nodes in my groin, and an itchy, painful sensation around my penis",s3://otiz-image-test/test-version1/Patient 003.jpg,HSV/Herpes,
 Patient 004,"Age: 26
 Sex: Female
 Sexual Partner History:
 within last 1-3 months had protected sex
 Duration of Symptoms: 3 weeks
 Symptoms: 
-• Discharge from the vagina
-•  Pain or itching
-Image: typical HSV sore in vagina","I'm 26, had protected sex a while back—maybe a month ago. For the past three weeks, I've been dealing with some discharge and this constant itching and discomfort",s3://otiz-image-test/test-version1/Patient 004.jpg,HSV/Herpes,
+â€¢ Discharge from the vagina
+â€¢  Pain or itching
+Image: typical HSV sore in vagina","I'm 26, had protected sex a while backï¿½maybe a month ago. For the past three weeks, I've been dealing with some discharge and this constant itching and discomfort",s3://otiz-image-test/test-version1/Patient 004.jpg,HSV/Herpes,
 Patient 005,"Age: 37
 Sex: Female
 Sexual Partner History:
 regular sex with one partner
 Duration of Symptoms: 1 week
 Symptoms: 
-• Fever
-• Headache
-• Body aches
-• itching around vagina
-Image:  typical HSV sore in vagina","For the past week, I’ve had a fever, headaches, and body aches. Along with that, there’s been this constant itching around my vagina. I’m 37 and in a regular sexual relationship with one partner",s3://otiz-image-test/test-version1/Patient 005.jpg,HSV/Herpes,
+â€¢ Fever
+â€¢ Headache
+â€¢ Body aches
+â€¢ itching around vagina
+Image:  typical HSV sore in vagina","For the past week, Iï¿½ve had a fever, headaches, and body aches. Along with that, thereï¿½s been this constant itching around my vagina. Iï¿½m 37 and in a regular sexual relationship with one partner",s3://otiz-image-test/test-version1/Patient 005.jpg,HSV/Herpes,
 Patient 006,"Age: 29
 Sex: Male
 Sexual Partner History:
 Had sex with multiple partner with this month
 Duration of Symptoms: not sure when it started, but there for past few days
 Symptoms: 
-• blisters around anus that bleed sometimes
-•  Pain or itching 
-Image: typical HSV sore in anus","Not sure when it started, but I’ve had these blisters around my anus for the past few days. Sometimes they bleed, and there’s a lot of pain and itching. I’m 29 and have had multiple partners this month",s3://otiz-image-test/test-version1/Patient 006.jpg,HSV/Herpes,
+â€¢ blisters around anus that bleed sometimes
+â€¢  Pain or itching
+Image: typical HSV sore in anus","Not sure when it started, but Iï¿½ve had these blisters around my anus for the past few days. Sometimes they bleed, and thereï¿½s a lot of pain and itching. Iï¿½m 29 and have had multiple partners this month",s3://otiz-image-test/test-version1/Patient 006.jpg,HSV/Herpes,
 Patient 007,"Age: 24
 Sex: Other
 Sexual Partner History:
@@ -71,123 +71,123 @@ prefer not to say
 Duration of Symptoms:
 1 month 
 Symptoms: 
-•  red bumps on anus
-• changes in bowel habits
-• pain and itching around the anus
-Image: typical HSV sore in anus","For the past month, I’ve had red bumps on my anus, along with pain, itching, and some changes in my bowel habits.",s3://otiz-image-test/test-version1/Patient 007.jpg,HSV/Herpes,
+â€¢  red bumps on anus
+â€¢ changes in bowel habits
+â€¢ pain anditchingaround the anus
+Image: typical HSV sore in anus","For the past month, Iï¿½ve had red bumps on my anus, along with pain, itching, and some changes in my bowel habits.",s3://otiz-image-test/test-version1/Patient 007.jpg,HSV/Herpes,
 Patient 008,"Age: 31
 Sex: Male
 Sexual Partner History:
 Active sexual life, with multiple partner
 Duration of Symptoms: 1-2 weeks
 Symptoms: 
-•Discharge from the urethra
-• Painful urination
-Image: textbook image of penile hsv","For the past week or two, I’ve had discharge from my urethra and it’s painful when I urinate. I have an active sex life with multiple partners",s3://otiz-image-test/test-version1/Patient 008.jpg,HSV/Herpes,
+â€¢Discharge from the urethra
+â€¢ Painful urination
+Image: textbook image of penile hsv","For the past week or two, Iï¿½ve had discharge from my urethra and itï¿½s painful when I urinate. I have an active sex life with multiple partners",s3://otiz-image-test/test-version1/Patient 008.jpg,HSV/Herpes,
 Patient 009,"Age: 36
 Sex: Other
 Sexual Partner History:
 more than 3 months
 Duration of Symptoms: more than a month
 Symptoms: 
-• pain and itching around the anus
-Image: Textbook image of anus hsv",It’s been over a month now that I’ve had pain and itching around my anus. My last sexual encounter was more than three months ago.,s3://otiz-image-test/test-version1/Patient 009.jpg,HSV/Herpes,
+â€¢ pain anditchingaround the anus
+Image: Textbook image of anus hsv",Itï¿½s been over a month now that Iï¿½ve had pain and itching around my anus. My last sexual encounter was more than three months ago.,s3://otiz-image-test/test-version1/Patient 009.jpg,HSV/Herpes,
 Patient 010,"Age: 28
 Sex: Female
 Sexual Partner History:
 within this month had unprotected sex
 Duration of Symptoms: 3-6 days
 Symptoms: 
-• Flu-like symptoms, including fever, swollen lymph nodes, and fatigue
-• Pain from urine passing
-Image: Textbook image of vaginal hsv","I had unprotected sex earlier this month, and for the past few days—maybe 3 to 6—I’ve been feeling really off. It started with flu-like symptoms: fever, swollen lymph nodes, and just feeling totally drained. Now it even hurts when I pee. It’s really uncomfortable.",s3://otiz-image-test/test-version1/Patient 010.jpg,HSV/Herpes,
+â€¢ Flu-like symptoms, including fever, swollen lymph nodes, and fatigue
+â€¢ Pain from urine passing
+Image: Textbook image of vaginal hsv","I had unprotected sex earlier this month, and for the past few daysï¿½maybe 3 to 6ï¿½Iï¿½ve been feeling really off. It started with flu-like symptoms: fever, swollen lymph nodes, and just feeling totally drained. Now it even hurts when I pee. Itï¿½s really uncomfortable.",s3://otiz-image-test/test-version1/Patient 010.jpg,HSV/Herpes,
 Patient 011,"Age: 23
 Sex:Male
 Sexual Partner History:
-•  within 1-3 months, had unprotected sex
+â€¢  within 1-3 months, had unprotected sex
 Duration of Symptoms: 
 3 weeks
 Symptoms: 
-• Fatigue
-• Painless skin ulcer
-• Swollen lymph nodes
-Image: TextBook image of penile syphilis","I’m 23, and I had unprotected sex about a month or two ago. For the past three weeks, I’ve been feeling really tired all the time. I’ve also noticed a painless ulcer on my skin and some swelling in my lymph nodes. It’s starting to worry me",s3://otiz-image-test/test-version1/Patient 011.jpg,Syphilis,
+â€¢ Fatigue
+â€¢ Painless skin ulcer
+â€¢ Swollen lymph nodes
+Image: TextBook image of penile syphilis","Iï¿½m 23, and I had unprotected sex about a month or two ago. For the past three weeks, Iï¿½ve been feeling really tired all the time. Iï¿½ve also noticed a painless ulcer on my skin and some swelling in my lymph nodes. Itï¿½s starting to worry me",s3://otiz-image-test/test-version1/Patient 011.jpg,Syphilis,
 Patient 012,"Age: 39
 Sex: Female
 Sexual Partner History:
 more than 3 months had sex
 Duration of Symptoms:  more than 2 months symptoms is there
 Symptoms: 
-•darker bumps in vagina
-• bleeding after sex
-• pain while having sex
-Image: textbook image of vaginal HPV","It’s been over two months that I’ve had these darker bumps in my vagina. On top of that, I bleed after sex, and it’s been painful during intercourse. My last sexual activity was more than three months ago",s3://otiz-image-test/test-version1/Patient 012.jpg,HPV,
+â€¢darker bumps in vagina
+â€¢ bleeding after sex
+â€¢ pain while having sex
+Image: textbook image of vaginal HPV","Itï¿½s been over two months that Iï¿½ve had these darker bumps in my vagina. On top of that, I bleed after sex, and itï¿½s been painful during intercourse. My last sexual activity was more than three months ago",s3://otiz-image-test/test-version1/Patient 012.jpg,HPV,
 Patient 013,"Age: 28
 Sex: Female
 Sexual Partner History:
 1-3 months, had sex with one partner
 Duration of Symptoms: 2 -3weeks
 Symptoms: 
-• unusual discharge
-• pain while having sex
-Image: vaginal HPV","It’s been about 2 to 3 weeks now, and I’ve noticed some unusual discharge. I’ve also been feeling pain during sex. My last sexual encounter was 1 to 3 months ago with one partner.",s3://otiz-image-test/test-version1/Patient 013.jpg,HPV,
+â€¢ unusual discharge
+â€¢ pain while having sex
+Image: vaginal HPV","Its been about 2 to 3 weeks now, and Iï¿½ve noticed some unusual discharge. Iï¿½ve also been feeling pain during sex. My last sexual encounter was 1 to 3 months ago with one partner.",s3://otiz-image-test/test-version1/Patient 013.jpg,HPV,
 Patient 014,"Age: 23
 Sex: Female
 Sexual Partner History:
 had unprotected sex within this month
 Duration of Symptoms: for past 1 week
 Symptoms: 
-• a cluster of sores in vagina
-• Painful Urination
-Image: vaginal HPV","For the past week, I’ve had a cluster of sores in my vagina, and it’s really painful when I pee. I had unprotected sex earlier this month",s3://otiz-image-test/test-version1/Patient 014.jpg,HPV,
+â€¢ a cluster of sores in vagina
+â€¢ Painful Urination
+Image: vaginal HPV","For the past week, Iï¿½ve had a cluster of sores in my vagina, and itï¿½s really painful when I pee. I had unprotected sex earlier this month",s3://otiz-image-test/test-version1/Patient 014.jpg,HPV,
 Patient 015,"Age: 34
 Sex: Other
 Sexual Partner History:
 had sex within this month, multiple partners
 Duration of Symptoms: 2-6 days
 Symptoms: 
-• discharge from anus
-• Itching
-Image: Anus HPV","It’s been a few days now, maybe 2 to 6, and I’ve noticed discharge from my anus along with constant itching. I had sex with multiple partners earlier this month",s3://otiz-image-test/test-version1/Patient 015.jpg,HPV,
+â€¢ discharge from anus
+â€¢ Itching
+Image: Anus HPV","Its been a few days now, maybe 2 to 6, and Iï¿½ve noticed discharge from my anus along with constant itching. I had sex with multiple partners earlier this month",s3://otiz-image-test/test-version1/Patient 015.jpg,HPV,
 Patient 016,"Age: 22
 Sex: Male
 Sexual Partner History:
 Sexually active with one partner, had sex few days before
 Duration of Symptoms: few days, 2-3 days
 Symptoms: 
-• Soft lumps around anus
-• Bleeding
-• Itching
-Image: Anus HPV","In the last 2–3 days, I’ve started noticing soft lumps around my anus. There’s been some bleeding and a lot of itching. I’m sexually active with one partner, and we had sex recently",s3://otiz-image-test/test-version1/Patient 016.jpg,HPV,
+â€¢ Soft lumps around anus
+â€¢ Bleeding
+â€¢ Itching
+Image: Anus HPV","In the last 2ï¿½3 days, Iï¿½ve started noticing soft lumps around my anus. Thereï¿½s been some bleeding and a lot of itching. Iï¿½m sexually active with one partner, and we had sex recently",s3://otiz-image-test/test-version1/Patient 016.jpg,HPV,
 Patient 017,"Age: 37
 Sex: Male
 Sexual Partner History:
 within this month
 Duration of Symptoms: 2 weeks
 Symptoms: 
-•  Warts on the head or shaft of the penis 
-•  Bleeding and pain around the warts
-Image: Penile HPV","For the past two weeks, I’ve had warts on the head and shaft of my penis. They’ve been bleeding and causing pain. My last sexual encounter was earlier this month",s3://otiz-image-test/test-version1/Patient 017.jpg,HPV,
+â€¢  Warts on the head or shaft of the penis 
+â€¢  Bleeding and pain around the warts
+Image: Penile HPV","For the past two weeks, Iï¿½ve had warts on the head and shaft of my penis. Theyï¿½ve been bleeding and causing pain. My last sexual encounter was earlier this month",s3://otiz-image-test/test-version1/Patient 017.jpg,HPV,
 Patient 018,"Age: 22
 Sex: Male
 Sexual Partner History:
 had sex 1-3 months before, not sexually active after that. 
 Duration of Symptoms: 3-6 weeks
 Symptoms: 
-•Penis itching
-•Penis Discomfort
-•Painful urination
-Image: Penile HPV","Had sex 1-3 months ago, haven’t been active since. For the past 3-6 weeks, there’s been itching and discomfort in my penis, plus it’s painful when I pee.",s3://otiz-image-test/test-version1/Patient 018.jpg,HPV,
+â€¢Penis itching
+â€¢Penis Discomfort
+â€¢Painful urination
+Image: Penile HPV","Had sex 1-3 months ago, havenï¿½t been active since. For the past 3-6 weeks, thereï¿½s been itching and discomfort in my penis, plus itï¿½s painful when I pee.",s3://otiz-image-test/test-version1/Patient 018.jpg,HPV,
 Patient 019,"Age: 31
 Sex: Male
 Sexual Partner History:
 had sex before 3 months, and not active since then. 
 Duration of Symptoms: 2 months
 Symptoms: 
-•Discharge
-•Itching
-•Pain in penis
-Image: Penile HPV","Sexual activity was over 3 months ago, and I haven’t been active since. For the past 2 months, I’ve been dealing with discharge, itching, and pain in my penis.",s3://otiz-image-test/test-version1/Patient 019.jpg,HPV,
+â€¢Discharge
+â€¢Itching
+â€¢Pain in penis
+Image: Penile HPV","Sexual activity was over 3 months ago, and I havenï¿½t been active since. For the past 2 months, Iï¿½ve been dealing with discharge, itching, and pain in my penis.",s3://otiz-image-test/test-version1/Patient 019.jpg,HPV,
 Patient 020,"Age: 27
 Sex: Female
 Sexual Partner History:
@@ -195,19 +195,19 @@ within this month had sex, sexually active
 Duration of Symptoms:
 1 week and more
 Symptoms: 
-•sore around the vagina
-•vaginal odor
-•Vaginal itching
-Image: Vaginal Syphilis","Sexually active, last had sex earlier this month. For over a week now, I’ve had a sore around my vagina, along with vaginal odor and itching",s3://otiz-image-test/test-version1/Patient 020.jpg,Syphilis,
+â€¢sore around the vagina
+â€¢vaginal odor
+â€¢Vaginal itching
+Image: Vaginal Syphilis","Sexually active, last had sex earlier this month. For over a week now, Iï¿½ve had a sore around my vagina, along with vaginal odor and itching",s3://otiz-image-test/test-version1/Patient 020.jpg,Syphilis,
 Patient 021,"Age: 21
 Sex: Female
 Sexual Partner History:
 had unprotected casual sex within 1-3 months
 Duration of Symptoms: 3 weeks
 Symptoms: 
- •yellowish vaginal discharge
-•itching in vagina
-Image: Vaginal Syphilis","Had unprotected casual sex 1-3 months ago. For the past 3 weeks, I’ve noticed yellowish vaginal discharge and constant itching in my vagina",s3://otiz-image-test/test-version1/Patient 021.jpg,Syphilis,
+â€¢ yellowish vaginal discharge
+â€¢itching in vagina
+Image: Vaginal Syphilis","Had unprotected casual sex 1-3 months ago. For the past 3 weeks, Iï¿½ve noticed yellowish vaginal discharge and constant itching in my vagina",s3://otiz-image-test/test-version1/Patient 021.jpg,Syphilis,
 Patient 022,"Age: 33
 Sex: female
 Sexual Partner History:
@@ -215,278 +215,278 @@ within this month, had sex
 Duration of Symptoms:
 1 week
 Symptoms: 
-• painless bumps in anus
-• Fever
-• Headache
-Image: Anus Syphilis","Had sex earlier this month. For the past week, I’ve had painless bumps in my anus along with a fever and headache.",s3://otiz-image-test/test-version1/Patient 022.jpg,Syphilis,
+â€¢ painless bumps in anus
+â€¢ Fever
+â€¢ Headache
+Image: Anus Syphilis","Had sex earlier this month. For the past week, Iï¿½ve had painless bumps in my anus along with a fever and headache.",s3://otiz-image-test/test-version1/Patient 022.jpg,Syphilis,
 Patient 023,"Age: 25
 Sex: other
 Sexual Partner History:
 within this month, had sex
 Duration of Symptoms: 2 weeks
 Symptoms: 
-•Swollen lymph nodes
-•fatigue
-•Wartlike in anus
-Image: Anus Syphilis","Had sex earlier this month. For the past two weeks, I’ve been feeling fatigued, noticed swollen lymph nodes, and there’s a wart-like growth in my anus",s3://otiz-image-test/test-version1/Patient 023.jpg,Syphilis,
+â€¢Swollen lymph nodes
+â€¢fatigue
+â€¢Wartlike in anus
+Image: Anus Syphilis","Had sex earlier this month. For the past two weeks, Iï¿½ve been feeling fatigued, noticed swollen lymph nodes, and thereï¿½s a wart-like growth in my anus",s3://otiz-image-test/test-version1/Patient 023.jpg,Syphilis,
 Patient 024,"Age: 35
 Sex: Male
 Sexual Partner History:
 had protected sex about 3 weeks ago
 Duration of Symptoms: 3 days
 Symptoms: 
-•Painless sore in penis
-Image: Penile syphilis","I had protected sex around three weeks back. For the last three days, there’s been a painless sore on my penis",s3://otiz-image-test/test-version1/Patient 024.jpg,Syphilis,
+â€¢Painless sore in penis
+Image: Penile syphilis","I had protected sex around three weeks back. For the last three days, thereï¿½s been a painless sore on my penis",s3://otiz-image-test/test-version1/Patient 024.jpg,Syphilis,
 Patient 025,"Age: 32
 Sex: Male
 Sexual Partner History: had sex within this month. was sexually active
 Duration of Symptoms: symptoms started with sore for more than a month or two, but other symtoms started like a week ago
 Symptoms: 
-•Fever
-•Sore throat
-•Weight loss
-•Muscle aches
-•sore in the penis
-Image: Penile syphilis","I had sex earlier this month and have been pretty sexually active. I first noticed a sore on my penis over a month ago, but in the past week, other symptoms have shown up—fever, sore throat, muscle aches, weight loss—it’s all starting to pile up",s3://otiz-image-test/test-version1/Patient 025.jpg,Syphilis,
+â€¢Fever
+â€¢Sore throat
+â€¢Weight loss
+â€¢Muscle aches
+â€¢sore in the penis
+Image: Penile syphilis","I had sex earlier this month and have been pretty sexually active. I first noticed a sore on my penis over a month ago, but in the past week, other symptoms have shown upï¿½fever, sore throat, muscle aches, weight lossï¿½itï¿½s all starting to pile up",s3://otiz-image-test/test-version1/Patient 025.jpg,Syphilis,
 Patient 026,"Age: 19
 Sex: Male
 Sexual Partner History:
 within this month had sex 
 Duration of Symptoms: 10 days
 Symptoms: 
-• burning sensation during urination
-• yellow discharge from the penis
-• pain in the testicles
-Image: penis without sores / with yellow discharge","I had sex earlier this month, and for the past 10 days, I’ve been dealing with a burning sensation when I pee, yellow discharge from my penis, and pain in my testicles",s3://otiz-image-test/test-version1/Patient 026.jpg,Chlamydia,
+â€¢ burning sensation during urination
+â€¢ yellow discharge from the penis
+â€¢ pain in the testicles
+Image: penis without sores / with yellow discharge","I had sex earlier this month, and for the past 10 days, Iï¿½ve been dealing with a burning sensation when I pee, yellow discharge from my penis, and pain in my testicles",s3://otiz-image-test/test-version1/Patient 026.jpg,Chlamydia,
 Patient 027,"Age: 23
 Sex: Female
 Sexual Partner History:
 had sex within this month
 Duration of Symptoms: 3 weeks
 Symptoms: 
-• foul smell yellow discharge
-• bleeding between periods
-• Burning sensation when urinating
-Image: clear vagina / vagina with yellow thick discharge","I’m 23 and had sex earlier this month. For the past three weeks, I’ve been noticing a foul-smelling yellow discharge, bleeding between periods, and a burning sensation when I pee.",s3://otiz-image-test/test-version1/Patient 027.jpg,Chlamydia,
+â€¢ foul smell yellow discharge
+â€¢ bleeding between periods
+â€¢ Burning sensation when urinating
+Image: clear vagina / vagina with yellow thick discharge","Iï¿½m 23 and had sex earlier this month. For the past three weeks, Iï¿½ve been noticing a foul-smelling yellow discharge, bleeding between periods, and a burning sensation when I pee.",s3://otiz-image-test/test-version1/Patient 027.jpg,Chlamydia,
 Patient 028,"Age: 25
 Sex: Male
 Sexual Partner History:
 had sex within this month
 Duration of Symptoms: 4-6 weeks
 Symptoms: 
-• Painful urination.
- • discharge from the tip of the penis
-Image: clear penis","I’m 25 and had sex earlier this month. For the past 4-6 weeks, I’ve been dealing with painful urination and discharge from the tip of my penis",s3://otiz-image-test/test-version1/Patient 028.jpg,Gonorrhea,
+â€¢ Painful urination.
+â€¢ discharge from the tip of the penis
+Image: clear penis","Im 25 and had sex earlier this month. For the past 4-6 weeks, Ive been dealing with painful urination and discharge from the tip of my penis",s3://otiz-image-test/test-version1/Patient 028.jpg,Gonorrhea,
 Patient 029,"Age: 34
 Sex: Female
 Sexual Partner History:
 had sex 1-3 months
 Duration of Symptoms: 3 weeks
 Symptoms:  
-•Painful urination
-• Increased vaginal discharge.
-•Vaginal bleeding between periods
-Image: clear vagina ","I’m 34 and had sex 1-3 months ago. For the past three weeks, I’ve had painful urination, increased vaginal discharge, and bleeding between periods",s3://otiz-image-test/test-version1/Patient 029.jpg,Gonorrhea,
+â€¢Painful urination
+â€¢ Increased vaginal discharge.
+â€¢Vaginal bleeding between periods
+Image: clear vagina ","Im 34 and had sex 1-3 months ago. For the past three weeks, Ive had painful urination, increased vaginal discharge, and bleeding between periods",s3://otiz-image-test/test-version1/Patient 029.jpg,Gonorrhea,
 Patient 030,"Age: 30
 Sex: Male
 Sexual Partner History: had sex within past 2 weeks
 Duration of Symptoms: 6 days
 Symptoms: 
-• Pain during urination and ejaculation
-• Thin, milky white penile discharge
-• Increased urinary frequency and urgency
-Image: penis with white discharge / clear penis","I’m 30 and had sex about two weeks ago. For the past six days, I’ve been experiencing pain during urination and ejaculation, thin milky-white discharge from my penis, and needing to urinate more often with an urgent feeling.",s3://otiz-image-test/test-version1/Patient 030.jpg,Trich,
+â€¢ Pain during urination and ejaculation
+â€¢ Thin, milky white penile discharge
+â€¢ Increased urinary frequency and urgency
+Image: penis with white discharge / clear penis","Iï¿½m 30 and had sex about two weeks ago. For the past six days, Iï¿½ve been experiencing pain during urination and ejaculation, thin milky-white discharge from my penis, and needing to urinate more often with an urgent feeling.",s3://otiz-image-test/test-version1/Patient 030.jpg,Trich,
 Patient 031,"Age: 58
 Sex: Male
 Sexual Partner History:
 prefer not to say, but had active sexual life, and refrain from sex for years now
 Duration of Symptoms: 1 year
 Symptoms: 
-• ulcer that bleed
-• Smelly discharge
-• Swelling at the end of the penis
-Image: penile cancer image","I’m 58 and haven’t been sexually active for years, though I used to have an active sex life. Over the past year, I’ve noticed an ulcer on my penis that bleeds, a smelly discharge, and swelling at the tip",s3://otiz-image-test/test-version1/Patient 031.jpg,Penile cancer,
+â€¢ ulcer that bleed
+â€¢ Smelly discharge
+â€¢ Swelling at the end of the penis
+Image: penile cancer image","Iï¿½m 58 and havenï¿½t been sexually active for years, though I used to have an active sex life. Over the past year, Iï¿½ve noticed an ulcer on my penis that bleeds, a smelly discharge, and swelling at the tip",s3://otiz-image-test/test-version1/Patient 031.jpg,Penile cancer,
 Patient 032,"Age: 20
 Sex: Female
 Sexual Partner History:
 Never had sex 
 Duration of Symptoms: 2 weeks
 Symptoms: 
-• Itchy sensation in vagina
-• Redness and swelling in vagina
-• Burning sensation when pee
-Image: fungal infection in vagina","I’m 20 and have never had sex. For the past two weeks, I’ve been dealing with an itchy sensation in my vagina, along with redness, swelling, and a burning feeling when I pee.",s3://otiz-image-test/test-version1/Patient 032.jpg,Fungal infection ,
+â€¢ Itchy sensation in vagina
+â€¢ Redness and swelling in vagina
+â€¢ Burning sensation when pee
+Image: fungal infection in vagina","Iï¿½m 20 and have never had sex. For the past two weeks, Iï¿½ve been dealing with an itchy sensation in my vagina, along with redness, swelling, and a burning feeling when I pee.",s3://otiz-image-test/test-version1/Patient 032.jpg,Fungal infection ,
 Patient 033,"Age: 37
 Sex: Male
 Sexual Partner History:
 had sex 1-3 months 
 Duration of Symptoms: 3-4 weeks
 Symptoms: 
-•  Dry penis skin with patches
-• Itchy skin
-Image: eczema in penis","I’m 37 and had sex 1-3 months ago. For the past 3-4 weeks, I’ve noticed dry skin with patches on my penis and constant itching",s3://otiz-image-test/test-version1/Patient 033.jpg,Eczema,
+â€¢  Dry penis skin with patches
+â€¢ Itchy skin
+Image: eczema in penis","Im 37 and had sex 1-3 months ago. For the past 3-4 weeks, Iï¿½ve noticed dry skin with patches on my penis and constant itching",s3://otiz-image-test/test-version1/Patient 033.jpg,Eczema,
 Patient 034,"Age: 42
 Sex: Female
 Sexual Partner History:
 had sex within this month
 Duration of Symptoms: 6 months
 Symptoms: 
-• pink discolored patches of skin
-• painful
-Image: psoriasis in vagina","I’m 42 and had sex earlier this month. For the past six months, I’ve had pink discolored patches of skin that are painful.",s3://otiz-image-test/test-version1/Patient 034.jpg,Psorisis,
+â€¢ pink discolored patches of skin
+â€¢ painful
+Image: psoriasis in vagina","Im 42 and had sex earlier this month. For the past six months, Iï¿½ve had pink discolored patches of skin that are painful.",s3://otiz-image-test/test-version1/Patient 034.jpg,Psorisis,
 Patient 035,"Age: 33
 Sex: Other
 Sexual Partner History:
 never had sex
 Duration of Symptoms: 7-10 days
 Symptoms: 
-• small, inflamed bumps
-• Painful and itchy skin around anus
-Image: dermatitis rash in anus","I’m 33 and have never had sex. Over the last 7-10 days, I’ve noticed small, inflamed bumps and painful, itchy skin around my anus",s3://otiz-image-test/test-version1/Patient 035.jpg,Dermatitis,
+â€¢ small, inflamed bumps
+â€¢ Painful and itchy skin around anus
+Image: dermatitis rash in anus","Iï¿½m 33 and have never had sex. Over the last 7-10 days, Iï¿½ve noticed small, inflamed bumps and painful, itchy skin around my anus",s3://otiz-image-test/test-version1/Patient 035.jpg,Dermatitis,
 Patient 036,"Age: 25
 Sex: Female
 Sexual Partner History:
 no details about sexual history
 Duration of Symptoms: 2 weeks
 Symptoms: 
-• Smooth white patches
-• Painful sexual intercourse
-• Painful urination
-Image: low quality image of vaginal   Lichen sclerosus","I’m 25 and have been experiencing symptoms for the past two weeks. There are smooth white patches, and sex has become painful, along with discomfort when I urinate.",s3://otiz-image-test/test-version1/Patient 036.jpg,Lichen sclerosus,
+â€¢ Smooth white patches
+â€¢ Painful sexual intercourse
+â€¢ Painful urination
+Image: low quality image of vaginal   Lichen sclerosus","Iï¿½m 25 and have been experiencing symptoms for the past two weeks. There are smooth white patches, and sex has become painful, along with discomfort when I urinate.",s3://otiz-image-test/test-version1/Patient 036.jpg,Lichen sclerosus,
 Patient 037,"Age: 16
 Sex: Male
 Sexual Partner History:
 never had sex
 Duration of Symptoms: 1-2 weeks
 Symptoms: 
-•  Pain and irritation on the head of penis
-• foul smell
-•  Pain while urinating
-Image: Penis with balanitis","I’m 16 and have never had sex. For the past 1-2 weeks, I’ve had pain and irritation on the head of my penis, a foul smell, and pain while urinating.",s3://otiz-image-test/test-version1/Patient 037.jpg,Balanitis,
+â€¢  Pain and irritation on the head of penis
+â€¢ foul smell
+â€¢  Pain while urinating
+Image: Penis with balanitis","Iï¿½m 16 and have never had sex. For the past 1-2 weeks, Iï¿½ve had pain and irritation on the head of my penis, a foul smell, and pain while urinating.",s3://otiz-image-test/test-version1/Patient 037.jpg,Balanitis,
 Patient 038,"Age: 23
 Sex: Other
 Sexual Partner History:
 had sex within this month with multiple partner
 Duration of Symptoms: 1 week
 Symptoms: 
-•   Painful urination
-•  discharge
-•  discomfort
-Image: penis shaped cake (or similar inanimate object like vagina shaped peeled orange etc)","I’m 23 and had sex with multiple partners earlier this month. For the past week, I’ve been dealing with painful urination, discharge, and general discomfort.",s3://otiz-image-test/test-version1/Patient 038.jpg,Inaimate object,
+â€¢   Painful urination
+â€¢  discharge
+â€¢  discomfort
+Image: penis shaped cake (or similar inanimate object like vagina shaped peeled orange etc)","Iï¿½m 23 and had sex with multiple partners earlier this month. For the past week, Iï¿½ve been dealing with painful urination, discharge, and general discomfort.",s3://otiz-image-test/test-version1/Patient 038.jpg,Inaimate object,
 Patient 039,"Age: 28
 Sex: Male
 Sexual Partner History:
 no sexual history details
 Duration of Symptoms: 1 week
 Symptoms: 
-• itchy
-• cracked skin
-Image: contact dermatitis in skin (hand)",I’m 28 and have had symptoms for the past week. My skin has been itchy and cracked. I prefer not to share details about my sexual history.,s3://otiz-image-test/test-version1/Patient 039.jpg,contact dermatitis,
+â€¢ itchy
+â€¢ cracked skin
+Image: contact dermatitis in skin (hand)",Im 28 and have had symptoms for the past week. My skin has been itchy and cracked. I prefer not to share details about my sexual history.,s3://otiz-image-test/test-version1/Patient 039.jpg,contact dermatitis,
 Patient 040,"Age: 21
 Sex: Female
 Sexual Partner History:
 within this month, had sex
 Duration of Symptoms: 2-3 weeks
 Symptoms: 
-• itchy
-• painful urination
-Image: cartoonized image of vagina (or penis)","I’m 21 and had sex earlier this month. For the past 2-3 weeks, I’ve been experiencing itching and painful urination.",s3://otiz-image-test/test-version1/Patient 040.jpg,Inaimate object,
+â€¢ itchy
+â€¢ painful urination
+Image: cartoonized image of vagina (or penis)","Iï¿½m 21 and had sex earlier this month. For the past 2-3 weeks, Iï¿½ve been experiencing itching and painful urination.",s3://otiz-image-test/test-version1/Patient 040.jpg,Inaimate object,
 Patient 041,"Age: 33
 Sex: Female
 Sexual Partner History:
 had sex within this month, multiple partner
 Duration of Symptoms: 2weeks
 Symptoms: 
-•  have clustered warts on vagina
-•  itching in the wart region
-•  bleeding after sex
-Image: Not comfortable to upload image (do not input image)","I’m 33 and had sex with multiple partners earlier this month. For the past two weeks, I’ve had clustered warts on my vagina, itching around the warts, and bleeding after sex",s3://otiz-image-test/test-version1/Patient 041.jpg,HPV,
+â€¢  have clustered warts on vagina
+â€¢  itching in the wart region
+â€¢  bleeding after sex
+Image: Not comfortable to upload image (do not input image)","Iï¿½m 33 and had sex with multiple partners earlier this month. For the past two weeks, Iï¿½ve had clustered warts on my vagina, itching around the warts, and bleeding after sex",s3://otiz-image-test/test-version1/Patient 041.jpg,HPV,
 Patient 042,"Age: 24
 Sex: Male
 Sexual Partner History:
 1-3 months had sex
 Duration of Symptoms: 2 weeks
 Symptoms: 
-•  no visible changes observed in penis
-• pain during urination and ejaculation
-•  white discharge
-• increased urine frequency
-Image: not comfortable to upload image","I’m 24 and had sex 1-3 months ago. For the past two weeks, I haven’t noticed any visible changes on my penis, but I’ve been experiencing pain during urination and ejaculation, white discharge, and an increased need to urinate frequently",s3://otiz-image-test/test-version1/Patient 042.jpg,Trich,
+â€¢  no visible changes observed in penis
+â€¢ pain during urination and ejaculation
+â€¢  white discharge
+â€¢ increased urine frequency
+Image: not comfortable to upload image","Im 24 and had sex 1-3 months ago. For the past two weeks, I havenï¿½t noticed any visible changes on my penis, but Iï¿½ve been experiencing pain during urination and ejaculation, white discharge, and an increased need to urinate frequently",s3://otiz-image-test/test-version1/Patient 042.jpg,Trich,
 Patient 043,"Age: 26
 Sex: Male
 Sexual Partner History:
 had sex more than 3 months
 Duration of Symptoms: 3-4 weeks
 Symptoms: 
-• Painless sores in penis and anus
-• Fever
-• Muscle ache
-• sore throat
-Image: penis with syphilis sore or anus with syphilis sore (only ask if model ask for it in history taking - depends on the flow)","I’m 26 and had sex more than 3 months ago. For the past 3-4 weeks, I’ve had painless sores on my penis and anus, along with fever, muscle aches, and a sore throat",s3://otiz-image-test/test-version1/Patient 043.jpg,Syphilis,
+â€¢ Painless sores in penis and anus
+â€¢ Fever
+â€¢ Muscle ache
+â€¢ sore throat
+Image: penis with syphilis sore or anus with syphilis sore (only ask if model ask for it in history taking - depends on the flow)","Iï¿½m 26 and had sex more than 3 months ago. For the past 3-4 weeks, Iï¿½ve had painless sores on my penis and anus, along with fever, muscle aches, and a sore throat",s3://otiz-image-test/test-version1/Patient 043.jpg,Syphilis,
 Patient 044,"Age: 19 years
 Sex: male
 Sexual Partner History:
 no sexual history details
 Duration of Symptoms: not sure
 Symptoms: 
-•  slightly curved penis
-•  discomfort sometimes
-Image: penis without any sores, but atypical shape (yet normal - may slightly curved or something)","I’m 19 and not sure how long the symptoms have been present. My penis is slightly curved, and I feel some discomfort occasionally",s3://otiz-image-test/test-version1/Patient 044.jpg,Normal,
+â€¢  slightly curved penis
+â€¢  discomfort sometimes
+Image: penis without any sores, but atypical shape (yet normal - may slightly curved or something)","Iï¿½m 19 and not sure how long the symptoms have been present. My penis is slightly curved, and I feel some discomfort occasionally",s3://otiz-image-test/test-version1/Patient 044.jpg,Normal,
 Patient 045,"Age: 29
 Sex: Other
 Sexual Partner History:
 prefer not to say
-Duration of Symptoms: i’m noticing it for past 3 weeks, not sure it was there before
+Duration of Symptoms: iï¿½m noticing it for past 3 weeks, not sure it was there before
 Symptoms: 
-•   blackish brown rashlike spot 
-•   painless
-Image: anus without any rashes or sores, with birth mark","I’m 29 and have noticed a blackish-brown rash-like spot for the past three weeks. It’s painless, and I’m not sure if it was there before",s3://otiz-image-test/test-version1/Patient 045.jpg,Normal,
+â€¢   blackish brown rashlike spot 
+â€¢   painless
+Image: anus without any rashes or sores, with birth mark","Iï¿½m 29 and have noticed a blackish-brown rash-like spot for the past three weeks. Itï¿½s painless, and Iï¿½m not sure if it was there before",s3://otiz-image-test/test-version1/Patient 045.jpg,Normal,
 Patient 046,"Age: 27
 Sex: Female
 Sexual Partner History:
 had unprotected sex more than 3 months now
 Duration of Symptoms: past few days
 Symptoms: 
-feel like itching sometimes
-Image: Vagina without any sores / rashes","I’m 27 and had unprotected sex over three months ago. For the past few days, I’ve been feeling occasional itching.",s3://otiz-image-test/test-version1/Patient 046.jpg,Normal,
+â€¢ feel like itching sometimes
+Image: Vagina without any sores / rashes","Iï¿½m 27 and had unprotected sex over three months ago. For the past few days, Iï¿½ve been feeling occasional itching.",s3://otiz-image-test/test-version1/Patient 046.jpg,Normal,
 Patient 047,"Age: 20
 Sex: Male
 Sexual Partner History:
 no sexual activity 
 Duration of Symptoms: not sure
 Symptoms: 
-small pimples like in penis
-Image: pearly papule","I’m 20 and have never been sexually active. I’m not sure how long it’s been, but I’ve noticed small pimple-like spots on my penis.",s3://otiz-image-test/test-version1/Patient 047.jpg,Pearly papules,
+â€¢ small pimples like in penis
+Image: pearly papule","Iï¿½m 20 and have never been sexually active. Iï¿½m not sure how long itï¿½s been, but Iï¿½ve noticed small pimple-like spots on my penis.",s3://otiz-image-test/test-version1/Patient 047.jpg,Pearly papules,
 Patient 048,"Age: 35
 Sex: Female
 Sexual Partner History:
 sexually active, had unprotected sex past week
 Duration of Symptoms: 3-4 days as I notice
 Symptoms: 
-small painless growth in skin near vagina 
-Image: skin tag near vagina","I’m 35 and sexually active. I had unprotected sex last week, and over the past 3-4 days, I’ve noticed a small, painless growth on the skin near my vagina.",s3://otiz-image-test/test-version1/Patient 048.jpg,Skin Tag,
+â€¢ small painless growth in skin near vagina 
+Image: skin tag near vagina","Iï¿½m 35 and sexually active. I had unprotected sex last week, and over the past 3-4 days, Iï¿½ve noticed a small, painless growth on the skin near my vagina.",s3://otiz-image-test/test-version1/Patient 048.jpg,Skin Tag,
 Patient 049,"Age: 29
 Sex: male
 Sexual Partner History:
 no history on sexual acitivity
 Duration of Symptoms: few hours 
 Symptoms: 
-• sudden headache becoming unbearable
-•  feel nausea
-• slurred speech
-• reddish eye
-Image: No image needed, or can upload any ","I’m 29, A few hours ago, I developed a sudden, unbearable headache along with nausea, slurred speech, and a reddish eye.",s3://otiz-image-test/test-version1/Patient 049.jpg,medical emergency,
+â€¢ sudden headache becoming unbearable
+â€¢  feel nausea
+â€¢ slurred speech
+â€¢ reddish eye
+Image: No image needed, or can upload any ","Iï¿½m 29, A few hours ago, I developed a sudden, unbearable headache along with nausea, slurred speech, and a reddish eye.",s3://otiz-image-test/test-version1/Patient 049.jpg,medical emergency,
 Patient 050,"Age: 37
 Sex: Female
 Sexual Partner History:
 no history of sexual activity given
 Duration of Symptoms: one day
 Symptoms: 
-• stabbing pain in chest
-• slight shortness of breath
-• lightheadness
-•  dizziness
-• nausea
-• rapid heartbeat
-• left hand pain
-Image: no need of image / any","I’m 37, and since yesterday, I’ve been experiencing stabbing chest pain, slight shortness of breath, lightheadedness, dizziness, nausea, a rapid heartbeat, and pain in my left hand.",s3://otiz-image-test/test-version1/Patient 050.jpg,medical emergency,
+â€¢ stabbing pain in chest
+â€¢ slight shortness of breath
+â€¢ lightheadness
+â€¢ dizziness
+â€¢ nausea
+â€¢ rapid heartbeat
+â€¢ left hand pain
+Image: no need of image / any","I'm 37, and since yesterday, I've been experiencing stabbing chest pain, slight shortness of breath, lightheadedness, dizziness, nausea, a rapid heartbeat, and pain in my left hand.",s3://otiz-image-test/test-version1/Patient 050.jpg,medical emergency,Pending
