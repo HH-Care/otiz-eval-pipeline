@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import boto3
@@ -318,10 +317,10 @@ def main():
             image_data = None
 
         cv_report, vlm_report, otiz_report = asyncio.run(
-            process_image(openai_service, image_data, row["image_url"], row["History"])
+            process_image(openai_service, image_data, row["image_url"], row["medical_case_history"])
         )
         
-        ground_truth = row['original condition (simulated)']
+        ground_truth = row['Ground Truth']
 
         # Update stats for the condition
         stats = st.session_state["condition_stats"].setdefault(
@@ -372,10 +371,38 @@ def main():
                 else:
                     st.info("No prediction match data available.")
 
-                with st.expander("Attribution Guide", expanded=True):
-                    data = parse_key_value(row['Attribution Guide'])
-                    df_attr = pd.DataFrame(list(data.items()), columns=['Key', 'Value'])
-                    st.dataframe(df_attr)
+                # Insert new block for medical_case_history
+                if row.get('medical_case_history'):
+                    history_json = json.loads(row['medical_case_history'])
+                    with st.expander("Patient Demographics"):
+                        demographics = history_json.get('patient_demographics', {})
+                        st.write(f"**Age:** {demographics.get('age', 'N/A')}")
+                        st.write(f"**Gender:** {demographics.get('gender', 'N/A')}")
+                        st.write(f"**Risk Factors:** {', '.join(demographics.get('risk_factors', []))}")
+                    with st.expander("Sexual History"):
+                        sexual_history = history_json.get('sexual_history', {})
+                        st.write(f"**Last Sexual Encounter:** {sexual_history.get('last_sexual_encounter', 'N/A')}")
+                        st.write(f"**Partner Count:** {sexual_history.get('partner_count', 'N/A')}")
+                        st.write(f"**Partner Genders:** {', '.join(sexual_history.get('partner_genders', []))}")
+                        st.write(f"**Sexual Activities:** {', '.join(sexual_history.get('sexual_activities', []))}")
+                        st.write(f"**Condom Usage:** {sexual_history.get('condom_usage', 'N/A')}")
+                        st.write(f"**STI History:** {sexual_history.get('sti_history', 'N/A')}")
+                        st.write(f"**HIV Prevention:** {sexual_history.get('hiv_prevention', 'N/A')}")
+                        st.write(f"**Trauma History:** {sexual_history.get('trauma_history', 'N/A')}")
+                    with st.expander("Symptoms Timeline"):
+                        symptoms = history_json.get('symptoms_timeline', {})
+                        st.write(f"**Onset:** {symptoms.get('onset', 'N/A')}")
+                        st.write(f"**Progression:** {symptoms.get('progression', 'N/A')}")
+                        st.write(f"**Systemic Symptoms:** {symptoms.get('systemic_symptoms', 'N/A')}")
+                        st.write(f"**Localized Symptoms:** {symptoms.get('localized_symptoms', 'N/A')}")
+                else:
+                    st.info("No medical case history available.")
+
+                with st.expander("Image Analysis"):
+                    st.write(row['image_analysis'] or "N/A")
+
+                with st.expander("Patient Narrative"):
+                    st.write(row['patient_narrative'] or "N/A")
                 
             with col2:
                 st.markdown("### Original Condition")

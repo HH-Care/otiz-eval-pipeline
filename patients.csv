@@ -1,492 +1,1528 @@
-Patient ID,Attribution Guide,History,image_url,original condition (simulated),AI result
-Patient 001,"Age: 21
-Sex: Male
-Sexual Partner History:
-Had unprotected sex 3 weeks before
-Duration of Symptoms: 
-Symptoms started last week
-Symptoms: 
-• Body ache
-• Pain or itching around the genitals
-• Small bumps or blisters around the penis
-• Discharge from the urethra
-• Painful urination
-Image: Typical HSV penile lesion","I'm 21 and had unprotected sex three weeks ago. Last week, I started feeling body aches, itching, and pain around my genitals. Now, I see small bumps or blisters on my penis, have discharge from my urethra, and it hurts when I pee.",s3://otiz-image-test/test-version1/Patient 001.jpg,HSV/Herpes,Pending
-Patient 002,"Age: 28
-Sex: Male
-Sexual Partner History:
-Had sex within this month
-Duration of Symptoms:
-4 days
-Symptoms: 
-• Discharge from the urethra
-• Painful urination
-• Headache
-Image: typical HSV penile ulcer image
-","I'm 28 and had sex earlier this month. Four days ago, I started feeling offfirst a headache, then a burning sensation when I pee. Now, Ive got some discharge from my urethra, and it's really uncomfortable",s3://otiz-image-test/test-version1/Patient 002.jpg,HSV/Herpes,
-Patient 003,"Age: 32
-Sex:Male
-Sexual Partner History:
-active sex life, had sex few days before
-Duration of Symptoms: 
-few days ( 2-3 days)
-Symptoms: 
-• Fever
-• Swollen lymph nodes in the groin
-• Pain or itching around the penis
-Image: typical HSV penile ulcer","I'm 32 and have an active sex life, last had sex a few days ago. In the past two to three days, I�ve had a fever, swollen lymph nodes in my groin, and an itchy, painful sensation around my penis",s3://otiz-image-test/test-version1/Patient 003.jpg,HSV/Herpes,
-Patient 004,"Age: 26
-Sex: Female
-Sexual Partner History:
-within last 1-3 months had protected sex
-Duration of Symptoms: 3 weeks
-Symptoms: 
-• Discharge from the vagina
-•  Pain or itching
-Image: typical HSV sore in vagina","I'm 26, had protected sex a while back�maybe a month ago. For the past three weeks, I've been dealing with some discharge and this constant itching and discomfort",s3://otiz-image-test/test-version1/Patient 004.jpg,HSV/Herpes,
-Patient 005,"Age: 37
-Sex: Female
-Sexual Partner History:
-regular sex with one partner
-Duration of Symptoms: 1 week
-Symptoms: 
-• Fever
-• Headache
-• Body aches
-• itching around vagina
-Image:  typical HSV sore in vagina","For the past week, I�ve had a fever, headaches, and body aches. Along with that, there�s been this constant itching around my vagina. I�m 37 and in a regular sexual relationship with one partner",s3://otiz-image-test/test-version1/Patient 005.jpg,HSV/Herpes,
-Patient 006,"Age: 29
-Sex: Male
-Sexual Partner History:
-Had sex with multiple partner with this month
-Duration of Symptoms: not sure when it started, but there for past few days
-Symptoms: 
-• blisters around anus that bleed sometimes
-•  Pain or itching
-Image: typical HSV sore in anus","Not sure when it started, but I�ve had these blisters around my anus for the past few days. Sometimes they bleed, and there�s a lot of pain and itching. I�m 29 and have had multiple partners this month",s3://otiz-image-test/test-version1/Patient 006.jpg,HSV/Herpes,
-Patient 007,"Age: 24
-Sex: Other
-Sexual Partner History:
-prefer not to say
-Duration of Symptoms:
-1 month 
-Symptoms: 
-•  red bumps on anus
-• changes in bowel habits
-• pain anditchingaround the anus
-Image: typical HSV sore in anus","For the past month, I�ve had red bumps on my anus, along with pain, itching, and some changes in my bowel habits.",s3://otiz-image-test/test-version1/Patient 007.jpg,HSV/Herpes,
-Patient 008,"Age: 31
-Sex: Male
-Sexual Partner History:
-Active sexual life, with multiple partner
-Duration of Symptoms: 1-2 weeks
-Symptoms: 
-•Discharge from the urethra
-• Painful urination
-Image: textbook image of penile hsv","For the past week or two, I�ve had discharge from my urethra and it�s painful when I urinate. I have an active sex life with multiple partners",s3://otiz-image-test/test-version1/Patient 008.jpg,HSV/Herpes,
-Patient 009,"Age: 36
-Sex: Other
-Sexual Partner History:
-more than 3 months
-Duration of Symptoms: more than a month
-Symptoms: 
-• pain anditchingaround the anus
-Image: Textbook image of anus hsv",It�s been over a month now that I�ve had pain and itching around my anus. My last sexual encounter was more than three months ago.,s3://otiz-image-test/test-version1/Patient 009.jpg,HSV/Herpes,
-Patient 010,"Age: 28
-Sex: Female
-Sexual Partner History:
-within this month had unprotected sex
-Duration of Symptoms: 3-6 days
-Symptoms: 
-• Flu-like symptoms, including fever, swollen lymph nodes, and fatigue
-• Pain from urine passing
-Image: Textbook image of vaginal hsv","I had unprotected sex earlier this month, and for the past few days�maybe 3 to 6�I�ve been feeling really off. It started with flu-like symptoms: fever, swollen lymph nodes, and just feeling totally drained. Now it even hurts when I pee. It�s really uncomfortable.",s3://otiz-image-test/test-version1/Patient 010.jpg,HSV/Herpes,
-Patient 011,"Age: 23
-Sex:Male
-Sexual Partner History:
-•  within 1-3 months, had unprotected sex
-Duration of Symptoms: 
-3 weeks
-Symptoms: 
-• Fatigue
-• Painless skin ulcer
-• Swollen lymph nodes
-Image: TextBook image of penile syphilis","I�m 23, and I had unprotected sex about a month or two ago. For the past three weeks, I�ve been feeling really tired all the time. I�ve also noticed a painless ulcer on my skin and some swelling in my lymph nodes. It�s starting to worry me",s3://otiz-image-test/test-version1/Patient 011.jpg,Syphilis,
-Patient 012,"Age: 39
-Sex: Female
-Sexual Partner History:
-more than 3 months had sex
-Duration of Symptoms:  more than 2 months symptoms is there
-Symptoms: 
-•darker bumps in vagina
-• bleeding after sex
-• pain while having sex
-Image: textbook image of vaginal HPV","It�s been over two months that I�ve had these darker bumps in my vagina. On top of that, I bleed after sex, and it�s been painful during intercourse. My last sexual activity was more than three months ago",s3://otiz-image-test/test-version1/Patient 012.jpg,HPV,
-Patient 013,"Age: 28
-Sex: Female
-Sexual Partner History:
-1-3 months, had sex with one partner
-Duration of Symptoms: 2 -3weeks
-Symptoms: 
-• unusual discharge
-• pain while having sex
-Image: vaginal HPV","Its been about 2 to 3 weeks now, and I�ve noticed some unusual discharge. I�ve also been feeling pain during sex. My last sexual encounter was 1 to 3 months ago with one partner.",s3://otiz-image-test/test-version1/Patient 013.jpg,HPV,
-Patient 014,"Age: 23
-Sex: Female
-Sexual Partner History:
-had unprotected sex within this month
-Duration of Symptoms: for past 1 week
-Symptoms: 
-• a cluster of sores in vagina
-• Painful Urination
-Image: vaginal HPV","For the past week, I�ve had a cluster of sores in my vagina, and it�s really painful when I pee. I had unprotected sex earlier this month",s3://otiz-image-test/test-version1/Patient 014.jpg,HPV,
-Patient 015,"Age: 34
-Sex: Other
-Sexual Partner History:
-had sex within this month, multiple partners
-Duration of Symptoms: 2-6 days
-Symptoms: 
-• discharge from anus
-• Itching
-Image: Anus HPV","Its been a few days now, maybe 2 to 6, and I�ve noticed discharge from my anus along with constant itching. I had sex with multiple partners earlier this month",s3://otiz-image-test/test-version1/Patient 015.jpg,HPV,
-Patient 016,"Age: 22
-Sex: Male
-Sexual Partner History:
-Sexually active with one partner, had sex few days before
-Duration of Symptoms: few days, 2-3 days
-Symptoms: 
-• Soft lumps around anus
-• Bleeding
-• Itching
-Image: Anus HPV","In the last 2�3 days, I�ve started noticing soft lumps around my anus. There�s been some bleeding and a lot of itching. I�m sexually active with one partner, and we had sex recently",s3://otiz-image-test/test-version1/Patient 016.jpg,HPV,
-Patient 017,"Age: 37
-Sex: Male
-Sexual Partner History:
-within this month
-Duration of Symptoms: 2 weeks
-Symptoms: 
-•  Warts on the head or shaft of the penis 
-•  Bleeding and pain around the warts
-Image: Penile HPV","For the past two weeks, I�ve had warts on the head and shaft of my penis. They�ve been bleeding and causing pain. My last sexual encounter was earlier this month",s3://otiz-image-test/test-version1/Patient 017.jpg,HPV,
-Patient 018,"Age: 22
-Sex: Male
-Sexual Partner History:
-had sex 1-3 months before, not sexually active after that. 
-Duration of Symptoms: 3-6 weeks
-Symptoms: 
-•Penis itching
-•Penis Discomfort
-•Painful urination
-Image: Penile HPV","Had sex 1-3 months ago, haven�t been active since. For the past 3-6 weeks, there�s been itching and discomfort in my penis, plus it�s painful when I pee.",s3://otiz-image-test/test-version1/Patient 018.jpg,HPV,
-Patient 019,"Age: 31
-Sex: Male
-Sexual Partner History:
-had sex before 3 months, and not active since then. 
-Duration of Symptoms: 2 months
-Symptoms: 
-•Discharge
-•Itching
-•Pain in penis
-Image: Penile HPV","Sexual activity was over 3 months ago, and I haven�t been active since. For the past 2 months, I�ve been dealing with discharge, itching, and pain in my penis.",s3://otiz-image-test/test-version1/Patient 019.jpg,HPV,
-Patient 020,"Age: 27
-Sex: Female
-Sexual Partner History:
-within this month had sex, sexually active
-Duration of Symptoms:
-1 week and more
-Symptoms: 
-•sore around the vagina
-•vaginal odor
-•Vaginal itching
-Image: Vaginal Syphilis","Sexually active, last had sex earlier this month. For over a week now, I�ve had a sore around my vagina, along with vaginal odor and itching",s3://otiz-image-test/test-version1/Patient 020.jpg,Syphilis,
-Patient 021,"Age: 21
-Sex: Female
-Sexual Partner History:
-had unprotected casual sex within 1-3 months
-Duration of Symptoms: 3 weeks
-Symptoms: 
-• yellowish vaginal discharge
-•itching in vagina
-Image: Vaginal Syphilis","Had unprotected casual sex 1-3 months ago. For the past 3 weeks, I�ve noticed yellowish vaginal discharge and constant itching in my vagina",s3://otiz-image-test/test-version1/Patient 021.jpg,Syphilis,
-Patient 022,"Age: 33
-Sex: female
-Sexual Partner History:
-within this month, had sex
-Duration of Symptoms:
-1 week
-Symptoms: 
-• painless bumps in anus
-• Fever
-• Headache
-Image: Anus Syphilis","Had sex earlier this month. For the past week, I�ve had painless bumps in my anus along with a fever and headache.",s3://otiz-image-test/test-version1/Patient 022.jpg,Syphilis,
-Patient 023,"Age: 25
-Sex: other
-Sexual Partner History:
-within this month, had sex
-Duration of Symptoms: 2 weeks
-Symptoms: 
-•Swollen lymph nodes
-•fatigue
-•Wartlike in anus
-Image: Anus Syphilis","Had sex earlier this month. For the past two weeks, I�ve been feeling fatigued, noticed swollen lymph nodes, and there�s a wart-like growth in my anus",s3://otiz-image-test/test-version1/Patient 023.jpg,Syphilis,
-Patient 024,"Age: 35
-Sex: Male
-Sexual Partner History:
-had protected sex about 3 weeks ago
-Duration of Symptoms: 3 days
-Symptoms: 
-•Painless sore in penis
-Image: Penile syphilis","I had protected sex around three weeks back. For the last three days, there�s been a painless sore on my penis",s3://otiz-image-test/test-version1/Patient 024.jpg,Syphilis,
-Patient 025,"Age: 32
-Sex: Male
-Sexual Partner History: had sex within this month. was sexually active
-Duration of Symptoms: symptoms started with sore for more than a month or two, but other symtoms started like a week ago
-Symptoms: 
-•Fever
-•Sore throat
-•Weight loss
-•Muscle aches
-•sore in the penis
-Image: Penile syphilis","I had sex earlier this month and have been pretty sexually active. I first noticed a sore on my penis over a month ago, but in the past week, other symptoms have shown up�fever, sore throat, muscle aches, weight loss�it�s all starting to pile up",s3://otiz-image-test/test-version1/Patient 025.jpg,Syphilis,
-Patient 026,"Age: 19
-Sex: Male
-Sexual Partner History:
-within this month had sex 
-Duration of Symptoms: 10 days
-Symptoms: 
-• burning sensation during urination
-• yellow discharge from the penis
-• pain in the testicles
-Image: penis without sores / with yellow discharge","I had sex earlier this month, and for the past 10 days, I�ve been dealing with a burning sensation when I pee, yellow discharge from my penis, and pain in my testicles",s3://otiz-image-test/test-version1/Patient 026.jpg,Chlamydia,
-Patient 027,"Age: 23
-Sex: Female
-Sexual Partner History:
-had sex within this month
-Duration of Symptoms: 3 weeks
-Symptoms: 
-• foul smell yellow discharge
-• bleeding between periods
-• Burning sensation when urinating
-Image: clear vagina / vagina with yellow thick discharge","I�m 23 and had sex earlier this month. For the past three weeks, I�ve been noticing a foul-smelling yellow discharge, bleeding between periods, and a burning sensation when I pee.",s3://otiz-image-test/test-version1/Patient 027.jpg,Chlamydia,
-Patient 028,"Age: 25
-Sex: Male
-Sexual Partner History:
-had sex within this month
-Duration of Symptoms: 4-6 weeks
-Symptoms: 
-• Painful urination.
-• discharge from the tip of the penis
-Image: clear penis","Im 25 and had sex earlier this month. For the past 4-6 weeks, Ive been dealing with painful urination and discharge from the tip of my penis",s3://otiz-image-test/test-version1/Patient 028.jpg,Gonorrhea,
-Patient 029,"Age: 34
-Sex: Female
-Sexual Partner History:
-had sex 1-3 months
-Duration of Symptoms: 3 weeks
-Symptoms:  
-•Painful urination
-• Increased vaginal discharge.
-•Vaginal bleeding between periods
-Image: clear vagina ","Im 34 and had sex 1-3 months ago. For the past three weeks, Ive had painful urination, increased vaginal discharge, and bleeding between periods",s3://otiz-image-test/test-version1/Patient 029.jpg,Gonorrhea,
-Patient 030,"Age: 30
-Sex: Male
-Sexual Partner History: had sex within past 2 weeks
-Duration of Symptoms: 6 days
-Symptoms: 
-• Pain during urination and ejaculation
-• Thin, milky white penile discharge
-• Increased urinary frequency and urgency
-Image: penis with white discharge / clear penis","I�m 30 and had sex about two weeks ago. For the past six days, I�ve been experiencing pain during urination and ejaculation, thin milky-white discharge from my penis, and needing to urinate more often with an urgent feeling.",s3://otiz-image-test/test-version1/Patient 030.jpg,Trich,
-Patient 031,"Age: 58
-Sex: Male
-Sexual Partner History:
-prefer not to say, but had active sexual life, and refrain from sex for years now
-Duration of Symptoms: 1 year
-Symptoms: 
-• ulcer that bleed
-• Smelly discharge
-• Swelling at the end of the penis
-Image: penile cancer image","I�m 58 and haven�t been sexually active for years, though I used to have an active sex life. Over the past year, I�ve noticed an ulcer on my penis that bleeds, a smelly discharge, and swelling at the tip",s3://otiz-image-test/test-version1/Patient 031.jpg,Penile cancer,
-Patient 032,"Age: 20
-Sex: Female
-Sexual Partner History:
-Never had sex 
-Duration of Symptoms: 2 weeks
-Symptoms: 
-• Itchy sensation in vagina
-• Redness and swelling in vagina
-• Burning sensation when pee
-Image: fungal infection in vagina","I�m 20 and have never had sex. For the past two weeks, I�ve been dealing with an itchy sensation in my vagina, along with redness, swelling, and a burning feeling when I pee.",s3://otiz-image-test/test-version1/Patient 032.jpg,Fungal infection ,
-Patient 033,"Age: 37
-Sex: Male
-Sexual Partner History:
-had sex 1-3 months 
-Duration of Symptoms: 3-4 weeks
-Symptoms: 
-•  Dry penis skin with patches
-• Itchy skin
-Image: eczema in penis","Im 37 and had sex 1-3 months ago. For the past 3-4 weeks, I�ve noticed dry skin with patches on my penis and constant itching",s3://otiz-image-test/test-version1/Patient 033.jpg,Eczema,
-Patient 034,"Age: 42
-Sex: Female
-Sexual Partner History:
-had sex within this month
-Duration of Symptoms: 6 months
-Symptoms: 
-• pink discolored patches of skin
-• painful
-Image: psoriasis in vagina","Im 42 and had sex earlier this month. For the past six months, I�ve had pink discolored patches of skin that are painful.",s3://otiz-image-test/test-version1/Patient 034.jpg,Psorisis,
-Patient 035,"Age: 33
-Sex: Other
-Sexual Partner History:
-never had sex
-Duration of Symptoms: 7-10 days
-Symptoms: 
-• small, inflamed bumps
-• Painful and itchy skin around anus
-Image: dermatitis rash in anus","I�m 33 and have never had sex. Over the last 7-10 days, I�ve noticed small, inflamed bumps and painful, itchy skin around my anus",s3://otiz-image-test/test-version1/Patient 035.jpg,Dermatitis,
-Patient 036,"Age: 25
-Sex: Female
-Sexual Partner History:
-no details about sexual history
-Duration of Symptoms: 2 weeks
-Symptoms: 
-• Smooth white patches
-• Painful sexual intercourse
-• Painful urination
-Image: low quality image of vaginal   Lichen sclerosus","I�m 25 and have been experiencing symptoms for the past two weeks. There are smooth white patches, and sex has become painful, along with discomfort when I urinate.",s3://otiz-image-test/test-version1/Patient 036.jpg,Lichen sclerosus,
-Patient 037,"Age: 16
-Sex: Male
-Sexual Partner History:
-never had sex
-Duration of Symptoms: 1-2 weeks
-Symptoms: 
-•  Pain and irritation on the head of penis
-• foul smell
-•  Pain while urinating
-Image: Penis with balanitis","I�m 16 and have never had sex. For the past 1-2 weeks, I�ve had pain and irritation on the head of my penis, a foul smell, and pain while urinating.",s3://otiz-image-test/test-version1/Patient 037.jpg,Balanitis,
-Patient 038,"Age: 23
-Sex: Other
-Sexual Partner History:
-had sex within this month with multiple partner
-Duration of Symptoms: 1 week
-Symptoms: 
-•   Painful urination
-•  discharge
-•  discomfort
-Image: penis shaped cake (or similar inanimate object like vagina shaped peeled orange etc)","I�m 23 and had sex with multiple partners earlier this month. For the past week, I�ve been dealing with painful urination, discharge, and general discomfort.",s3://otiz-image-test/test-version1/Patient 038.jpg,Inaimate object,
-Patient 039,"Age: 28
-Sex: Male
-Sexual Partner History:
-no sexual history details
-Duration of Symptoms: 1 week
-Symptoms: 
-• itchy
-• cracked skin
-Image: contact dermatitis in skin (hand)",Im 28 and have had symptoms for the past week. My skin has been itchy and cracked. I prefer not to share details about my sexual history.,s3://otiz-image-test/test-version1/Patient 039.jpg,contact dermatitis,
-Patient 040,"Age: 21
-Sex: Female
-Sexual Partner History:
-within this month, had sex
-Duration of Symptoms: 2-3 weeks
-Symptoms: 
-• itchy
-• painful urination
-Image: cartoonized image of vagina (or penis)","I�m 21 and had sex earlier this month. For the past 2-3 weeks, I�ve been experiencing itching and painful urination.",s3://otiz-image-test/test-version1/Patient 040.jpg,Inaimate object,
-Patient 041,"Age: 33
-Sex: Female
-Sexual Partner History:
-had sex within this month, multiple partner
-Duration of Symptoms: 2weeks
-Symptoms: 
-•  have clustered warts on vagina
-•  itching in the wart region
-•  bleeding after sex
-Image: Not comfortable to upload image (do not input image)","I�m 33 and had sex with multiple partners earlier this month. For the past two weeks, I�ve had clustered warts on my vagina, itching around the warts, and bleeding after sex",s3://otiz-image-test/test-version1/Patient 041.jpg,HPV,
-Patient 042,"Age: 24
-Sex: Male
-Sexual Partner History:
-1-3 months had sex
-Duration of Symptoms: 2 weeks
-Symptoms: 
-•  no visible changes observed in penis
-• pain during urination and ejaculation
-•  white discharge
-• increased urine frequency
-Image: not comfortable to upload image","Im 24 and had sex 1-3 months ago. For the past two weeks, I haven�t noticed any visible changes on my penis, but I�ve been experiencing pain during urination and ejaculation, white discharge, and an increased need to urinate frequently",s3://otiz-image-test/test-version1/Patient 042.jpg,Trich,
-Patient 043,"Age: 26
-Sex: Male
-Sexual Partner History:
-had sex more than 3 months
-Duration of Symptoms: 3-4 weeks
-Symptoms: 
-• Painless sores in penis and anus
-• Fever
-• Muscle ache
-• sore throat
-Image: penis with syphilis sore or anus with syphilis sore (only ask if model ask for it in history taking - depends on the flow)","I�m 26 and had sex more than 3 months ago. For the past 3-4 weeks, I�ve had painless sores on my penis and anus, along with fever, muscle aches, and a sore throat",s3://otiz-image-test/test-version1/Patient 043.jpg,Syphilis,
-Patient 044,"Age: 19 years
-Sex: male
-Sexual Partner History:
-no sexual history details
-Duration of Symptoms: not sure
-Symptoms: 
-•  slightly curved penis
-•  discomfort sometimes
-Image: penis without any sores, but atypical shape (yet normal - may slightly curved or something)","I�m 19 and not sure how long the symptoms have been present. My penis is slightly curved, and I feel some discomfort occasionally",s3://otiz-image-test/test-version1/Patient 044.jpg,Normal,
-Patient 045,"Age: 29
-Sex: Other
-Sexual Partner History:
-prefer not to say
-Duration of Symptoms: i�m noticing it for past 3 weeks, not sure it was there before
-Symptoms: 
-•   blackish brown rashlike spot 
-•   painless
-Image: anus without any rashes or sores, with birth mark","I�m 29 and have noticed a blackish-brown rash-like spot for the past three weeks. It�s painless, and I�m not sure if it was there before",s3://otiz-image-test/test-version1/Patient 045.jpg,Normal,
-Patient 046,"Age: 27
-Sex: Female
-Sexual Partner History:
-had unprotected sex more than 3 months now
-Duration of Symptoms: past few days
-Symptoms: 
-• feel like itching sometimes
-Image: Vagina without any sores / rashes","I�m 27 and had unprotected sex over three months ago. For the past few days, I�ve been feeling occasional itching.",s3://otiz-image-test/test-version1/Patient 046.jpg,Normal,
-Patient 047,"Age: 20
-Sex: Male
-Sexual Partner History:
-no sexual activity 
-Duration of Symptoms: not sure
-Symptoms: 
-• small pimples like in penis
-Image: pearly papule","I�m 20 and have never been sexually active. I�m not sure how long it�s been, but I�ve noticed small pimple-like spots on my penis.",s3://otiz-image-test/test-version1/Patient 047.jpg,Pearly papules,
-Patient 048,"Age: 35
-Sex: Female
-Sexual Partner History:
-sexually active, had unprotected sex past week
-Duration of Symptoms: 3-4 days as I notice
-Symptoms: 
-• small painless growth in skin near vagina 
-Image: skin tag near vagina","I�m 35 and sexually active. I had unprotected sex last week, and over the past 3-4 days, I�ve noticed a small, painless growth on the skin near my vagina.",s3://otiz-image-test/test-version1/Patient 048.jpg,Skin Tag,
-Patient 049,"Age: 29
-Sex: male
-Sexual Partner History:
-no history on sexual acitivity
-Duration of Symptoms: few hours 
-Symptoms: 
-• sudden headache becoming unbearable
-•  feel nausea
-• slurred speech
-• reddish eye
-Image: No image needed, or can upload any ","I�m 29, A few hours ago, I developed a sudden, unbearable headache along with nausea, slurred speech, and a reddish eye.",s3://otiz-image-test/test-version1/Patient 049.jpg,medical emergency,
-Patient 050,"Age: 37
-Sex: Female
-Sexual Partner History:
-no history of sexual activity given
-Duration of Symptoms: one day
-Symptoms: 
-• stabbing pain in chest
-• slight shortness of breath
-• lightheadness
-• dizziness
-• nausea
-• rapid heartbeat
-• left hand pain
-Image: no need of image / any","I'm 37, and since yesterday, I've been experiencing stabbing chest pain, slight shortness of breath, lightheadedness, dizziness, nausea, a rapid heartbeat, and pain in my left hand.",s3://otiz-image-test/test-version1/Patient 050.jpg,medical emergency,Pending
+Patient ID,image_url,Ground Truth,medical_case_history,gender,image_analysis,patient_narrative,reviewed
+Patient 001,s3://otiz-image-test/test-version1/Patient 001.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 28,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately two weeks ago; patient recalls unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent use, often omitted during new encounters."",
+    ""sti_history"": ""No previously diagnosed STIs or HIV."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Began noticing a small painful lesion on the glans penis about three days after his last unprotected sexual encounter."",
+    ""progression"": ""The lesion became more noticeable, with redness and mild erosion, accompanied by a burning sensation and occasional itching."",
+    ""systemic_symptoms"": ""No fever or generalized malaise noted."",
+    ""localized_symptoms"": ""Pain, irritation, and a single superficial ulceration on the glans penis.""
+  },
+  ""patient_narrative"": ""I am a 28-year-old male who has had two partners in the past six months. I have not always used protection, particularly with my most recent partner two weeks ago. A few days later, I noticed a painful spot on the tip of my penis. Over time, it became red, more irritated, and took on the appearance of a shallow ulceration. I have never been told I have any sexually transmitted infections and have not taken any medications like PrEP or PEP. Because of the discomfort and the way it looks, I decided to seek medical advice.""
+}",male,"The image depicts a superficial ulcer or erosion on the glans penis, appearing erythematous with a raw base and some surrounding redness.","I am a 28-year-old male who has had two partners in the past six months. I have not always used protection, particularly with my most recent partner two weeks ago. A few days later, I noticed a painful spot on the tip of my penis. Over time, it became red, more irritated, and took on the appearance of a shallow ulceration. I have never been told I have any sexually transmitted infections and have not taken any medications like PrEP or PEP. Because of the discomfort and the way it looks, I decided to seek medical advice.",False
+Patient 002,s3://otiz-image-test/test-version1/Patient 002.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 30,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred roughly one week ago; patient recalls partially protected vaginal intercourse with a new partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used intermittently, especially inconsistent with new partners."",
+    ""sti_history"": ""No previously diagnosed STIs or HIV reported."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small, painful spots on the head of the penis around four to five days after last sexual encounter."",
+    ""progression"": ""Lesions appeared as small fluid-filled bumps that became superficial erosions with a red base; mild crusting was noted after a few days."",
+    ""systemic_symptoms"": ""No fever, chills, or significant malaise reported."",
+    ""localized_symptoms"": ""Burning sensation and mild itchiness, with tenderness when touched.""
+  },
+  ""patient_narrative"": ""I am a 30-year-old man who has recently been intimate with multiple partners. About a week ago, I had a partially protected vaginal encounter with a new partner. A few days later, I became aware of a few painful bumps on the tip of my penis. These bumps quickly turned into small, shallow sores that were quite red. They itch sometimes and are tender when touched, but I haven\u2019t felt run-down overall. I rarely use condoms consistently, and I have never been diagnosed with an STI before nor used preventive medications like PrEP or PEP. Concerned by the sores' appearance and discomfort, I decided to seek a professional opinion.""
+}",male,"Multiple small shallow erosions or ulcers on the glans penis, with surrounding erythema and some crust formation visible. The lesions appear clustered and notably red around the edges.","I am a 30-year-old man who has recently been intimate with multiple partners. About a week ago, I had a partially protected vaginal encounter with a new partner. A few days later, I became aware of a few painful bumps on the tip of my penis. These bumps quickly turned into small, shallow sores that were quite red. They itch sometimes and are tender when touched, but I haven’t felt run-down overall. I rarely use condoms consistently, and I have never been diagnosed with an STI before nor used preventive medications like PrEP or PEP. Concerned by the sores' appearance and discomfort, I decided to seek a professional opinion.",False
+Patient 003,s3://otiz-image-test/test-version1/Patient 003.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 31,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred around ten days ago; patient reports unprotected vaginal intercourse with a new partner at that time."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""female"",
+      ""female"",
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent, particularly when meeting new partners."",
+    ""sti_history"": ""No previously confirmed STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed the first small sores on the penile shaft about eight days after his last unprotected encounter."",
+    ""progression"": ""Bumps gradually formed superficial erosions with a few developing crusts and scabbing in the center, causing persistent discomfort."",
+    ""systemic_symptoms"": ""No fever, chills, or body aches reported."",
+    ""localized_symptoms"": ""Burning, itching sensation around the lesions, and mild tenderness with touch.""
+  },
+  ""patient_narrative"": ""I am a 31-year-old male who has recently been sexually active with several partners. About ten days ago, I had unprotected vaginal intercourse with a new partner. Around two days later, I noticed a few painful bumps forming on my penis. Over the next few days, they became shallow sores with some crust, and the area felt itchy and tender to the touch. I have never been diagnosed with a sexually transmitted infection, and I have not taken any preventive medication like PrEP or PEP. My condom use is inconsistent, especially in new relationships. Feeling worried by the appearance of the sores and the discomfort they cause, I decided to seek medical attention.""
+}",male,"The image shows multiple superficial erosions on the penis with a pink base, some with crusting or surface debris. Surrounding tissue appears erythematous, and a few lesions appear to be healing with partial scabs.","I am a 31-year-old male who has recently been sexually active with several partners. About ten days ago, I had unprotected vaginal intercourse with a new partner. Around two days later, I noticed a few painful bumps forming on my penis. Over the next few days, they became shallow sores with some crust, and the area felt itchy and tender to the touch. I have never been diagnosed with a sexually transmitted infection, and I have not taken any preventive medication like PrEP or PEP. My condom use is inconsistent, especially in new relationships. Feeling worried by the appearance of the sores and the discomfort they cause, I decided to seek medical attention.",False
+Patient 004,s3://otiz-image-test/test-version1/Patient 004.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 32,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred roughly eight days ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Often omitted with new partners."",
+    ""sti_history"": ""No known prior STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has never used PrEP or taken PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""First noted a cluster of small bumps at the base of the penis about four days after his last sexual encounter."",
+    ""progression"": ""These bumps gradually became fluid-filled and tender, with occasional itching and mild redness in the surrounding skin."",
+    ""systemic_symptoms"": ""No fever, body aches, or generalized symptoms reported."",
+    ""localized_symptoms"": ""Burning sensation, mild itching, and slight discomfort in the affected area.""
+  },
+  ""patient_narrative"": ""I am a 32-year-old male who recently had unprotected sex with a new partner about a week ago. After a few days passed, I noticed a cluster of small bumps at the base of my penis. They later became fluid-filled and have been somewhat painful and itchy. I do not typically use condoms on a regular basis, and I've never been tested positive for any sexually transmitted infections or used HIV prevention methods like PrEP or PEP. The tenderness and appearance of these bumps made me seek medical advice.""
+}",male,"The image displays several pinkish fluid-filled papules located near the penis shaft, each with a smooth, glistening surface. A slightly reddened area of skin surrounds the lesions, but no extensive ulceration or thick crusting is evident.","I am a 32-year-old male who recently had unprotected sex with a new partner about a week ago. After a few days passed, I noticed a cluster of small bumps at the base of my penis. They later became fluid-filled and have been somewhat painful and itchy. I do not typically use condoms on a regular basis, and I've never been tested positive for any sexually transmitted infections or used HIV prevention methods like PrEP or PEP. The tenderness and appearance of these bumps made me seek medical advice.",False
+Patient 005,s3://otiz-image-test/test-version1/Patient 005.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 33,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately one week ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent, often not used with new partners."",
+    ""sti_history"": ""No reported history of sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has never taken PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed an outbreak of small bumps on the penis roughly four days after his last unprotected encounter."",
+    ""progression"": ""Bumps evolved from painless to painful fluid-filled lesions. Some have begun to open or crust, causing additional discomfort."",
+    ""systemic_symptoms"": ""No fever, chills, or generalized malaise reported."",
+    ""localized_symptoms"": ""Mild stinging and itching at the lesion sites with some soreness upon touch.""
+  },
+  ""patient_narrative"": ""I am a 33-year-old male who recently engaged in unprotected intercourse with a new partner about a week ago. A few days later, I noticed a cluster of small fluid-filled bumps appearing on my penis. Initially, they didn\u2019t bother me much, but they gradually became tender, and a couple have begun to leak fluid or form small scabs. I haven\u2019t felt generally ill otherwise. My condom use has been inconsistent, and I have never had a diagnosed sexually transmitted infection before or used preventive measures like PrEP or PEP. Concerned by these lesions and their discomfort, I decided to seek medical attention.""
+}",male,"The image shows multiple clustered fluid-filled vesicles on the penile shaft, each with a clear or slightly opaque center. Some vesicles appear to have ruptured, revealing shallow erosions and mild redness in surrounding areas.","I am a 33-year-old male who recently engaged in unprotected intercourse with a new partner about a week ago. A few days later, I noticed a cluster of small fluid-filled bumps appearing on my penis. Initially, they didn’t bother me much, but they gradually became tender, and a couple have begun to leak fluid or form small scabs. I haven’t felt generally ill otherwise. My condom use has been inconsistent, and I have never had a diagnosed sexually transmitted infection before or used preventive measures like PrEP or PEP. Concerned by these lesions and their discomfort, I decided to seek medical attention.",False
+Patient 006,s3://otiz-image-test/test-version1/Patient 006.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 35,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Receptive anal intercourse"",
+      ""Multiple sexual partners"",
+      ""Unprotected sexual encounters""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about ten days ago; patient reports receptive anal intercourse with a new male partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""anal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent; patient often does not use condoms with new or casual partners."",
+    ""sti_history"": ""No previously confirmed STI diagnoses, including HIV."",
+    ""hiv_prevention"": ""Has not been on PrEP or taken PEP recently."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small painful bumps around the anal area approximately five days after last sexual contact."",
+    ""progression"": ""The bumps grouped together and some developed a fluid-filled center or began to erode slightly, leading to increased discomfort."",
+    ""systemic_symptoms"": ""No fever, chills, or widespread body aches reported."",
+    ""localized_symptoms"": ""Burning, itching, and tenderness in the anal region, especially during bowel movements.""
+  },
+  ""patient_narrative"": ""I am a 35-year-old male who engages in receptive anal and sometimes oral sex, usually with multiple partners. About ten days ago, I had an encounter with a new partner without using protection. A few days later, I started feeling discomfort, noticing painful, itchy bumps appearing around my anus. Over time, they seemed to get worse and form small open areas that made it painful to go to the bathroom. I've never been diagnosed with any sexually transmitted infections before and haven\u2019t used medications like PrEP or PEP. Concerned about these persistent and increasingly uncomfortable sores, I decided to seek medical advice.""
+}",male,"Clusters of rounded lesions with a superficial erosive surface are visible around the anal folds. Some appear fluid-filled, and there is surrounding redness, indicating inflammation and possible mild discharge in a few areas.","I am a 35-year-old male who engages in receptive anal and sometimes oral sex, usually with multiple partners. About ten days ago, I had an encounter with a new partner without using protection. A few days later, I started feeling discomfort, noticing painful, itchy bumps appearing around my anus. Over time, they seemed to get worse and form small open areas that made it painful to go to the bathroom. I've never been diagnosed with any sexually transmitted infections before and haven’t used medications like PrEP or PEP. Concerned about these persistent and increasingly uncomfortable sores, I decided to seek medical advice.",False
+Patient 007,s3://otiz-image-test/test-version1/Patient 007.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 36,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Unprotected receptive anal intercourse"",
+      ""Multiple sexual partners""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about a week ago; patient reports receptive anal intercourse with a new male partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""anal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used inconsistently, particularly with new partners."",
+    ""sti_history"": ""No reported history of STI or HIV."",
+    ""hiv_prevention"": ""Has never used PrEP or taken PEP."",
+    ""trauma_history"": ""No known history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""First noticed small, painful lesions around the anal area approximately five days after the last sexual encounter."",
+    ""progression"": ""Lesions increased in number and began to form fluid-filled bumps with surrounding redness, causing amplified discomfort over subsequent days."",
+    ""systemic_symptoms"": ""No fever, body aches, or other systemic complaints."",
+    ""localized_symptoms"": ""Pain, burning, and mild itching, especially noticeable during bowel movements.""
+  },
+  ""patient_narrative"": ""I am a 36-year-old male who had receptive anal intercourse with a new male partner about a week ago. A few days later, I noticed small painful bumps forming around my anal region. These bumps eventually began to fill with fluid and became very uncomfortable, particularly during bowel movements. I do not regularly use condoms, especially with new partners, and I have never been diagnosed with a sexually transmitted infection nor used preventive measures like PrEP or PEP. The worsening discomfort and the appearance of these lesions prompted me to seek medical care.""
+}",male,"Clusters of vesicular lesions on both sides of the anal cleft, with erythematous borders and some lesions appearing to coalesce. The vesicles appear to contain a clear or slightly cloudy fluid, with redness and slight swelling in the surrounding tissue.","I am a 36-year-old male who had receptive anal intercourse with a new male partner about a week ago. A few days later, I noticed small painful bumps forming around my anal region. These bumps eventually began to fill with fluid and became very uncomfortable, particularly during bowel movements. I do not regularly use condoms, especially with new partners, and I have never been diagnosed with a sexually transmitted infection nor used preventive measures like PrEP or PEP. The worsening discomfort and the appearance of these lesions prompted me to seek medical care.",False
+Patient 008,s3://otiz-image-test/test-version1/Patient 008.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 34,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about one week ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent use, particularly with new partners."",
+    ""sti_history"": ""No known prior sexually transmitted infections or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""First noticed a cluster of sore spots on the glans penis approximately four days after the last sexual encounter."",
+    ""progression"": ""Lesions progressed from small red patches to more superficial erosions, causing increased irritation and tenderness."",
+    ""systemic_symptoms"": ""No fever, chills, or other generalized complaints."",
+    ""localized_symptoms"": ""Tenderness, mild pain, and a slight burning sensation noted primarily during contact or friction.""
+  },
+  ""patient_narrative"": ""I am a 34-year-old male who had unprotected sex with a new partner about a week ago. A few days later, I noticed painful spots on the head of my penis. Over time, they became red, developed into shallow sores, and have continued to bother me, especially when the area is touched. I usually do not use condoms consistently, and I have never been diagnosed with an STI or taken HIV prevention medications. Concerned by the appearance and discomfort, I sought medical attention to determine what might be causing these symptoms.""
+}",male,"The image shows scattered areas of shallow erosions on the glans penis with surrounding redness. Some lesions appear slightly raw, and others show mild crust formation, indicating a possible healing stage.","I am a 34-year-old male who had unprotected sex with a new partner about a week ago. A few days later, I noticed painful spots on the head of my penis. Over time, they became red, developed into shallow sores, and have continued to bother me, especially when the area is touched. I usually do not use condoms consistently, and I have never been diagnosed with an STI or taken HIV prevention medications. Concerned by the appearance and discomfort, I sought medical attention to determine what might be causing these symptoms.",False
+Patient 009,s3://otiz-image-test/test-version1/Patient 009.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 29,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Unprotected receptive anal intercourse"",
+      ""Multiple sexual partners""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred around one week ago; patient reports receptive anal intercourse with a new male partner without consistent condom use."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""anal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent, particularly with new partners."",
+    ""sti_history"": ""No known history of STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small yet painful bumps around the anal area approximately four days following last sexual contact."",
+    ""progression"": ""Bumps developed into fluid-filled spots and became more numerous, leading to discomfort and irritation, especially during bowel movements."",
+    ""systemic_symptoms"": ""No fever, chills, or other systemic issues reported."",
+    ""localized_symptoms"": ""Burning, itching, and tenderness around the anus, particularly noticeable with movement or contact.""
+  },
+  ""patient_narrative"": ""I am a 29-year-old male who had a new partner about a week ago. We had receptive anal sex without consistent protection. A few days later, I noticed small painful bumps near my anus. Over time, more bumps appeared, some filled with fluid, and they became quite uncomfortable, especially when I move around or use the bathroom. I have never tested positive for any sexually transmitted infections and have not used preventative measures like PrEP or PEP. Concerned about the increase in painful lesions, I decided to seek medical attention.""
+}",male,"The image shows several fluid-filled lesions in the anal region, each surrounded by an area of redness. Some appear shallowly eroded or ulcerated, with signs of inflammatory change in the surrounding skin.","I am a 29-year-old male who had a new partner about a week ago. We had receptive anal sex without consistent protection. A few days later, I noticed small painful bumps near my anus. Over time, more bumps appeared, some filled with fluid, and they became quite uncomfortable, especially when I move around or use the bathroom. I have never tested positive for any sexually transmitted infections and have not used preventative measures like PrEP or PEP. Concerned about the increase in painful lesions, I decided to seek medical attention.",False
+Patient 010,s3://otiz-image-test/test-version1/Patient 010.jpg,HSV/Herpes,"{
+  ""patient_demographics"": {
+    ""age"": 29,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple recent sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately one week ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Irregular, particularly with new partners."",
+    ""sti_history"": ""No documented prior STI diagnoses or HIV."",
+    ""hiv_prevention"": ""Has not been on PrEP or used PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small, whitish sores in the vaginal area about four days after her last encounter."",
+    ""progression"": ""Over the following days, these lesions increased in number, became more painful, and were accompanied by mild burning and irritation."",
+    ""systemic_symptoms"": ""No fever or generalized body aches reported."",
+    ""localized_symptoms"": ""Burning sensation, soreness, and some mild discharge around the lesions.""
+  },
+  ""patient_narrative"": ""I am a 29-year-old female who recently engaged in unprotected sex with a new partner about a week ago. A few days after the encounter, I noticed some small white sores developing inside and just around my vagina. These spots became painful and irritated over the next few days, and I experienced a mild burning feeling in that area. I have had two partners in the last several months, and I\u2019ve been inconsistent about using condoms. I have not been diagnosed with any sexually transmitted infections before and have never used HIV prevention methods like PrEP or PEP. Concerned about these new lesions, I decided to seek medical advice.""
+}",female,"Several round, pale lesions on the internal and external vaginal folds, some with a shallow or eroded center. Surrounding tissue appears inflamed and slightly reddened.","I am a 29-year-old female who recently engaged in unprotected sex with a new partner about a week ago. A few days after the encounter, I noticed some small white sores developing inside and just around my vagina. These spots became painful and irritated over the next few days, and I experienced a mild burning feeling in that area. I have had two partners in the last several months, and I’ve been inconsistent about using condoms. I have not been diagnosed with any sexually transmitted infections before and have never used HIV prevention methods like PrEP or PEP. Concerned about these new lesions, I decided to seek medical advice.",False
+Patient 011,s3://otiz-image-test/test-version1/Patient 011.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 32,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately two weeks ago; patient notes unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent, especially during recent encounters."",
+    ""sti_history"": ""No prior diagnoses of sexually transmitted infections or HIV reported."",
+    ""hiv_prevention"": ""Has not engaged in PrEP or PEP use."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed a single small sore on the penis about one week after his last unprotected sexual contact."",
+    ""progression"": ""The lesion grew slightly larger over a few days, displaying a well-defined, shallow ulcer with a red base. The patient reports minimal discomfort surrounding this area."",
+    ""systemic_symptoms"": ""No fever, malaise, or other systemic complaints described."",
+    ""localized_symptoms"": ""Mild tenderness and some sensitivity to touch around the ulcer, but otherwise unremarkable.""
+  },
+  ""patient_narrative"": ""I am a 32-year-old male who had unprotected sex with a new partner two weeks ago. About a week after that encounter, I found a small sore on my penis. It has slowly widened into a shallow ulcer with a red area in the middle, but it doesn\u2019t hurt much. I don\u2019t feel sick overall, and I\u2019ve never tested positive for any STIs or sought any preventive treatment like PrEP or PEP. Concerned about this sore and why it\u2019s not going away, I came to get it checked out.""
+}",male,"The image shows one round, superficial ulceration on the glans penis with a defined border and a reddish center. There is no prominent crust or exudate, and the surrounding tissue appears minimally inflamed.","I am a 32-year-old male who had unprotected sex with a new partner two weeks ago. About a week after that encounter, I found a small sore on my penis. It has slowly widened into a shallow ulcer with a red area in the middle, but it doesn’t hurt much. I don’t feel sick overall, and I’ve never tested positive for any STIs or sought any preventive treatment like PrEP or PEP. Concerned about this sore and why it’s not going away, I came to get it checked out.",False
+Patient 012,s3://otiz-image-test/test-version1/Patient 012.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 27,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately one month ago; patient reports unprotected vaginal intercourse with a new male partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Infrequent, often omitted with new partners."",
+    ""sti_history"": ""No known prior diagnoses of sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has not used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Patient began noticing small, raised bumps around the vaginal opening about two weeks ago."",
+    ""progression"": ""Over time, these bumps became larger and more numerous, with a noticeable increase in surface texture. Mild itching and occasional discomfort were reported."",
+    ""systemic_symptoms"": ""No fever, malaise, or other systemic complaints."",
+    ""localized_symptoms"": ""Itching, minor irritation, and mild soreness around the affected area.""
+  },
+  ""patient_narrative"": ""I am a 27-year-old female with multiple recent sexual partners. About one month ago, I had unprotected intercourse with a new partner. A couple of weeks later, I noticed small bumps forming near my vaginal opening. These bumps grew in size and became somewhat bumpy in texture, causing mild irritation and occasional itching. I do not typically use condoms regularly, and I have never been diagnosed with any sexually transmitted infections. I have not tried HIV prevention methods like PrEP or PEP. Worried about the appearance and growth of these bumps, I decided to seek a medical evaluation.""
+}",female,"The photograph displays multiple exophytic lesions in the vulvovaginal region, some coalescing into a larger cluster. The lesions appear irregular and have a somewhat cauliflower-like surface. Surrounding skin shows mild redness but no overt signs of ulceration or bleeding.","I am a 27-year-old female with multiple recent sexual partners. About one month ago, I had unprotected intercourse with a new partner. A couple of weeks later, I noticed small bumps forming near my vaginal opening. These bumps grew in size and became somewhat bumpy in texture, causing mild irritation and occasional itching. I do not typically use condoms regularly, and I have never been diagnosed with any sexually transmitted infections. I have not tried HIV prevention methods like PrEP or PEP. Worried about the appearance and growth of these bumps, I decided to seek a medical evaluation.",False
+Patient 013,s3://otiz-image-test/test-version1/Patient 013.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 30,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately two months ago; patient reports unprotected vaginal intercourse with a relatively new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Infrequent, particularly with new or casual partners."",
+    ""sti_history"": ""No previously documented STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No known history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small growths near the vaginal opening around three weeks ago."",
+    ""progression"": ""Lesions became more numerous and formed larger, raised clusters. Mild itching and occasional irritation were experienced, especially with friction."",
+    ""systemic_symptoms"": ""No fever or generalized symptoms reported."",
+    ""localized_symptoms"": ""Itching, mild discomfort, and a sensation of pressure or fullness in the affected area.""
+  },
+  ""patient_narrative"": ""I am a 30-year-old woman who noticed small growths near my vaginal opening about three weeks ago. Initially, there were only a few, but they have grown in size and number over time, now forming larger clusters. They cause itching and slight discomfort, especially if they rub against my clothing. My sexual encounters have not always included condom use, particularly with partners I am newly seeing. I have never been diagnosed with a sexually transmitted infection in the past, nor have I used any HIV prevention measures like PrEP or PEP. Concerned by the increasing size and number of these growths, I sought medical advice.""
+}",female,"The image shows multiple exophytic masses in the vulvovaginal region, appearing as irregular, fleshy projections with a somewhat cauliflower-like surface texture. The surrounding tissue appears pink and moist, with scattered groups of similar lesions that have coalesced in areas.","I am a 30-year-old woman who noticed small growths near my vaginal opening about three weeks ago. Initially, there were only a few, but they have grown in size and number over time, now forming larger clusters. They cause itching and slight discomfort, especially if they rub against my clothing. My sexual encounters have not always included condom use, particularly with partners I am newly seeing. I have never been diagnosed with a sexually transmitted infection in the past, nor have I used any HIV prevention measures like PrEP or PEP. Concerned by the increasing size and number of these growths, I sought medical advice.",False
+Patient 014,s3://otiz-image-test/test-version1/Patient 014.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 31,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred roughly one month ago; patient reports unprotected vaginal intercourse with a new male partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Often omitted, especially with new or casual partners."",
+    ""sti_history"": ""No previously documented history of STI or HIV."",
+    ""hiv_prevention"": ""Has never used PrEP or taken PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small raised growths around the external vaginal area approximately three weeks ago."",
+    ""progression"": ""Gradually, these growths became more numerous and began coalescing into larger clusters. Mild discomfort and itching were reported, particularly during prolonged activity."",
+    ""systemic_symptoms"": ""No fever, chills, or other systemic symptoms reported."",
+    ""localized_symptoms"": ""Itching, irritation, and occasional soreness near the affected areas.""
+  },
+  ""patient_narrative"": ""I am a 31-year-old woman who noticed small bump-like lesions around my vaginal opening about three weeks ago. Over time, these bumps expanded and formed small clusters, sometimes causing itching or slight irritation. I have had two partners recently and did not consistently use protection. I have never been diagnosed with a sexually transmitted infection and have not used preventive measures such as PrEP or PEP. Concerned by the increased size and number of these growths, I decided to seek a medical evaluation.""
+}",female,"Multiple exophytic lesions can be observed around the vaginal introitus, some resembling small, irregular clusters with a mildly cauliflower-like appearance. The surrounding tissue appears moist with subtle inflammation.","I am a 31-year-old woman who noticed small bump-like lesions around my vaginal opening about three weeks ago. Over time, these bumps expanded and formed small clusters, sometimes causing itching or slight irritation. I have had two partners recently and did not consistently use protection. I have never been diagnosed with a sexually transmitted infection and have not used preventive measures such as PrEP or PEP. Concerned by the increased size and number of these growths, I decided to seek a medical evaluation.",False
+Patient 015,s3://otiz-image-test/test-version1/Patient 015.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 29,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Receptive anal intercourse"",
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred roughly three weeks ago; patient reports receptive anal intercourse with a new male partner without consistent use of protection."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""anal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent, occasionally omitted with new partners."",
+    ""sti_history"": ""No prior confirmed STIs or HIV diagnoses reported."",
+    ""hiv_prevention"": ""Has never used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Initially noticed small, painless nodules around the anal region approximately one and a half weeks after his last encounter."",
+    ""progression"": ""The nodules increased in both number and size, developing a clustered or slightly cauliflower-like appearance. Mild itching and occasional discomfort have been reported, especially with prolonged sitting."",
+    ""systemic_symptoms"": ""No fever, malaise, or other systemic symptoms mentioned."",
+    ""localized_symptoms"": ""Mild irritation, itching, and occasional soreness concentrated around the anus.""
+  },
+  ""patient_narrative"": ""I am a 29-year-old male who has been sexually active with multiple partners and not always used protection. About three weeks ago, I had receptive anal sex with a new partner. Around a week and a half later, I noticed small bumps forming around my anus. They gradually became more numerous and took on a bumpy texture, occasionally itching or causing slight discomfort when I sit for extended periods. I have never been diagnosed with any STIs, nor have I taken preventive measures like PrEP or PEP. Concerned about these growths and their increasing size, I decided to seek medical help.""
+}",male,"Multiple small white or pale-pink exophytic growths clustered near the anal opening, some coalescing into larger patches. Surface characteristics appear uneven and slightly raised, with surrounding skin showing mild erythema.","I am a 29-year-old male who has been sexually active with multiple partners and not always used protection. About three weeks ago, I had receptive anal sex with a new partner. Around a week and a half later, I noticed small bumps forming around my anus. They gradually became more numerous and took on a bumpy texture, occasionally itching or causing slight discomfort when I sit for extended periods. I have never been diagnosed with any STIs, nor have I taken preventive measures like PrEP or PEP. Concerned about these growths and their increasing size, I decided to seek medical help.",False
+Patient 016,s3://otiz-image-test/test-version1/Patient 016.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 30,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Receptive anal intercourse"",
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about two weeks ago, involving receptive anal intercourse with a new male partner and inconsistent protection."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""anal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used inconsistently, particularly with newer partners."",
+    ""sti_history"": ""No previously diagnosed sexually transmitted infections reported."",
+    ""hiv_prevention"": ""Has not utilized PrEP or PEP."",
+    ""trauma_history"": ""No known history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small bumps around the anal area approximately one week after his most recent unprotected sexual encounter."",
+    ""progression"": ""Those bumps gradually multiplied and coalesced into larger, raised clusters. Mild itching and occasional discomfort have been noted."",
+    ""systemic_symptoms"": ""No fever, chills, or significant systemic complaints reported."",
+    ""localized_symptoms"": ""Itching, minor soreness, and mild irritation in the anal region, particularly with prolonged sitting.""
+  },
+  ""patient_narrative"": ""I am a 30-year-old male who recently had receptive anal intercourse with a new partner about two weeks ago. A little over a week later, I noticed small bumps developing around my anus. They gradually became more numerous and formed these raised clusters. They itch sometimes, especially if I sit for a long time, but I don\u2019t have other major symptoms. I haven\u2019t been diagnosed with any sexually transmitted infections before, and I rarely use condoms consistently. I have never used PrEP or PEP. Concerned by how these bumps have grown, I decided to see a healthcare provider.""
+}",male,"The photograph shows multiple exophytic, raised lesions around the anal opening, some forming a cauliflower-like cluster. The lesions vary in size, with an irregular, somewhat bumpy surface. Surrounding tissue appears mildly inflamed.","I am a 30-year-old male who recently had receptive anal intercourse with a new partner about two weeks ago. A little over a week later, I noticed small bumps developing around my anus. They gradually became more numerous and formed these raised clusters. They itch sometimes, especially if I sit for a long time, but I don’t have other major symptoms. I haven’t been diagnosed with any sexually transmitted infections before, and I rarely use condoms consistently. I have never used PrEP or PEP. Concerned by how these bumps have grown, I decided to see a healthcare provider.",False
+Patient 017,s3://otiz-image-test/test-version1/Patient 017.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 34,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred around one month ago; patient had unprotected penile-vaginal intercourse with a new partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used rarely, especially with new partners."",
+    ""sti_history"": ""No previously documented STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed a few small bumps on the penis approximately three weeks after the most recent unprotected encounter."",
+    ""progression"": ""Over time, these bumps multiplied and coalesced into large, bumpy clusters, some protruding from the penile shaft and glans. Mild itching and occasional irritation were reported, especially with friction."",
+    ""systemic_symptoms"": ""No fever, malaise, or other systemic symptoms mentioned."",
+    ""localized_symptoms"": ""Itching, minor soreness, and occasional discomfort during intercourse.""
+  },
+  ""patient_narrative"": ""I am a 34-year-old man who noticed several small bumps on my penis about a month after unprotected sex with a new partner. These bumps started to grow and spread, eventually forming larger, rough, cauliflower-like clusters. They sometimes itch or feel irritated if rubbed against my clothing. I\u2019ve not had any other major symptoms or illnesses, and I rarely use condoms consistently. I\u2019ve never been diagnosed with an STI, nor have I taken any preventive measures like PrEP or PEP. Worried by the increasing size and appearance of these growths, I decided to seek medical consultation.""
+}",male,"The image shows densely grouped, exophytic growths on the glans and shaft of the penis. The lesions have a cauliflower-like appearance, forming irregular, flesh-colored or reddish clusters with a textured surface.","I am a 34-year-old man who noticed several small bumps on my penis about a month after unprotected sex with a new partner. These bumps started to grow and spread, eventually forming larger, rough, cauliflower-like clusters. They sometimes itch or feel irritated if rubbed against my clothing. I’ve not had any other major symptoms or illnesses, and I rarely use condoms consistently. I’ve never been diagnosed with an STI, nor have I taken any preventive measures like PrEP or PEP. Worried by the increasing size and appearance of these growths, I decided to seek medical consultation.",False
+Patient 018,s3://otiz-image-test/test-version1/Patient 018.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 35,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately three weeks prior; patient reports unprotected vaginal intercourse with a relatively new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Rarely used, particularly with new partners."",
+    ""sti_history"": ""No known prior STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Patient first noticed small, raised nodules on the penis about two weeks after last unprotected encounter."",
+    ""progression"": ""Nodules gradually coalesced and became more prominent, forming larger clusters with a bumpy texture. Patient reports mild itching and occasional discomfort during intercourse."",
+    ""systemic_symptoms"": ""No fever, fatigue, or other systemic complaints."",
+    ""localized_symptoms"": ""Itching, minor soreness, and some irritation when lesions come in contact with clothing.""
+  },
+  ""patient_narrative"": ""I am a 35-year-old male who noticed a few small bumps on my penis roughly a couple of weeks after having unprotected sex with a new partner. Over time, these bumps seemed to grow and form a number of clusters, which sometimes itch or feel sore. I do not typically practice consistent condom use and have never been diagnosed with a sexually transmitted infection. I also haven\u2019t used any preventive medications like PrEP or PEP. Concerned by the increasing size and number of these lesions, I sought medical attention to understand what might be causing them.""
+}",male,"Exophytic, irregular growths around the penile glans, some appearing with a rough, cauliflower-like surface. Several lesions are located at or near the opening and extend outward in small clusters.","I am a 35-year-old male who noticed a few small bumps on my penis roughly a couple of weeks after having unprotected sex with a new partner. Over time, these bumps seemed to grow and form a number of clusters, which sometimes itch or feel sore. I do not typically practice consistent condom use and have never been diagnosed with a sexually transmitted infection. I also haven’t used any preventive medications like PrEP or PEP. Concerned by the increasing size and number of these lesions, I sought medical attention to understand what might be causing them.",False
+Patient 019,s3://otiz-image-test/test-version1/Patient 019.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 36,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately one month ago; patient had unprotected vaginal intercourse with a recent partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used irregularly, often omitted during new encounters."",
+    ""sti_history"": ""No previously documented STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not taken PrEP or PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Began noticing small raised lesions on the penis about two weeks after his last sexual encounter."",
+    ""progression"": ""Lesions grew in number and size, becoming larger, bumpy clusters. Mild itching and intermittent irritation were reported, particularly during daily activities and intercourse."",
+    ""systemic_symptoms"": ""No fever or systemic complaints mentioned."",
+    ""localized_symptoms"": ""Itching, mild soreness, and some discomfort with friction against clothing.""
+  },
+  ""patient_narrative"": ""I am a 36-year-old male who noticed small bumps on my penis about two weeks after having unprotected sex with a new partner. Over the next couple of weeks, these bumps increased in size and number, eventually becoming raised clusters. Although they sometimes itch and feel irritated, I don\u2019t have any notable systemic symptoms like fever. I\u2019ve had multiple partners and rarely used condoms consistently. I have no known history of sexually transmitted infections and have never used preventive medications like PrEP or PEP. Seeing how these lesions continue to grow and interfere with my comfort, I decided to seek medical advice.""
+}",male,"Multiple exophytic lesions on the glans and shaft of the penis, displaying a cauliflower-like texture. Lesions vary in size, with closely grouped clusters and a pinkish-red coloration.","I am a 36-year-old male who noticed small bumps on my penis about two weeks after having unprotected sex with a new partner. Over the next couple of weeks, these bumps increased in size and number, eventually becoming raised clusters. Although they sometimes itch and feel irritated, I don’t have any notable systemic symptoms like fever. I’ve had multiple partners and rarely used condoms consistently. I have no known history of sexually transmitted infections and have never used preventive medications like PrEP or PEP. Seeing how these lesions continue to grow and interfere with my comfort, I decided to seek medical advice.",False
+Patient 020,s3://otiz-image-test/test-version1/Patient 020.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 28,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately two weeks ago; patient reports unprotected vaginal intercourse with a new male partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent, often omitted with new partners."",
+    ""sti_history"": ""No previously confirmed sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has never taken PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed a small, singular sore near the vaginal opening about a week after her last unprotected encounter."",
+    ""progression"": ""The sore has retained well-defined edges and slowly expanded in diameter, with minimal pain or irritation reported."",
+    ""systemic_symptoms"": ""No fever, chills, or generalized malaise mentioned."",
+    ""localized_symptoms"": ""Mild sensitivity upon touch, but otherwise not significantly painful.""
+  },
+  ""patient_narrative"": ""I am a 28-year-old female who recently had unprotected sex with a new male partner about two weeks ago. About a week later, I noticed a small sore just outside my vaginal opening. It has slowly become more noticeable, but it doesn't hurt very much, and I haven't felt sick otherwise. I've never tested positive for any sexually transmitted infections and have never taken preventive measures like PrEP or PEP. My condom use with new partners can be inconsistent, which worries me. Because of this persistent lesion, I decided to seek medical evaluation.""
+}",female,"An isolated round lesion with a reddish base and relatively distinct borders is visible near the vaginal introitus. The surrounding tissue shows mild redness, but no pronounced inflammation or exudate is apparent.","I am a 28-year-old female who recently had unprotected sex with a new male partner about two weeks ago. About a week later, I noticed a small sore just outside my vaginal opening. It has slowly become more noticeable, but it doesn't hurt very much, and I haven't felt sick otherwise. I've never tested positive for any sexually transmitted infections and have never taken preventive measures like PrEP or PEP. My condom use with new partners can be inconsistent, which worries me. Because of this persistent lesion, I decided to seek medical evaluation.",False
+Patient 021,s3://otiz-image-test/test-version1/Patient 021.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 28,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately three weeks ago; patient reports unprotected vaginal intercourse with a new male partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Inconsistent, especially with new partners."",
+    ""sti_history"": ""No previously documented STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has never taken PrEP or PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""A singular red, sore patch was first noticed near the vaginal opening about two weeks after her last unprotected encounter."",
+    ""progression"": ""The lesion gradually enlarged with a well-defined border, remaining relatively painless despite appearing raw or eroded in the center."",
+    ""systemic_symptoms"": ""No fever, chills, or generalized malaise noted."",
+    ""localized_symptoms"": ""Mild irritation and sensitivity on direct contact, but no significant discharge or severe pain.""
+  },
+  ""patient_narrative"": ""I am a 28-year-old female who engaged in unprotected vaginal sex with a new partner about three weeks ago. About two weeks later, I noticed a small, bright red sore near my vaginal opening. It has grown slightly in size but doesn\u2019t really hurt much beyond mild irritation when touched. I haven\u2019t had any fevers or felt sick, and I\u2019ve never been diagnosed with an STI or taken any preventive measures like PrEP or PEP. I sometimes skip condoms with new partners. Concerned about this lasting sore, I sought medical evaluation.""
+}",female,"The photograph depicts a singular, round erythematous lesion in the vulvar area with a defined border and a moist, reddened surface. Surrounding tissue shows mild redness but minimal swelling and no obvious discharge.","I am a 28-year-old female who engaged in unprotected vaginal sex with a new partner about three weeks ago. About two weeks later, I noticed a small, bright red sore near my vaginal opening. It has grown slightly in size but doesn’t really hurt much beyond mild irritation when touched. I haven’t had any fevers or felt sick, and I’ve never been diagnosed with an STI or taken any preventive measures like PrEP or PEP. I sometimes skip condoms with new partners. Concerned about this lasting sore, I sought medical evaluation.",False
+Patient 022,s3://otiz-image-test/test-version1/Patient 022.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 29,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Receptive anal intercourse"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately two weeks ago; patient reports receptive anal intercourse, with inconsistent condom usage."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""anal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Occasionally used, but often omitted in his latest encounter."",
+    ""sti_history"": ""No known prior STIs or reported HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed a single sore in the anal region roughly one week after his last sexual contact."",
+    ""progression"": ""The lesion gradually became more apparent, maintaining a shallow, erosive appearance and well-defined border. Little change in size or number has been observed so far."",
+    ""systemic_symptoms"": ""Patient denies fever, chills, or generalized body aches."",
+    ""localized_symptoms"": ""Reports mild discomfort and minimal itching, especially during hygienic activities.""
+  },
+  ""patient_narrative"": ""I am a 29-year-old male who had unprotected anal intercourse with a partner about two weeks ago. Around a week later, I noticed a small sore around my anus. It hasn\u2019t changed much, but it\u2019s occasionally uncomfortable. I haven\u2019t experienced any fever or significant pain. Although I sometimes use condoms, I was not consistent during my last encounter. I have never been diagnosed with an STI or used preventive medications like PrEP or PEP. Concerned about this persistent sore, I decided to seek medical advice.""
+}",male,"The photograph shows a superficial ulceration near the anal opening. It appears pinkish-red, with a relatively sharp outline and a slightly moist surface. Surrounding skin is mildly erythematous, but there is no pronounced swelling.","I am a 29-year-old male who had unprotected anal intercourse with a partner about two weeks ago. Around a week later, I noticed a small sore around my anus. It hasn’t changed much, but it’s occasionally uncomfortable. I haven’t experienced any fever or significant pain. Although I sometimes use condoms, I was not consistent during my last encounter. I have never been diagnosed with an STI or used preventive medications like PrEP or PEP. Concerned about this persistent sore, I decided to seek medical advice.",False
+Patient 023,s3://otiz-image-test/test-version1/Patient 023.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 31,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Receptive anal intercourse"",
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred around two weeks ago; patient reports receptive anal intercourse with a partner using condoms inconsistently."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""anal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Occasional, not always used for anal intercourse."",
+    ""sti_history"": ""No documented history of STIs or HIV diagnoses."",
+    ""hiv_prevention"": ""Has never taken PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""First noticed two small, pale sores around the anal area approximately one week after last sexual encounter."",
+    ""progression"": ""Sores have remained relatively stable in size, with well-defined borders and minimal pain reported. They seem slightly moist and shallow in appearance."",
+    ""systemic_symptoms"": ""No systemic complaints such as fever or malaise."",
+    ""localized_symptoms"": ""Mild irritation and some itching, particularly when cleaning or during bowel movements.""
+  },
+  ""patient_narrative"": ""I am a 31-year-old male who engages in receptive anal intercourse with multiple partners. About two weeks ago, I had intercourse without consistently using condoms, and a week later, I began to see two pale sores near my anus. They have not caused much pain, but they do feel irritated when I wipe or sit for extended periods. I haven\u2019t had a fever or felt ill otherwise, and I haven't been diagnosed with any STIs before or used preventive methods like PrEP or PEP. Concerned about these persistent lesions, I decided to seek medical care.""
+}",male,"The photograph shows a couple of superficial lesions in the perianal region, each presenting as pale, shallow erosions with a somewhat smooth base. Surrounding skin appears mildly erythematous, but no pronounced swelling or discharge is visible.","I am a 31-year-old male who engages in receptive anal intercourse with multiple partners. About two weeks ago, I had intercourse without consistently using condoms, and a week later, I began to see two pale sores near my anus. They have not caused much pain, but they do feel irritated when I wipe or sit for extended periods. I haven’t had a fever or felt ill otherwise, and I haven't been diagnosed with any STIs before or used preventive methods like PrEP or PEP. Concerned about these persistent lesions, I decided to seek medical care.",False
+Patient 024,s3://otiz-image-test/test-version1/Patient 024.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 29,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about two weeks ago; patient indicates unprotected intercourse with a new partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used inconsistently, particularly with new partners."",
+    ""sti_history"": ""No known prior STI or HIV diagnoses reported."",
+    ""hiv_prevention"": ""Has never taken PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed a sore on the penis approximately one week after the last unprotected sexual encounter."",
+    ""progression"": ""Lesion has become more defined over a few days, remaining relatively shallow with slight redness at the edges. Minimal discomfort or pain described."",
+    ""systemic_symptoms"": ""No fever, chills, or overall malaise reported."",
+    ""localized_symptoms"": ""Slight tenderness with mild irritation, especially when the area is touched or rubbed by clothing.""
+  },
+  ""patient_narrative"": ""I am a 29-year-old male with multiple sexual partners, and I sometimes fail to use protection. About two weeks ago, I had unprotected intercourse with a new partner. Roughly a week later, I noticed this sore on my penis. It\u2019s shallow, red, and only slightly tender, but it hasn\u2019t really changed much over the past few days. I haven\u2019t experienced any fever or other major symptoms. Worried about the persistent nature of this lesion, I came in for a medical evaluation.""
+}",male,"The image depicts a single superficial ulcer on the glans penis, with a circular shape and a reddish base. The edges appear distinct and somewhat raised, while the surrounding tissue shows mild erythema.","I am a 29-year-old male with multiple sexual partners, and I sometimes fail to use protection. About two weeks ago, I had unprotected intercourse with a new partner. Roughly a week later, I noticed this sore on my penis. It’s shallow, red, and only slightly tender, but it hasn’t really changed much over the past few days. I haven’t experienced any fever or other major symptoms. Worried about the persistent nature of this lesion, I came in for a medical evaluation.",False
+Patient 025,s3://otiz-image-test/test-version1/Patient 025.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 30,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about two weeks ago; patient recalls unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Often omitted, particularly with new partners."",
+    ""sti_history"": ""No previously documented STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""He first noticed a single painless lesion on the glans penis approximately one week after the most recent encounter."",
+    ""progression"": ""The sore has remained small and well-defined, with minimal change in appearance. The patient reports no spontaneous pain and minimal sensitivity upon touch."",
+    ""systemic_symptoms"": ""Denies fever, chills, or generalized fatigue."",
+    ""localized_symptoms"": ""Mild discomfort only upon direct contact, otherwise asymptomatic.""
+  },
+  ""patient_narrative"": ""I am a 30-year-old male who recently engaged in unprotected intercourse with a new partner. About a week later, I noticed a small sore on the tip of my penis. It hasn\u2019t been painful, just mildly sensitive if I touch it. I\u2019ve not experienced any fevers or notable illness. I\u2019m concerned because this lesion has persisted rather than fading. I have not been diagnosed with an STI before nor have I used preventive medications like PrEP or PEP. My condom use has been fairly inconsistent in recent months, particularly with new partners. Given the persistence and nature of this sore, I decided to get checked.""
+}",male,"A solitary, round lesion on the glans penis with a smooth, well-demarcated border and a somewhat indurated base. Surrounding skin tone appears normal, with no significant exudate or overt inflammation.","I am a 30-year-old male who recently engaged in unprotected intercourse with a new partner. About a week later, I noticed a small sore on the tip of my penis. It hasn’t been painful, just mildly sensitive if I touch it. I’ve not experienced any fevers or notable illness. I’m concerned because this lesion has persisted rather than fading. I have not been diagnosed with an STI before nor have I used preventive medications like PrEP or PEP. My condom use has been fairly inconsistent in recent months, particularly with new partners. Given the persistence and nature of this sore, I decided to get checked.",False
+Patient 026,s3://otiz-image-test/test-version1/Patient 026.jpg,Chlamydia,"{
+  ""patient_demographics"": {
+    ""age"": 26,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Unprotected sexual encounters""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately one week ago; patient reports partially protected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used inconsistently, especially in new relationships."",
+    ""sti_history"": ""No previously diagnosed sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Clear penile discharge appeared about four days after last sexual contact."",
+    ""progression"": ""Discharge has become more noticeable; mild urethral discomfort and occasional burning during urination have been reported."",
+    ""systemic_symptoms"": ""No fever, chills, or body aches noted."",
+    ""localized_symptoms"": ""Slight irritation at the urethral meatus and mild dysuria.""
+  },
+  ""patient_narrative"": ""I am a 26-year-old male who had a new partner about a week ago. We used condoms initially but not consistently throughout our encounter. After a few days, I began noticing a clear discharge coming from my penis and some mild burning when urinating. I haven\u2019t felt sick otherwise and have never been diagnosed with an STI or used preventive measures like PrEP or PEP. Concerned by the discharge and discomfort, I sought medical evaluation.""
+}",male,"The photograph shows a thin, translucent fluid emanating from the urethral opening, suggesting a watery or mucoid discharge. No external lesions or ulcers are clearly visible around the penile glans.","I am a 26-year-old male who had a new partner about a week ago. We used condoms initially but not consistently throughout our encounter. After a few days, I began noticing a clear discharge coming from my penis and some mild burning when urinating. I haven’t felt sick otherwise and have never been diagnosed with an STI or used preventive measures like PrEP or PEP. Concerned by the discharge and discomfort, I sought medical evaluation.",False
+Patient 027,s3://otiz-image-test/test-version1/Patient 027.jpg,candidiasis,"{
+  ""patient_demographics"": {
+    ""age"": 27,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Recent use of antibiotics"",
+      ""Wearing tight, non-breathable underwear""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about two weeks ago; patient reports protected vaginal intercourse with her regular partner."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Usually consistent with current partner."",
+    ""sti_history"": ""No known prior STIs or HIV diagnoses."",
+    ""hiv_prevention"": ""No history of PrEP or PEP usage."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed increased vaginal itching and thick discharge approximately one week ago."",
+    ""progression"": ""Discharge became thicker and clumpier, accompanied by worsening irritation and redness."",
+    ""systemic_symptoms"": ""No fever or systemic discomfort reported."",
+    ""localized_symptoms"": ""Significant itching and burning around the vulva, especially after prolonged periods of moisture.""
+  },
+  ""patient_narrative"": ""I\u2019m a 27-year-old female who recently completed a course of antibiotics for a sinus infection. Over the last week, I began experiencing intense itching and a thick, white vaginal discharge. It feels itchy and sometimes slightly burns around my vaginal area, especially if I stay in tight clothes or don\u2019t dry off well after showers. I usually use condoms with my established partner and haven\u2019t had any sexually transmitted infections in the past. Concerned about the ongoing discharge and discomfort, I decided to seek treatment.""
+}",female,"The image shows patchy white areas along the vaginal walls with some thick, whitish discharge. The surrounding tissue appears erythematous, indicative of localized inflammation or irritation.","I’m a 27-year-old female who recently completed a course of antibiotics for a sinus infection. Over the last week, I began experiencing intense itching and a thick, white vaginal discharge. It feels itchy and sometimes slightly burns around my vaginal area, especially if I stay in tight clothes or don’t dry off well after showers. I usually use condoms with my established partner and haven’t had any sexually transmitted infections in the past. Concerned about the ongoing discharge and discomfort, I decided to seek treatment.",False
+Patient 028,s3://otiz-image-test/test-version1/Patient 028.jpg,Gonorrhea,"{
+  ""patient_demographics"": {
+    ""age"": 27,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred around one week ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Rarely used, especially during recent encounters."",
+    ""sti_history"": ""No previously confirmed sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No disclosed history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed unusual penile discharge about three days after the most recent unprotected contact."",
+    ""progression"": ""Discharge progressed from mildly clear to thick, whitish-yellow in color over the past few days. The patient also reports increased discomfort while urinating."",
+    ""systemic_symptoms"": ""No fever, fatigue, or other systemic complaints."",
+    ""localized_symptoms"": ""Burning sensation during urination and mild urethral discomfort.""
+  },
+  ""patient_narrative"": ""I am a 27-year-old male who has had two sexual partners in the last couple of months. About a week ago, I had unprotected intercourse with a new partner. Within a few days, I began noticing a strange discharge from my penis. It was initially somewhat clear but quickly got thicker and turned a whitish-yellow color. There is a mild burning feeling when I urinate, but I haven\u2019t felt sick otherwise. I\u2019ve never had a sexually transmitted infection before and haven\u2019t used preventive treatments like PrEP or PEP. Concerned by the color and quantity of the discharge, I decided to seek medical evaluation.""
+}",male,"The image shows a thick, milky discharge at the urethral meatus, with no obvious lesions or sores visible on the glans. The discharge appears to be a whitish-yellow color.","I am a 27-year-old male who has had two sexual partners in the last couple of months. About a week ago, I had unprotected intercourse with a new partner. Within a few days, I began noticing a strange discharge from my penis. It was initially somewhat clear but quickly got thicker and turned a whitish-yellow color. There is a mild burning feeling when I urinate, but I haven’t felt sick otherwise. I’ve never had a sexually transmitted infection before and haven’t used preventive treatments like PrEP or PEP. Concerned by the color and quantity of the discharge, I decided to seek medical evaluation.",False
+Patient 029,s3://otiz-image-test/test-version1/Patient 029.jpg,Gonorrhea,"{
+  ""patient_demographics"": {
+    ""age"": 24,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about one week ago; patient reports partially protected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used inconsistently, especially with new partners."",
+    ""sti_history"": ""No previously known STIs or HIV diagnoses."",
+    ""hiv_prevention"": ""Has never used PrEP or PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed unusual discharge approximately three days after the last sexual encounter."",
+    ""progression"": ""Discharge became heavier, taking on a thick, white coloration. The patient also noted an increase in vaginal discomfort and mild burning sensation when urinating."",
+    ""systemic_symptoms"": ""No fever or systemic complaints."",
+    ""localized_symptoms"": ""Itching and mild irritation around the vaginal opening, occasional pelvic heaviness.""
+  },
+  ""patient_narrative"": ""I am a 24-year-old female who noticed a heavy, thick, white discharge starting a few days after having sex with a new partner. My condom use has been inconsistent, and I'm worried about the possibility of an infection. This discharge has been accompanied by a mild burning when I go to the bathroom and some ongoing itching in the area. I have not had any fever or body aches. I've never been diagnosed with any STIs, and I haven\u2019t used preventive medications like PrEP or PEP. Concerned by these symptoms and the noticeable white discharge, I decided to seek medical advice.""
+}",female,"The photograph shows a thick white discharge emanating from the vaginal canal, with no overt signs of ulceration or distinct lesions visible on the vulvar tissues.","I am a 24-year-old female who noticed a heavy, thick, white discharge starting a few days after having sex with a new partner. My condom use has been inconsistent, and I'm worried about the possibility of an infection. This discharge has been accompanied by a mild burning when I go to the bathroom and some ongoing itching in the area. I have not had any fever or body aches. I've never been diagnosed with any STIs, and I haven’t used preventive medications like PrEP or PEP. Concerned by these symptoms and the noticeable white discharge, I decided to seek medical advice.",False
+Patient 030,s3://otiz-image-test/test-version1/Patient 030.jpg,Trich,"{
+  ""patient_demographics"": {
+    ""age"": 28,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple recent partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about one week ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Often omitted, especially with newer partners."",
+    ""sti_history"": ""No prior STI or HIV diagnoses reported."",
+    ""hiv_prevention"": ""Has not used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed a mild, clear penile discharge approximately five days after his last unprotected sexual encounter."",
+    ""progression"": ""Discharge has remained relatively consistent in appearance, occasionally causing mild discomfort and slight burning sensation during urination."",
+    ""systemic_symptoms"": ""No fever, chills, or generalized body aches reported."",
+    ""localized_symptoms"": ""Light urethral irritation and increased awareness of moisture around the tip of the penis.""
+  },
+  ""patient_narrative"": ""I am a 28-year-old male who has been sexually active with more than one partner recently. About a week ago, I had unprotected intercourse with a new partner, and after several days, I started noticing a small amount of clear discharge from my penis. There's some mild discomfort when I use the bathroom, but overall, I don\u2019t have any major systemic symptoms like a fever. I haven\u2019t been diagnosed with any sexually transmitted infections before, and I haven\u2019t used any preventive medications like PrEP or PEP. Concerned by the ongoing discharge, I decided to get it checked out.""
+}",male,"A clear, watery fluid is visible at the tip of the penis, with no evident sores or lesions on the glans or surrounding skin.","I am a 28-year-old male who has been sexually active with more than one partner recently. About a week ago, I had unprotected intercourse with a new partner, and after several days, I started noticing a small amount of clear discharge from my penis. There's some mild discomfort when I use the bathroom, but overall, I don’t have any major systemic symptoms like a fever. I haven’t been diagnosed with any sexually transmitted infections before, and I haven’t used any preventive medications like PrEP or PEP. Concerned by the ongoing discharge, I decided to get it checked out.",False
+Patient 031,s3://otiz-image-test/test-version1/Patient 031.jpg,Penile cancer,"{
+  ""patient_demographics"": {
+    ""age"": 52,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use"",
+      ""Lack of circumcision"",
+      ""History of tobacco use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about three months ago; patient recalls unprotected vaginal intercourse with a casual partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Used inconsistently, especially with new or casual partners."",
+    ""sti_history"": ""No prior confirmed STIs or HIV diagnoses disclosed."",
+    ""hiv_prevention"": ""Has never used PrEP or PEP."",
+    ""trauma_history"": ""No reported sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed a small, raised area on the glans penis approximately two months ago."",
+    ""progression"": ""Over the past several weeks, the raised lesion enlarged, developing a rough, ulcerative surface that occasionally bleeds or produces a foul odor. Discomfort has intensified, particularly during intimacy or friction from clothing."",
+    ""systemic_symptoms"": ""No prolonged fever or systemic complaints reported."",
+    ""localized_symptoms"": ""Pain, redness, occasional bleeding, and persistent irritation around the lesion site.""
+  },
+  ""patient_narrative"": ""I am a 52-year-old male who first noticed a small bump on the tip of my penis about two months ago. Over time, it became larger and started to look rough and raw, sometimes bleeding if it rubbed against my clothing. I'm somewhat sexually active with multiple partners, and I don\u2019t always use condoms. I have a history of smoking for many years. Although I haven\u2019t had any major fevers or felt sick otherwise, the lesion is causing increasing discomfort and worry. I decided to seek medical attention because it hasn\u2019t improved and seems to be getting more painful and unsightly.""
+}",male,"The photograph shows a prominent, irregular growth on the distal glans penis with a raw, exophytic surface. The lesion appears erythematous, with areas of apparent erosion and some moist or weeping areas. Surrounding tissue exhibits moderate redness and slight swelling.","I am a 52-year-old male who first noticed a small bump on the tip of my penis about two months ago. Over time, it became larger and started to look rough and raw, sometimes bleeding if it rubbed against my clothing. I'm somewhat sexually active with multiple partners, and I don’t always use condoms. I have a history of smoking for many years. Although I haven’t had any major fevers or felt sick otherwise, the lesion is causing increasing discomfort and worry. I decided to seek medical attention because it hasn’t improved and seems to be getting more painful and unsightly.",False
+Patient 032,s3://otiz-image-test/test-version1/Patient 032.jpg,candidiasis,"{
+  ""patient_demographics"": {
+    ""age"": 25,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Possible recent antibiotic usage"",
+      ""Wearing tight, non-breathable undergarments""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately two weeks ago; protected vaginal intercourse with a steady partner."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Generally consistent with current partner."",
+    ""sti_history"": ""No reported STIs or HIV diagnoses."",
+    ""hiv_prevention"": ""No use of PrEP or PEP mentioned."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Began experiencing vaginal itching and noticeable discharge around one week ago."",
+    ""progression"": ""The itching has worsened over the past few days, and the discharge has remained thick and white in color."",
+    ""systemic_symptoms"": ""No fever or generalized fatigue reported."",
+    ""localized_symptoms"": ""Persistent itching, mild irritation, and occasional burning sensation in the vaginal region.""
+  },
+  ""patient_narrative"": ""I am a 25-year-old female who has been experiencing a thick, white vaginal discharge accompanied by itching and a mild burning sensation for about a week. I haven\u2019t had any major health issues recently, and I generally use protection with my partner, though we sometimes rely on other methods. There is no strong or foul smell, but the discharge looks thick, and the itching can get uncomfortable, especially at night. Concerned about these ongoing symptoms, I decided to seek medical care.""
+}",female,"The photograph appears to show white, patchy discharge along the vaginal walls with surrounding erythema, suggestive of thick accumulations in some areas. No pronounced ulcerations or significant lesions are visible.","I am a 25-year-old female who has been experiencing a thick, white vaginal discharge accompanied by itching and a mild burning sensation for about a week. I haven’t had any major health issues recently, and I generally use protection with my partner, though we sometimes rely on other methods. There is no strong or foul smell, but the discharge looks thick, and the itching can get uncomfortable, especially at night. Concerned about these ongoing symptoms, I decided to seek medical care.",False
+Patient 033,s3://otiz-image-test/test-version1/Patient 033.jpg,Eczema,"{
+  ""patient_demographics"": {
+    ""age"": 38,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""History of sensitive skin"",
+      ""Frequent use of harsh soaps or cleansers""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Patient reports vaginal intercourse with a steady female partner about two weeks ago, typically protected."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal""
+    ],
+    ""condom_usage"": ""Generally consistent with long-term partner."",
+    ""sti_history"": ""No previous STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma or distress reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed gradual irritation and redness of the penile shaft over the past few weeks."",
+    ""progression"": ""Symptoms have intensified intermittently, with periods of dryness and mild cracking. Some relief after applications of moisturizing creams, but flare-ups persist."",
+    ""systemic_symptoms"": ""No fever or other systemic complaints."",
+    ""localized_symptoms"": ""Itching, mild burning, and visible dryness of the affected area.""
+  },
+  ""patient_narrative"": ""I\u2019m a 38-year-old male who has always had somewhat sensitive skin. Over the last couple of weeks, the skin on my penis has become red, dry, and a bit itchy. The area sometimes looks shiny or feels tender, especially after showering. I typically wash with regular soap, and the dryness seems to worsen if I scrub too vigorously. I haven\u2019t noticed any unusual discharge or lesions, and I don\u2019t feel sick otherwise. My sexual relationship is stable, and we usually use protection, though I don\u2019t believe this irritation is related to an infection. Because the redness and dry patches keep coming back, I decided to seek a professional opinion.""
+}",male,"The image depicts a patch of reddish, shiny skin on the dorsal side of the penis with areas of dryness and subtle scaling. There is no obvious ulceration, discharge, or vesicular lesions. The surface appears slightly thickened and irritated.","I’m a 38-year-old male who has always had somewhat sensitive skin. Over the last couple of weeks, the skin on my penis has become red, dry, and a bit itchy. The area sometimes looks shiny or feels tender, especially after showering. I typically wash with regular soap, and the dryness seems to worsen if I scrub too vigorously. I haven’t noticed any unusual discharge or lesions, and I don’t feel sick otherwise. My sexual relationship is stable, and we usually use protection, though I don’t believe this irritation is related to an infection. Because the redness and dry patches keep coming back, I decided to seek a professional opinion.",False
+Patient 034,s3://otiz-image-test/test-version1/Patient 034.jpg,Psorisis,"{
+  ""patient_demographics"": {
+    ""age"": 29,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Family history of chronic skin conditions"",
+      ""Stressful lifestyle""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred about two weeks ago; patient reports protected vaginal intercourse with her established partner."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal""
+    ],
+    ""condom_usage"": ""Consistent use with a long-term partner."",
+    ""sti_history"": ""No history of sexually transmitted infections or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or taken PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Patient first noticed redness and dryness in the groin area approximately three weeks ago."",
+    ""progression"": ""Over the last week, patches have become more widespread with occasional flaking and mild itching. The redness intensifies when the area is irritated or exposed to friction."",
+    ""systemic_symptoms"": ""No fever, fatigue, or other systemic complaints reported."",
+    ""localized_symptoms"": ""Itching, mild burning, and flaky appearance of the affected skin.""
+  },
+  ""patient_narrative"": ""I am a 29-year-old female who has been experiencing persistent redness and dryness in my vaginal area for roughly three weeks. The affected skin sometimes appears scaly or flaky, and can feel itchy or mildly painful if it rubs against clothing. I have a steady partner and we usually use condoms. I have never had any sexually transmitted infections, nor have I taken preventative measures like PrEP or PEP. My family does have some history of skin problems, and I have been under more stress than usual lately. Worried by the increased redness and discomfort, I sought a professional opinion.""
+}",female,"The image reveals a region of reddish, inflamed skin with noticeable patches and subtle scaling in the vulvovaginal area. The lesions appear well-demarcated, showing both redness and slight peeling on the surface.","I am a 29-year-old female who has been experiencing persistent redness and dryness in my vaginal area for roughly three weeks. The affected skin sometimes appears scaly or flaky, and can feel itchy or mildly painful if it rubs against clothing. I have a steady partner and we usually use condoms. I have never had any sexually transmitted infections, nor have I taken preventative measures like PrEP or PEP. My family does have some history of skin problems, and I have been under more stress than usual lately. Worried by the increased redness and discomfort, I sought a professional opinion.",False
+Patient 035,s3://otiz-image-test/test-version1/Patient 035.jpg,Dermatitis,"{
+  ""patient_demographics"": {
+    ""age"": 31,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Prolonged moisture in the anal area"",
+      ""Sensitive skin prone to irritation""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Reports vaginal intercourse with a steady partner about two weeks ago."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal""
+    ],
+    ""condom_usage"": ""Consistently uses condoms due to preference for contraceptive reliability."",
+    ""sti_history"": ""No known history of sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""No utilization of PrEP or PEP."",
+    ""trauma_history"": ""No reported sexual trauma or distress.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Approximately one week ago, developed a red, irritated patch around the anal region."",
+    ""progression"": ""Area became increasingly inflamed, with crusting and mild weeping. Patient reports that friction and sweating seem to worsen the irritation."",
+    ""systemic_symptoms"": ""No fever, chills, or systemic complaints."",
+    ""localized_symptoms"": ""Burning sensation, itching, and mild soreness exacerbated by prolonged sitting.""
+  },
+  ""patient_narrative"": ""I am a 31-year-old female who noticed a red, irritated patch around my anal area about a week ago. Over a few days, it started to crust over in some spots, and the irritation spread slightly. It can be quite painful or itchy, especially when I sit for long periods or it gets sweaty. I typically use condoms with my regular partner, and I haven't had any major illnesses recently. The discomfort has continued to worsen, prompting me to seek medical care for relief and an explanation of what's causing this persistent irritation.""
+}",female,"The image displays a large, erythematous patch in the perianal area with textural changes. Portions of the affected skin show yellowish crusting, and the surrounding region is notably red and inflamed. There is visible scaling or flaking along the edges.","I am a 31-year-old female who noticed a red, irritated patch around my anal area about a week ago. Over a few days, it started to crust over in some spots, and the irritation spread slightly. It can be quite painful or itchy, especially when I sit for long periods or it gets sweaty. I typically use condoms with my regular partner, and I haven't had any major illnesses recently. The discomfort has continued to worsen, prompting me to seek medical care for relief and an explanation of what's causing this persistent irritation.",False
+Patient 036,s3://otiz-image-test/test-version1/Patient 036.jpg,Lichen sclerosus,"{
+  ""patient_demographics"": {
+    ""age"": 52,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""History of chronic inflammatory conditions"",
+      ""Possible hormonal fluctuations""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred several weeks ago; the patient reports protected vaginal intercourse with her long-term partner."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Generally consistent, used regularly with current partner."",
+    ""sti_history"": ""No reported history of sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""None, as the patient has a stable partner."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Began noticing changes in the vulvar tissue several months ago, including itchiness and mild discomfort."",
+    ""progression"": ""Over time, the affected areas gradually became more noticeable, with increased dryness and occasional soreness."",
+    ""systemic_symptoms"": ""No fevers, chills, or systemic issues reported."",
+    ""localized_symptoms"": ""Itching, mild pain, and slight burning sensation in the vulvar region, which worsens with friction.""
+  },
+  ""patient_narrative"": ""I am a 52-year-old woman who has gradually noticed changes in my intimate area for the past few months. The skin seems thinner and lighter in patches, and I often experience itching and a slight stinging sensation. These symptoms occasionally flare up, making the area more sensitive, especially when I\u2019m active or wearing tighter clothing. I\u2019ve been sexually active with my regular partner, using protection consistently. I have not had issues with sexually transmitted infections. But as these itchy patches persist, I decided it was time to seek a medical opinion.""
+}",female,"The image reveals patches of lighter-colored skin within the vulvar area, with mild atrophy noted near the vaginal introitus. The tissue appears thin, somewhat shiny, and sclerotic in certain spots, with subtle redness in adjacent areas.","I am a 52-year-old woman who has gradually noticed changes in my intimate area for the past few months. The skin seems thinner and lighter in patches, and I often experience itching and a slight stinging sensation. These symptoms occasionally flare up, making the area more sensitive, especially when I’m active or wearing tighter clothing. I’ve been sexually active with my regular partner, using protection consistently. I have not had issues with sexually transmitted infections. But as these itchy patches persist, I decided it was time to seek a medical opinion.",False
+Patient 037,s3://otiz-image-test/test-version1/Patient 037.jpg,Balanitis,"{
+  ""patient_demographics"": {
+    ""age"": 23,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Use of harsh soaps"",
+      ""Infrequent foreskin hygiene""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""No sexual encounters reported."",
+    ""partner_count"": 0,
+    ""partner_genders"": [],
+    ""sexual_activities"": [],
+    ""condom_usage"": ""N/A"",
+    ""sti_history"": ""No prior STI or HIV diagnoses due to no reported sexual activity."",
+    ""hiv_prevention"": ""N/A"",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Patient observed redness and irritation on the glans penis about one week ago."",
+    ""progression"": ""The irritation has persisted, with mild fluctuations in redness and sensitivity."",
+    ""systemic_symptoms"": ""No fever or overall malaise."",
+    ""localized_symptoms"": ""Itching and mild discomfort, especially with manual cleaning or friction.""
+  },
+  ""patient_narrative"": ""I am a 23-year-old male who has never been sexually active. About a week ago, I noticed my penis becoming red and sensitive. It often feels itchy or slightly uncomfortable, particularly during washing. I haven\u2019t had any sexual partners, so I don\u2019t think this is related to an infection. However, I do use strong soaps that might be irritating the area. Concerned about the persistent redness and irritation, I decided to seek medical advice.""
+}",male,"The provided image shows a reddish, somewhat shiny glans surface. Minor patchy discoloration is visible, though no pronounced scaling or exudate is evident.","I am a 23-year-old male who has never been sexually active. About a week ago, I noticed my penis becoming red and sensitive. It often feels itchy or slightly uncomfortable, particularly during washing. I haven’t had any sexual partners, so I don’t think this is related to an infection. However, I do use strong soaps that might be irritating the area. Concerned about the persistent redness and irritation, I decided to seek medical advice.",False
+Patient 038,s3://otiz-image-test/test-version1/Patient 038.jpg,Inaimate object,"{
+  ""patient_demographics"": {
+    ""age"": 25,
+    ""gender"": ""male"",
+    ""risk_factors"": []
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""No sexual encounters reported."",
+    ""partner_count"": 0,
+    ""partner_genders"": [],
+    ""sexual_activities"": [],
+    ""condom_usage"": ""Not applicable given no reported sexual activity."",
+    ""sti_history"": ""No documented STI or HIV history."",
+    ""hiv_prevention"": ""Not applicable."",
+    ""trauma_history"": ""No sexual trauma or distress disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""No symptoms or complaints reported."",
+    ""progression"": ""There is no symptom progression described."",
+    ""systemic_symptoms"": ""None reported."",
+    ""localized_symptoms"": ""None reported.""
+  },
+  ""patient_narrative"": ""I am a 25-year-old male with no history of sexual relations. I do not have any symptoms or concerns such as pain, discharge, or skin changes in the genital region. On inspection of the provided image, it appears to be a smooth, uniformly colored shape without any lesions or irritations. Since I have not been sexually active, I have no personal sexual or trauma history to report. At present, I have no symptoms or discomfort prompting me to seek medical care.""
+}",male,"The image depicts a phallic-shaped form with uniformly consistent color and texture. No ulcerations, discharge, or visible lesions are noted.","I am a 25-year-old male with no history of sexual relations. I do not have any symptoms or concerns such as pain, discharge, or skin changes in the genital region. On inspection of the provided image, it appears to be a smooth, uniformly colored shape without any lesions or irritations. Since I have not been sexually active, I have no personal sexual or trauma history to report. At present, I have no symptoms or discomfort prompting me to seek medical care.",False
+Patient 039,s3://otiz-image-test/test-version1/Patient 039.jpg,psoriasis,"{
+  ""patient_demographics"": {
+    ""age"": 50,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Family history of chronic skin conditions"",
+      ""High stress levels"",
+      ""Manual labor involving repeated hand friction""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""No recent encounters reported; has a long-term partner."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Uses condoms inconsistently due to stable relationship."",
+    ""sti_history"": ""No history of sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has never used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma or distress reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed reddened, scaly patches on the backs of both hands about six months ago."",
+    ""progression"": ""Lesions gradually became thicker and more widespread, with increased flaking and occasional cracking, especially in cold or dry conditions."",
+    ""systemic_symptoms"": ""No fever or systemic complaints."",
+    ""localized_symptoms"": ""Persistent itching, dryness, and soreness in affected areas. Occasionally experiences minor bleeding from cracked skin.""
+  },
+  ""patient_narrative"": ""I am a 50-year-old male with a family history of skin problems. Over the last six months, I\u2019ve developed large, red scaly spots on my hands. The skin often cracks and peels, making everyday tasks uncomfortable. I work in a job that involves frequent use of my hands, which may irritate it further. The lesions can become very dry and itchy, sometimes to the point of bleeding. Along with my partner, we typically use condoms inconsistently, but thankfully I\u2019ve never had any major issues with sexually transmitted infections. Concerned about how the condition is expanding and affecting my daily life, I sought medical help.""
+}",male,"The photograph shows erythematous plaques covering portions of both hands, featuring scaly, peeling skin with some thickened patches. There appear to be adherent flakes and areas of rawness where the skin may have cracked open.","I am a 50-year-old male with a family history of skin problems. Over the last six months, I’ve developed large, red scaly spots on my hands. The skin often cracks and peels, making everyday tasks uncomfortable. I work in a job that involves frequent use of my hands, which may irritate it further. The lesions can become very dry and itchy, sometimes to the point of bleeding. Along with my partner, we typically use condoms inconsistently, but thankfully I’ve never had any major issues with sexually transmitted infections. Concerned about how the condition is expanding and affecting my daily life, I sought medical help.",False
+Patient 040,s3://otiz-image-test/test-version1/Patient 040.jpg,Inaimate object,"{
+  ""patient_demographics"": {
+    ""age"": 0,
+    ""gender"": ""male"",
+    ""risk_factors"": []
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""No sexual encounters reported."",
+    ""partner_count"": 0,
+    ""partner_genders"": [],
+    ""sexual_activities"": [],
+    ""condom_usage"": ""N/A"",
+    ""sti_history"": ""No applicable medical history; inanimate object."",
+    ""hiv_prevention"": ""N/A"",
+    ""trauma_history"": ""No history of trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""No symptoms relevant to a medical context."",
+    ""progression"": ""No changes or progression described."",
+    ""systemic_symptoms"": ""None, as this is an inanimate object."",
+    ""localized_symptoms"": ""No reported issues.""
+  },
+  ""patient_narrative"": ""N/A.""
+}",male,"The image shows a round, flat object topped with cheese, tomato pieces, and additional seasonings. The surface is lightly browned around the edges, suggesting a cooked item. No medical or biological characteristics are apparent.",N/A.,False
+Patient 041,s3://otiz-image-test/test-version1/Patient 041.jpg,HPV,"{
+  ""patient_demographics"": {
+    ""age"": 30,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""Multiple recent sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred two weeks ago; patient notes unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 3,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Irregular, often omitted in new relationships."",
+    ""sti_history"": ""No formerly diagnosed STIs or HIV."",
+    ""hiv_prevention"": ""Has not taken PrEP or PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Noticed small, painless bumps near the vaginal opening about three weeks ago."",
+    ""progression"": ""The bumps have grown in both size and number, forming clusters with a bumpy texture; mild itching is reported, particularly during prolonged activity."",
+    ""systemic_symptoms"": ""No fever or systemic complaints mentioned."",
+    ""localized_symptoms"": ""Occasional irritation, mild itching, and discomfort when the area is rubbed by clothing.""
+  },
+  ""patient_narrative"": ""I am a 30-year-old female with several sexual partners over the past year. Around three weeks ago, I observed a few small bumps near my vagina. They have since grown in size and formed grouped clusters. While they don\u2019t hurt much, they do itch occasionally and become irritated if clothing rubs against them. I haven\u2019t had any sexually transmitted infections in the past, nor have I used preventive methods like PrEP or PEP. Because of how these bumps are changing and growing, I sought medical care to find out what is going on.""
+}",female,"Multiple exophytic growths with a textured surface are visible in the vulvovaginal region. Some lesions appear to coalesce into larger clusters, presenting a fleshy or irregular exterior and pinkish coloration.","I am a 30-year-old female with several sexual partners over the past year. Around three weeks ago, I observed a few small bumps near my vagina. They have since grown in size and formed grouped clusters. While they don’t hurt much, they do itch occasionally and become irritated if clothing rubs against them. I haven’t had any sexually transmitted infections in the past, nor have I used preventive methods like PrEP or PEP. Because of how these bumps are changing and growing, I sought medical care to find out what is going on.",False
+Patient 042,s3://otiz-image-test/test-version1/Patient 042.jpg,Chlamydia,"{
+  ""patient_demographics"": {
+    ""age"": 28,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurring about one week ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Often omitted, especially with new partners."",
+    ""sti_history"": ""No previously confirmed STI or HIV diagnoses."",
+    ""hiv_prevention"": ""Has never used PrEP or taken PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""First noted unusual penile discharge roughly three days after the last unprotected encounter."",
+    ""progression"": ""Discharge evolved from scant and clear to more copious and milky-white in color, with mild burning during urination."",
+    ""systemic_symptoms"": ""No fever, chills, or generalized malaise."",
+    ""localized_symptoms"": ""A slight itching at the urethral opening, along with a noted increase in discharge flow.""
+  },
+  ""patient_narrative"": ""I am a 28-year-old male who started noticing a milky-white discharge from my penis about three days after having unprotected sex with a new partner. At first, it was only a small amount, but it got thicker and more noticeable over the following few days. It sometimes burns a bit when I go to the bathroom, and the discharge has been steady enough to make me worry. I\u2019ve never been diagnosed with an STI before, and I haven\u2019t taken measures like PrEP or PEP. Concerned by both the color and the quantity of the discharge, I decided to seek medical advice.""
+}",male,A milky-white discharge is seen emanating from the urethral meatus. There are no obvious lesions or ulcerations on the glans. The surrounding skin appears otherwise unremarkable.,"I am a 28-year-old male who started noticing a milky-white discharge from my penis about three days after having unprotected sex with a new partner. At first, it was only a small amount, but it got thicker and more noticeable over the following few days. It sometimes burns a bit when I go to the bathroom, and the discharge has been steady enough to make me worry. I’ve never been diagnosed with an STI before, and I haven’t taken measures like PrEP or PEP. Concerned by both the color and the quantity of the discharge, I decided to seek medical advice.",False
+Patient 043,s3://otiz-image-test/test-version1/Patient 043.jpg,Syphilis,"{
+  ""patient_demographics"": {
+    ""age"": 30,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Multiple sexual partners"",
+      ""Inconsistent condom use""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Occurred approximately two weeks ago; patient recalls unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 2,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal"",
+      ""oral""
+    ],
+    ""condom_usage"": ""Often omitted, especially with new partners."",
+    ""sti_history"": ""No previously diagnosed sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has never used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""A small sore first appeared on the penile shaft about one week after the last unprotected encounter."",
+    ""progression"": ""Lesion remained relatively stable in size with a shallow, clear border and minimal discomfort. Patient reports no significant changes in appearance except for mild redness around the area."",
+    ""systemic_symptoms"": ""No fever, chills, or generalized malaise observed."",
+    ""localized_symptoms"": ""Mild tenderness upon direct contact, no notable discharge or severe pain.""
+  },
+  ""patient_narrative"": ""I am a 30-year-old male who recently noticed a small sore on my penis about a week after having unprotected sex with a new partner. It hasn\u2019t been painfully bothersome, but there\u2019s mild tenderness when I touch it. I haven\u2019t had any fever or flu-like symptoms. In the past, I\u2019ve never been diagnosed with any sexually transmitted infections, and I\u2019ve not used prevention methods like PrEP or PEP. My condom use has been inconsistent, particularly with new partners. Worried about the sore\u2019s persistence, I decided to seek medical advice to understand what might be causing it.""
+}",male,"A single, superficial ulcer-like lesion can be seen on the penile shaft, with a well-defined border. The surrounding skin appears slightly erythematous, but there is no obvious exudate or heavy crusting.","I am a 30-year-old male who recently noticed a small sore on my penis about a week after having unprotected sex with a new partner. It hasn’t been painfully bothersome, but there’s mild tenderness when I touch it. I haven’t had any fever or flu-like symptoms. In the past, I’ve never been diagnosed with any sexually transmitted infections, and I’ve not used prevention methods like PrEP or PEP. My condom use has been inconsistent, particularly with new partners. Worried about the sore’s persistence, I decided to seek medical advice to understand what might be causing it.",False
+Patient 044,s3://otiz-image-test/test-version1/Patient 044.jpg,Normal,"{
+  ""patient_demographics"": {
+    ""age"": 25,
+    ""gender"": ""male"",
+    ""risk_factors"": []
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""No recent encounters reported; patient mentions minimal sexual activity over the past six months."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal""
+    ],
+    ""condom_usage"": ""Generally consistent usage when sexually active."",
+    ""sti_history"": ""No known history of STIs or HIV diagnoses."",
+    ""hiv_prevention"": ""Has not used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma reported.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""No concerns or complaints raised by the patient."",
+    ""progression"": ""No changes over time reported, patient states everything appears and feels normal."",
+    ""systemic_symptoms"": ""No systemic symptoms such as fever, malaise, or discomfort."",
+    ""localized_symptoms"": ""No irritation, discharge, or lesions noted.""
+  },
+  ""patient_narrative"": ""I am a 25-year-old male with no particular genitourinary complaints. I haven\u2019t noticed any changes or discomfort in the genital region, and I believe everything looks the same as it always has. I typically use condoms when sexually active, and I have not had any STIs or other issues in the past. Overall, I have no outstanding concerns about my sexual or general health at this time.""
+}",male,"The photographs demonstrate a penis of typical anatomical appearance without visible lesions, discoloration, or other abnormalities. Skin tone appears uniform, and no exudates or erosions are present.","I am a 25-year-old male with no particular genitourinary complaints. I haven’t noticed any changes or discomfort in the genital region, and I believe everything looks the same as it always has. I typically use condoms when sexually active, and I have not had any STIs or other issues in the past. Overall, I have no outstanding concerns about my sexual or general health at this time.",False
+Patient 045,s3://otiz-image-test/test-version1/Patient 045.jpg,Normal,"{
+  ""patient_demographics"": {
+    ""age"": 28,
+    ""gender"": ""male"",
+    ""risk_factors"": []
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Patient does not report any recent sexual encounters; no notable concerns disclosed."",
+    ""partner_count"": 0,
+    ""partner_genders"": [],
+    ""sexual_activities"": [],
+    ""condom_usage"": ""No recent sexual activity reported."",
+    ""sti_history"": ""No known history of STIs or HIV."",
+    ""hiv_prevention"": ""Has never used PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma mentioned.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""No symptoms or changes noted by the patient."",
+    ""progression"": ""No reported issues over time."",
+    ""systemic_symptoms"": ""Denies any fever, malaise, or health concerns."",
+    ""localized_symptoms"": ""No pain, lesions, or irritation.""
+  },
+  ""patient_narrative"": ""I am a 28-year-old male who has not noticed any changes or experienced discomfort in my genital region. I have no sexual health concerns at this time. I have not engaged in recent sexual activity and have never been diagnosed with a sexually transmitted infection. My general health is good, and I am simply confirming that everything is normal.""
+}",male,"The photograph shows a penis without any visible abnormal lesions, discoloration, or changes in contour. The skin appears intact and unremarkable.","I am a 28-year-old male who has not noticed any changes or experienced discomfort in my genital region. I have no sexual health concerns at this time. I have not engaged in recent sexual activity and have never been diagnosed with a sexually transmitted infection. My general health is good, and I am simply confirming that everything is normal.",False
+Patient 046,s3://otiz-image-test/test-version1/Patient 046.jpg,Normal,,,,,False
+Patient 047,s3://otiz-image-test/test-version1/Patient 047.jpg,Pearly papules,"{
+  ""patient_demographics"": {
+    ""age"": 26,
+    ""gender"": ""male"",
+    ""risk_factors"": []
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Patient reports a stable partner with whom he has regular intercourse; no recent new partners."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal""
+    ],
+    ""condom_usage"": ""Infrequent with long-term partner; no concerns reported."",
+    ""sti_history"": ""No history of sexually transmitted infections or HIV disclosed."",
+    ""hiv_prevention"": ""No use of PrEP or PEP, given the long-standing monogamous relationship."",
+    ""trauma_history"": ""No reported sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Patient observed these small bumps on the coronal rim of the penis for several years."",
+    ""progression"": ""Appearance has remained constant; the bumps have not changed in size or caused discomfort."",
+    ""systemic_symptoms"": ""No systemic issues such as fever, malaise, or fatigue."",
+    ""localized_symptoms"": ""No pain, discharge, or itching mentioned.""
+  },
+  ""patient_narrative"": ""I am a 26-year-old male, and I\u2019ve noticed a ring of tiny, bead-like bumps around the head of my penis for several years. They haven\u2019t caused me any pain, itching, or discharge, and they look the same as far back as I can remember. I am in a monogamous relationship with no concerns regarding sexually transmitted infections. I mainly wanted to confirm that these bumps are not a cause for worry, since they have been consistent in appearance and symptom-free.""
+}",male,"A row of small, evenly spaced papular lesions encircles the coronal margin of the penis. They appear symmetrical, with no surrounding erythema, ulceration, or discharge.","I am a 26-year-old male, and I’ve noticed a ring of tiny, bead-like bumps around the head of my penis for several years. They haven’t caused me any pain, itching, or discharge, and they look the same as far back as I can remember. I am in a monogamous relationship with no concerns regarding sexually transmitted infections. I mainly wanted to confirm that these bumps are not a cause for worry, since they have been consistent in appearance and symptom-free.",False
+Patient 048,s3://otiz-image-test/test-version1/Patient 048.jpg,Skin Tag,"{
+  ""patient_demographics"": {
+    ""age"": 27,
+    ""gender"": ""male"",
+    ""risk_factors"": []
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Patient reports intermittent activity with a steady partner over the past month; typically protected."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal""
+    ],
+    ""condom_usage"": ""Generally consistent with current partner, though not always used."",
+    ""sti_history"": ""No history of sexually transmitted infections or HIV."",
+    ""hiv_prevention"": ""Has not used PrEP or PEP."",
+    ""trauma_history"": ""No reported history of sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Small, fleshy bumps near the base of the penis initially noticed several months ago."",
+    ""progression"": ""Lumps have increased slightly in number but remain relatively unchanged in size. No associated pain or itching reported."",
+    ""systemic_symptoms"": ""No fever or generalized complaints."",
+    ""localized_symptoms"": ""The lesions are not painful, occasionally rubbing against clothing but not causing significant irritation.""
+  },
+  ""patient_narrative"": ""I am a 27-year-old male who discovered a few small growths around the base of my penis a few months ago. They haven\u2019t caused any pain or itchiness, but I\u2019ve noticed a few more have appeared over time. I\u2019m sexually active with a regular partner and mostly use protection, and I've never had any diagnosed sexually transmitted infections. Because these growths persist, I consulted a healthcare provider to understand their nature and whether they require treatment.""
+}",male,"Multiple small, pedunculated growths on the skin near the penile region. They appear soft, flesh-colored, and vary slightly in size, with no evidence of ulceration or discharge.","I am a 27-year-old male who discovered a few small growths around the base of my penis a few months ago. They haven’t caused any pain or itchiness, but I’ve noticed a few more have appeared over time. I’m sexually active with a regular partner and mostly use protection, and I've never had any diagnosed sexually transmitted infections. Because these growths persist, I consulted a healthcare provider to understand their nature and whether they require treatment.",False
+Patient 049,s3://otiz-image-test/test-version1/Patient 049.jpg,Conjunctivitis,"{
+  ""patient_demographics"": {
+    ""age"": 26,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""Recent unprotected sexual encounter""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""Happened about one week ago; patient reports unprotected vaginal intercourse with a new partner."",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""female""
+    ],
+    ""sexual_activities"": [
+      ""vaginal""
+    ],
+    ""condom_usage"": ""Did not use condoms in the most recent encounter."",
+    ""sti_history"": ""No reported history of STIs or HIV."",
+    ""hiv_prevention"": ""Has never taken PrEP or PEP."",
+    ""trauma_history"": ""No history of sexual trauma disclosed.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Eye irritation began approximately three days after his last sexual encounter."",
+    ""progression"": ""The eye became progressively redder and more uncomfortable over the next couple of days, with mild discharge in the mornings."",
+    ""systemic_symptoms"": ""No fever, chills, or generalized malaise reported."",
+    ""localized_symptoms"": ""Itching, redness, and a gritty sensation in the affected eye; occasional light watery discharge.""
+  },
+  ""patient_narrative"": ""I am a 26-year-old male who had unprotected sex with a new partner about a week ago. A few days afterward, my left eye started feeling irritated and looked a bit pink. Over time, it got redder and more uncomfortable, and I sometimes wake up with crust or a small amount of discharge. I haven\u2019t experienced any flu-like symptoms or issues in my other eye. Concerned about the redness and the possibility that it could be linked to my recent unprotected encounter, I decided to seek medical attention for further evaluation.""
+}",male,"The image shows marked redness of the sclera, with visible vascular engorgement and mild fluid accumulation near the inner corner. Eyelids appear slightly swollen, and the conjunctival surface is inflamed.","I am a 26-year-old male who had unprotected sex with a new partner about a week ago. A few days afterward, my left eye started feeling irritated and looked a bit pink. Over time, it got redder and more uncomfortable, and I sometimes wake up with crust or a small amount of discharge. I haven’t experienced any flu-like symptoms or issues in my other eye. Concerned about the redness and the possibility that it could be linked to my recent unprotected encounter, I decided to seek medical attention for further evaluation.",False
+Patient 050,s3://otiz-image-test/test-version1/Patient 050.jpg,Heart Related issue,"{
+  ""patient_demographics"": {
+    ""age"": 55,
+    ""gender"": ""male"",
+    ""risk_factors"": [
+      ""History of tobacco use"",
+      ""Sedentary lifestyle""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""No recent sexual encounters reported over the past six months."",
+    ""partner_count"": 0,
+    ""partner_genders"": [],
+    ""sexual_activities"": [],
+    ""condom_usage"": ""Not applicable due to lack of recent activity."",
+    ""sti_history"": ""No known history of STIs or HIV."",
+    ""hiv_prevention"": ""Has not used PrEP or PEP."",
+    ""trauma_history"": ""No reported sexual trauma.""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""Patient notes that chest discomfort began spontaneously about two days prior."",
+    ""progression"": ""Pain has intensified, especially with physical exertion or walking up stairs. Patient also reports occasional shortness of breath and feeling of pressure in the upper chest."",
+    ""systemic_symptoms"": ""No fever or chills, but patient experiences occasional episodes of sweating during pain."",
+    ""localized_symptoms"": ""A squeezing or tightening sensation in the chest area, radiating slightly to the left side. Mild fatigue accompanies episodes of discomfort.""
+  },
+  ""patient_narrative"": ""I am a 55-year-old male who started feeling a tight, squeezing sensation in my chest a couple of days ago. It seems to get worse when I walk up stairs or do any moderate activity. I occasionally break into a sweat when the pain sets in, but I haven\u2019t had a fever or felt sick otherwise. I live a relatively sedentary lifestyle and have smoked occasionally in the past. I haven\u2019t been sexually active recently, and I\u2019m not currently in a relationship. Concerned by this persistent tightness and discomfort, I decided I should seek an evaluation.""
+}",male,"The photograph shows a man clutching his chest around the left side, suggesting significant discomfort or pain. Facial features appear strained, and his posture indicates distress.","I am a 55-year-old male who started feeling a tight, squeezing sensation in my chest a couple of days ago. It seems to get worse when I walk up stairs or do any moderate activity. I occasionally break into a sweat when the pain sets in, but I haven’t had a fever or felt sick otherwise. I live a relatively sedentary lifestyle and have smoked occasionally in the past. I haven’t been sexually active recently, and I’m not currently in a relationship. Concerned by this persistent tightness and discomfort, I decided I should seek an evaluation.",False
