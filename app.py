@@ -9,6 +9,7 @@ import base64
 import logging
 import os
 from typing import Dict
+import diagnose_schema
 from vlm_schema import vlm_schema
 from otiz_schema import otiz_schema
 from accuracy_schema import accuracy_schema
@@ -147,19 +148,114 @@ class OpenAIService:
                     return None
                 await asyncio.sleep(2 ** attempt)
         return None
+    
+    async def get_diagnose_report(self, case_history, cv_report, vlm_report):
+        """Combine case history, CV report, and VLM report into an OTIZ report."""
+        self.logger.info("Generating OTIZ report")
+        try:
+            diagnose_prompt = f"""
+                You are a diagnostic assistant tasked with generating a final diagnosis based on three sources of information: the CV model output, the visual language model (VLM) analysis, and the classical clinical presentation (history and exam). Your role is to implement a robust consensus and conflict‐resolution mechanism that prioritizes clinical history over isolated high-confidence image findings—especially when the CV model misclassifies an image as "Normal" despite the presence of a discharge.
 
-    async def get_otiz_report(self, case_history, cv_report, vlm_report):
+                Context:
+
+                case_history : {str(case_history)}
+                cv_report :   {str(cv_report)}
+                vlm_report :  {str(vlm_report)}
+
+                Your process should include the following steps:
+                1. Evaluate and compare the numeric confidence scores from the CV model with the morphological descriptions provided by the VLM.
+                2. Check the clinical history for key features. For example, if the patient presents with a single, nearly painless ulcer with well-defined, firm borders (typical for syphilis), note that clinical context.
+                3. If the outputs conflict (e.g., the CV model suggests "Normal" while the VLM and clinical history point towards a specific pathology), trigger an additional verification step. This may include recommending confirmatory lab tests such as RPR/VDRL and treponemal assays, or requesting further diagnostic inputs like histopathological data.
+                4. Incorporate a "pain index" or "symptom intensity scale" in the evaluation to differentiate between conditions (e.g., a painless syphilis chancre vs. painful HSV lesions).
+                5. Adjust the weight given to each input: elevate clinical history and morphological analysis if they significantly conflict with the high-confidence CV output.
+                6. Finally, ensure that any conflicts or uncertainties are resolved by explicitly advising confirmatory testing.
+
+                Your output must be a valid JSON object containing three keys:
+                - "final_diagnosis": a concise diagnosis based on the integrated data.
+                - "reasoning": a clear explanation of the decision-making process, including how conflicting signals were handled.
+                - "recommendation": actionable next steps, such as which confirmatory tests to perform and any adjustments needed for the diagnostic pipeline.
+
+                For example, if the patient has a single painless ulcer with well-defined borders, your JSON output might be:
+                
+                containing the following keys:
+              
+                "final_diagnosis": "Syphilis",
+                "reasoning": "The CV model misclassified the image as 'Normal', but the VLM detailed analysis and clinical history indicate a classic presentation of a syphilis chancre. The nearly painless ulcer with firm, defined borders strongly suggests syphilis. This discrepancy triggered a secondary evaluation, prioritizing clinical context.",
+                "recommendation": "Proceed with confirmatory syphilis screening (RPR/VDRL and treponemal tests) and consider additional testing such as dark-field microscopy or histopathology. Rebalance the weighting of clinical history against high-confidence CV outputs in the diagnostic pipeline."
+                
+
+                Make sure your final output is valid JSON.
+
+            """
+
+            # Convert cv_report and vlm_report to strings if they're not already
+            cv_report_str = json.dumps(cv_report) if isinstance(cv_report, dict) else str(cv_report)
+            vlm_report_str = vlm_report if isinstance(vlm_report, str) else json.dumps(vlm_report)
+            
+            response = self.client.chat.completions.create(
+                model="o3-mini",
+                messages=[
+                    {
+                        "role": "developer",
+                        "content": [{"type": "text", "text": diagnose_prompt}]
+                    }
+                ],
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": {
+                      "name": "diagnostic_evaluation",
+                      "strict": True,
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "final_diagnosis": {
+                            "type": "string",
+                            "description": "The final diagnosis made based on the evaluation."
+                          },
+                          "reasoning": {
+                            "type": "string",
+                            "description": "The reasoning behind the final diagnosis, detailing the logic and thought process."
+                          },
+                          "recommendation": {
+                            "type": "string",
+                            "description": "Recommended next steps based on the diagnosis."
+                          }
+                        },
+                        "required": [
+                          "final_diagnosis",
+                          "reasoning",
+                          "recommendation"
+                        ],
+                        "additionalProperties": False
+                      }
+                    }
+                  },
+                reasoning_effort="high"
+            )
+
+            print(response)
+            
+            content = response.choices[0].message.content
+
+            print(content)
+            if content:
+                return content
+            else:
+                return "Error: Unable to generate Diagnosis report"
+        except Exception as e:
+            self.logger.error(f"Error generating Diagnosis report: {str(e)}")
+            return f"Error: {str(e)}"
+
+    async def get_otiz_report(self, diagnose_report):
         """Combine case history, CV report, and VLM report into an OTIZ report."""
         self.logger.info("Generating OTIZ report")
         try:
             analyse_prompt = f"""
-            Below is the case history and a VLM report.Analyse the case history and the VLM report and provide a diagnosis for the patient.
+            Below is the diagnosis report.Analyse the diagnosis report and provide a diagnosis for the patient.
 
-            User's Case History:
-            {case_history}
+            Diagnosis Report:
+            {diagnose_report}
 
-            Visual Language Model (VLM) Analysis:
-            {vlm_report}
             """
 
             response = self.client.chat.completions.create(
@@ -257,11 +353,13 @@ async def process_image(openai_service: OpenAIService, image_data: bytes, s3_url
         cv_report = await openai_service.get_prediction(s3_url)
         image_base64 = base64.b64encode(image_data).decode('utf-8') if image_data else ""
         vlm_report = await openai_service.get_vlm_report(image_base64) if image_data else "No image data for VLM"
-        otiz_report = await openai_service.get_otiz_report(case_history, cv_report, vlm_report)
-        return cv_report, vlm_report, otiz_report
+        diagnose_report = await openai_service.get_diagnose_report(case_history, cv_report, vlm_report)
+        otiz_report = await openai_service.get_otiz_report(diagnose_report)
+        
+        return cv_report, vlm_report, diagnose_report, otiz_report
     except Exception as e:
         st.error(f"Error processing image: {str(e)}")
-        return None, None, None
+        return None, None, None, None
 
 def main():
     st.title("OTIZ Evaluation Dashboard")
@@ -365,7 +463,7 @@ def main():
         gender = demographics.get('gender', 'N/A')  # You may adapt how you fetch the gender
 
         # Process image + predictions
-        cv_report, vlm_report, otiz_report = asyncio.run(
+        cv_report, vlm_report, diagnose_report, otiz_report = asyncio.run(
             process_image(openai_service, image_data, row["image_url"], row["medical_case_history"])
         )
 
@@ -507,6 +605,8 @@ def main():
                     st.json(vlm_report if vlm_report else "No VLM Report")
                 with st.expander("CV Report", expanded=True):
                     st.json(cv_report if cv_report else "No CV Prediction")
+                with st.expander("Diagnose Report", expanded=True):
+                    st.json(diagnose_report if diagnose_report else "No Diagnose Report")
 
             st.markdown("---")
 
