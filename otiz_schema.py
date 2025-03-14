@@ -114,7 +114,7 @@ otiz_schema ={
           "Pearly papules",
           "Skin Tag",
           "Medical emergency"],
-        "description": "The most likely diagnosis based on final reasoning based on all information.Strictly provide a midical term, not a description."
+        "description": "The most likely diagnosis based on final reasoning based on all information.Strictly provide most suitable the term"
       },
       "advice": {
         "type": "string",

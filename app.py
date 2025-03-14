@@ -153,13 +153,12 @@ class OpenAIService:
         self.logger.info("Generating OTIZ report")
         try:
             analyse_prompt = f"""
+            Below is the case history and a VLM report.Analyse the case history and the VLM report and provide a diagnosis for the patient.
+
             User's Case History:
             {case_history}
 
-            1) Multi-Class Classification Model (MCL) Analysis:
-            {cv_report}
-
-            2) Visual Language Model (VLM) Analysis:
+            Visual Language Model (VLM) Analysis:
             {vlm_report}
             """
 
@@ -202,10 +201,10 @@ class OpenAIService:
             accuracy_prompt = f"""
             You have provided two diagnoses: a ground truth diagnosis and a predicted diagnosis.
 
-            Check if they describe the same medical condition.
+            Consider that diagnoses can be expressed at different levels of specificity. A specific condition (e.g., "Heart Related issue") may be appropriately categorized under a broader term (e.g., "Medical emergency"). 
 
-            If they describe the same medical condition,{{ "match": true }}.
-            If they don't, return {{ "match": false }}.
+            If the predicted diagnosis is a broader category that sufficiently covers the ground truth condition, return {{ "match": true }}.
+            If it does not cover the condition, return {{ "match": false }}.
 
             - Ground truth condition: {ground_truth}
             - Predicted condition: {otiz_prediction}
@@ -256,8 +255,8 @@ async def process_image(openai_service: OpenAIService, image_data: bytes, s3_url
     """Process image: get CV prediction, VLM report, and OTIZ report."""
     try:
         cv_report = await openai_service.get_prediction(s3_url)
-        image_base64 = base64.b64encode(image_data).decode('utf-8')
-        vlm_report = await openai_service.get_vlm_report(image_base64)
+        image_base64 = base64.b64encode(image_data).decode('utf-8') if image_data else ""
+        vlm_report = await openai_service.get_vlm_report(image_base64) if image_data else "No image data for VLM"
         otiz_report = await openai_service.get_otiz_report(case_history, cv_report, vlm_report)
         return cv_report, vlm_report, otiz_report
     except Exception as e:
@@ -270,22 +269,38 @@ def main():
     # Initialize session state for condition stats
     if "condition_stats" not in st.session_state:
         st.session_state["condition_stats"] = {}
+    # List of all misclassified patients (patient-level info)
+    if "misclassified_patients" not in st.session_state:
+        st.session_state["misclassified_patients"] = []
+    # Track stats by gender
+    if "gender_stats" not in st.session_state:
+        st.session_state["gender_stats"] = {}
 
     accuracy_placeholder = st.empty()
 
     def render_accuracy_info(current_patient_id: str):
         with accuracy_placeholder.container():
             st.markdown(f"### Currently processing: Patient ID **{current_patient_id}**")
+            
+            # --- Build and display stats by condition ---
             stats_table = []
             total_cases = 0
             total_accurate = 0
 
             for cond, val in st.session_state["condition_stats"].items():
+                # Safely compute accuracy percentage
+                if val["total"] > 0:
+                    accuracy_percent = (val["accurate"] / val["total"]) * 100
+                else:
+                    accuracy_percent = 0.0
+
                 stats_table.append({
                     "Condition": cond,
                     "Total Cases": val["total"],
-                    "Accurate Predictions": val["accurate"]
+                    "Accurate Predictions": val["accurate"],
+                    "Accuracy (%)": round(accuracy_percent, 2)
                 })
+
                 total_cases += val["total"]
                 total_accurate += val["accurate"]
 
@@ -300,15 +315,38 @@ def main():
             else:
                 st.info("No cases processed yet.")
 
+            # --- Display misclassified-patient details if any ---
+            if st.session_state["misclassified_patients"]:
+                st.markdown("### Misclassified Patients")
+                df_misclassified = pd.DataFrame(st.session_state["misclassified_patients"])
+                st.table(df_misclassified)
+
+            # --- Build and display stats by gender ---
+            if st.session_state["gender_stats"]:
+                st.markdown("### Gender Statistics")
+                gender_data = []
+                for g, vals in st.session_state["gender_stats"].items():
+                    gender_data.append({
+                        "Gender": g,
+                        "Total Cases": vals["total"],
+                        "Accurate Predictions": vals["accurate"],
+                        "Misclassifications": vals["misclassified"]
+                    })
+                df_gender = pd.DataFrame(gender_data)
+                st.table(df_gender)
+
     openai_service = OpenAIService()
 
+    # Read your CSV
     try:
         df = pd.read_csv("patients.csv")
     except Exception as e:
         st.error(f"Error reading CSV file: {str(e)}")
         st.stop()
 
+    # Main loop over dataframe rows
     for _, row in df.iterrows():
+        # Try to load image
         try:
             s3_bucket, s3_key = parse_s3_url(row["image_url"])
             image_data = get_s3_image(s3_bucket, s3_key)
@@ -316,10 +354,21 @@ def main():
             st.warning(f"Could not load image from {row['image_url']}: {e}")
             image_data = None
 
+        # Retrieve case history JSON for demographics/gender
+        demographics = {}
+        if row.get('medical_case_history') and not pd.isna(row['medical_case_history']):
+            try:
+                history_json = json.loads(row['medical_case_history'])
+                demographics = history_json.get('patient_demographics', {})
+            except (json.JSONDecodeError, TypeError):
+                pass
+        gender = demographics.get('gender', 'N/A')  # You may adapt how you fetch the gender
+
+        # Process image + predictions
         cv_report, vlm_report, otiz_report = asyncio.run(
             process_image(openai_service, image_data, row["image_url"], row["medical_case_history"])
         )
-        
+
         ground_truth = row['Ground Truth']
 
         # Update stats for the condition
@@ -328,31 +377,51 @@ def main():
         )
         stats["total"] += 1
 
-        # Determine match indicator for this patient
+        # Also update stats for the gender
+        if gender not in st.session_state["gender_stats"]:
+            st.session_state["gender_stats"][gender] = {
+                "total": 0,
+                "accurate": 0,
+                "misclassified": 0
+            }
+        st.session_state["gender_stats"][gender]["total"] += 1
+
         match_indicator = None
+        predicted_condition = None
+
         if otiz_report and "Error" not in otiz_report:
             try:
                 otiz_data = json.loads(otiz_report)
-                if otiz_data.get('diagnosis'):
-                    predicted_condition = otiz_data['diagnosis']
-                else:
-                    predicted_condition = "Unknown"
+                predicted_condition = otiz_data.get('diagnosis', 'Unknown')
 
+                # Check accuracy
                 accuracy_json = asyncio.run(
                     openai_service.get_accuracy_report(predicted_condition, ground_truth)
                 )
                 acc_data = json.loads(accuracy_json)
                 if acc_data.get("match") is True:
                     stats["accurate"] += 1
+                    st.session_state["gender_stats"][gender]["accurate"] += 1
                     match_indicator = True
                 else:
+                    st.session_state["gender_stats"][gender]["misclassified"] += 1
                     match_indicator = False
             except Exception as e:
                 st.error(f"Error parsing OTIZ output or matching for patient {row['Patient ID']}: {e}")
 
-        render_accuracy_info(row["Patient ID"])
+        # If mismatch, add to the misclassified-patients list
+        if match_indicator is False:
+            st.session_state["misclassified_patients"].append({
+                "Patient ID": row["Patient ID"],
+                "Ground Truth": ground_truth,
+                "Predicted Condition": predicted_condition,
+                "Gender": gender
+            })
 
-        # Display patient details and reports
+        # Show updated stats & misclassified info
+        render_accuracy_info(str(row["Patient ID"]))
+
+        # ------------- Display UI for this patient --------------
         with st.container():
             col1, col2, col3 = st.columns([1, 1, 1])
 
@@ -371,38 +440,40 @@ def main():
                 else:
                     st.info("No prediction match data available.")
 
-                # Insert new block for medical_case_history
-                if row.get('medical_case_history'):
-                    history_json = json.loads(row['medical_case_history'])
-                    with st.expander("Patient Demographics"):
-                        demographics = history_json.get('patient_demographics', {})
-                        st.write(f"**Age:** {demographics.get('age', 'N/A')}")
-                        st.write(f"**Gender:** {demographics.get('gender', 'N/A')}")
-                        st.write(f"**Risk Factors:** {', '.join(demographics.get('risk_factors', []))}")
-                    with st.expander("Sexual History"):
-                        sexual_history = history_json.get('sexual_history', {})
-                        st.write(f"**Last Sexual Encounter:** {sexual_history.get('last_sexual_encounter', 'N/A')}")
-                        st.write(f"**Partner Count:** {sexual_history.get('partner_count', 'N/A')}")
-                        st.write(f"**Partner Genders:** {', '.join(sexual_history.get('partner_genders', []))}")
-                        st.write(f"**Sexual Activities:** {', '.join(sexual_history.get('sexual_activities', []))}")
-                        st.write(f"**Condom Usage:** {sexual_history.get('condom_usage', 'N/A')}")
-                        st.write(f"**STI History:** {sexual_history.get('sti_history', 'N/A')}")
-                        st.write(f"**HIV Prevention:** {sexual_history.get('hiv_prevention', 'N/A')}")
-                        st.write(f"**Trauma History:** {sexual_history.get('trauma_history', 'N/A')}")
-                    with st.expander("Symptoms Timeline"):
-                        symptoms = history_json.get('symptoms_timeline', {})
-                        st.write(f"**Onset:** {symptoms.get('onset', 'N/A')}")
-                        st.write(f"**Progression:** {symptoms.get('progression', 'N/A')}")
-                        st.write(f"**Systemic Symptoms:** {symptoms.get('systemic_symptoms', 'N/A')}")
-                        st.write(f"**Localized Symptoms:** {symptoms.get('localized_symptoms', 'N/A')}")
+                if row.get('medical_case_history') and not pd.isna(row['medical_case_history']):
+                    try:
+                        history_json = json.loads(row['medical_case_history'])
+                        with st.expander("Patient Demographics"):
+                            demographics = history_json.get('patient_demographics', {})
+                            st.write(f"**Age:** {demographics.get('age', 'N/A')}")
+                            st.write(f"**Gender:** {demographics.get('gender', 'N/A')}")
+                            st.write(f"**Risk Factors:** {', '.join(demographics.get('risk_factors', []))}")
+                        with st.expander("Sexual History"):
+                            sexual_history = history_json.get('sexual_history', {})
+                            st.write(f"**Last Sexual Encounter:** {sexual_history.get('last_sexual_encounter', 'N/A')}")
+                            st.write(f"**Partner Count:** {sexual_history.get('partner_count', 'N/A')}")
+                            st.write(f"**Partner Genders:** {', '.join(sexual_history.get('partner_genders', []))}")
+                            st.write(f"**Sexual Activities:** {', '.join(sexual_history.get('sexual_activities', []))}")
+                            st.write(f"**Condom Usage:** {sexual_history.get('condom_usage', 'N/A')}")
+                            st.write(f"**STI History:** {sexual_history.get('sti_history', 'N/A')}")
+                            st.write(f"**HIV Prevention:** {sexual_history.get('hiv_prevention', 'N/A')}")
+                            st.write(f"**Trauma History:** {sexual_history.get('trauma_history', 'N/A')}")
+                        with st.expander("Symptoms Timeline"):
+                            symptoms = history_json.get('symptoms_timeline', {})
+                            st.write(f"**Onset:** {symptoms.get('onset', 'N/A')}")
+                            st.write(f"**Progression:** {symptoms.get('progression', 'N/A')}")
+                            st.write(f"**Systemic Symptoms:** {symptoms.get('systemic_symptoms', 'N/A')}")
+                            st.write(f"**Localized Symptoms:** {symptoms.get('localized_symptoms', 'N/A')}")
+                    except (json.JSONDecodeError, TypeError):
+                        st.info("Invalid medical case history format.")
                 else:
                     st.info("No medical case history available.")
 
                 with st.expander("Image Analysis"):
-                    st.write(row['image_analysis'] or "N/A")
+                    st.write(row.get('image_analysis', "N/A"))
 
                 with st.expander("Patient Narrative"):
-                    st.write(row['patient_narrative'] or "N/A")
+                    st.write(row.get('patient_narrative', "N/A"))
                 
             with col2:
                 st.markdown("### Original Condition")

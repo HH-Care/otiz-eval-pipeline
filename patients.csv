@@ -1412,7 +1412,36 @@ Patient 045,s3://otiz-image-test/test-version1/Patient 045.jpg,Normal,"{
   },
   ""patient_narrative"": ""I am a 28-year-old male who has not noticed any changes or experienced discomfort in my genital region. I have no sexual health concerns at this time. I have not engaged in recent sexual activity and have never been diagnosed with a sexually transmitted infection. My general health is good, and I am simply confirming that everything is normal.""
 }",male,"The photograph shows a penis without any visible abnormal lesions, discoloration, or changes in contour. The skin appears intact and unremarkable.","I am a 28-year-old male who has not noticed any changes or experienced discomfort in my genital region. I have no sexual health concerns at this time. I have not engaged in recent sexual activity and have never been diagnosed with a sexually transmitted infection. My general health is good, and I am simply confirming that everything is normal.",False
-Patient 046,s3://otiz-image-test/test-version1/Patient 046.jpg,Normal,,,,,False
+Patient 046,s3://otiz-image-test/test-version1/Patient 046.jpg,Normal,"{
+  ""patient_demographics"": {
+    ""age"": 25,
+    ""gender"": ""female"",
+    ""risk_factors"": [
+      ""No significant risk factors""
+    ]
+  },
+  ""sexual_history"": {
+    ""last_sexual_encounter"": ""2 months ago"",
+    ""partner_count"": 1,
+    ""partner_genders"": [
+      ""male""
+    ],
+    ""sexual_activities"": [
+      ""vaginal intercourse""
+    ],
+    ""condom_usage"": ""Occasional use"",
+    ""sti_history"": ""No reported history of STIs"",
+    ""hiv_prevention"": ""Not currently on any HIV prevention regimen"",
+    ""trauma_history"": ""No history of sexual trauma reported""
+  },
+  ""symptoms_timeline"": {
+    ""onset"": ""No acute symptoms reported"",
+    ""progression"": ""No progression of any abnormal findings"",
+    ""systemic_symptoms"": ""No fever, malaise, or generalized body aches"",
+    ""localized_symptoms"": ""No itching, discharge, pain, or lesions""
+  },
+  ""patient_narrative"": ""The patient states that she has no current complaints, sought routine examination for peace of mind, and denies having any pain, itching, or visible changes. She expresses concern about maintaining good gynecological health but reports no alarming symptoms.""
+}",female,"Visual inspection shows normal external female genitalia, with typical labial anatomy, normal coloration, and no apparent lesions or abnormal discharge.","The patient states that she has no current complaints, sought routine examination for peace of mind, and denies having any pain, itching, or visible changes. She expresses concern about maintaining good gynecological health but reports no alarming symptoms.",False
 Patient 047,s3://otiz-image-test/test-version1/Patient 047.jpg,Pearly papules,"{
   ""patient_demographics"": {
     ""age"": 26,
