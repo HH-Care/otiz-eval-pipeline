@@ -12,10 +12,10 @@ from typing import Dict
 from vlm_schema import vlm_schema
 from otiz_schema import otiz_schema
 from accuracy_schema import accuracy_schema
-from prompts import vlm_agent_prompt, otiz_prompt
+from prompts import skin_filter_agent_prompt, otiz_prompt
 from openai import OpenAI
 from dotenv import load_dotenv
-
+from skin_filter_schema import otiz_skin_filter_schema
 load_dotenv()
 
 st.set_page_config(page_title="Patient Details", layout="wide")
@@ -65,11 +65,102 @@ class OpenAIService:
             self.logger.error(f"Failed to get prediction: {str(e)}")
             raise
 
-    async def get_vlm_report(self, image_data: str) -> str:
+    async def get_lvrm_report(self, image_data: str, clinical_information) -> str:
+
         """Generate a VLM report for the given base64-encoded image data."""
         self.logger.info("Generating VLM report for image")
+        
+        vlm_agent_prompt = f"""You are a medical visual AI specialized in dermatology and STDs/STIs. You will receive a patient's skin image(s) (from any body part) along with their associated clinical information. Your task is to analyze and diagnose the condition using a structured, multi-step approach that explicitly incorporates deep analytical thinking and reasoning.
+
+        CONTEXT:
+        Clinical Information of the patient: {clinical_information}
+
+        1. Image Analysis:
+        - Examine the image(s) meticulously.
+        - Describe the anatomical location and all notable visual features, including:
+            • Color and any changes in color.
+            • Size and shape of lesions or rashes.
+            • Texture and surface quality (e.g., smooth, rough, scaly, moist).
+            • Abnormalities such as rashes, macules/papules, vesicles/blisters, pustules, ulcers/open sores, warts/growths, nodules, discharge, crusting, or erosion.
+            • Patterns or distribution if multiple lesions are present (e.g., clustered, linear, generalized, symmetrical).
+            • Consider the patient's skin tone in your descriptions.
+
+        2. Clinical Correlation:
+        - Integrate the provided patient information (demographics, sexual history, symptoms, duration, medical history).
+        - Note relevant factors like age, sex, and risk behaviors (e.g., unprotected sex, new partner, IV drug use) pertinent to STIs.
+        - Account for symptoms such as itching, pain, burning, and systemic signs (e.g., fever, malaise) to support or refute potential diagnoses.
+        - Summarize how the clinical details align with or contradict the visual findings.
+
+        3. Analytical Reasoning & Conflict Resolution:
+        - Deliberately think through and weigh the evidence from both the image analysis and clinical correlation.
+        - Identify any discrepancies between the visual findings and clinical history (e.g., a high-confidence "Normal" image output versus clinical signs of pathology).
+        - Prioritize clinical history and detailed morphological descriptions over isolated high-confidence image outputs.
+        - Document your reasoning process by outlining key points, conflicts identified, and how these conflicts are resolved.
+
+        4. Diagnosis:
+        - Based on the image analysis, clinical correlation, and your analytical reasoning, determine the most likely diagnosis.
+        - For lesions suggesting STD/STI involvement, consider conditions such as herpes, syphilis, HPV (genital warts), chlamydia/gonococcal infections, HIV-related rash, and molluscum contagiosum.
+        - Also, consider non-STI dermatologic conditions (e.g., eczema, psoriasis, fungal infections, contact dermatitis, acne).
+        - Select the single best fitting diagnosis as the main diagnosis.
+        - Provide a confidence score (0–100) for the main diagnosis along with a clear explanation that highlights the key visual, clinical, and reasoning factors.
+        - List alternative plausible diagnoses as differential diagnoses; each must include:
+            • The diagnosis name.
+            • A confidence score (0–100).
+            • A brief explanation for its consideration.
+
+        5. Recommendations:
+        - Suggest any confirmatory tests (e.g., PCR, blood tests, biopsy) if needed.
+        - Recommend referrals or follow-up (e.g., refer to a dermatologist or appropriate specialist).
+        - Advise on immediate management or treatment (e.g., initiate antifungal cream, prescribe oral antibiotics, or advise temporary sexual abstinence).
+        - Include preventive recommendations where applicable (e.g., safe sex practices, improved hygiene, routine monitoring).
+
+        6. Normal Case:
+        - If the image shows no abnormality:
+            "main_diagnosis": "Normal skin (no significant abnormality)"
+            "differential_diagnosis": [] (empty list)
+            "main_diagnosis_confidence": 100
+            "recommendations": "No treatment needed. Maintain routine skincare and monitor."
+
+        7. All Regions & Skin Types:
+        - Apply this approach for any body part (e.g., genitals, oral cavity, or elsewhere) and for all skin tones.
+        - Adjust differential diagnoses appropriately based on lesion location, patient history, and skin color variations.
+
+        8. Final Review & Diagnosis Finalization:
+        - Conduct a final review of all integrated data and your reasoning process.
+        - Confirm that any conflicts between image findings and clinical information have been resolved, with a clear priority given to the clinical context and logical reasoning.
+        - If uncertainties or conflicts remain, explicitly recommend confirmatory testing to ensure diagnostic accuracy.
+
+        9. Output Format:
+        - Respond ONLY with a JSON object containing exactly the following fields (and no additional text):
+
+        ```json
+        {{
+          "image_analysis": "Detailed description of visual findings.",
+          "clinical_correlation": "Summary of how clinical information was integrated with the visual analysis.",
+          "main_diagnosis": "Name of the most likely condition",
+          "main_diagnosis_confidence": 0-100,
+          "main_diagnosis_reasoning": "Explanation of why this diagnosis was chosen, highlighting key visual, clinical, and reasoning factors.",
+          "differential_diagnosis": [
+            {{
+              "diagnosis": "Alternative diagnosis 1",
+              "confidence_score": 0-100,
+              "reasoning": "Explanation for considering this alternative."
+            }},
+            {{
+              "diagnosis": "Alternative diagnosis 2",
+              "confidence_score": 0-100,
+              "reasoning": "Explanation for considering this alternative."
+            }}
+            // Additional differential diagnoses as needed.
+          ],
+          "recommendations": "Next steps such as tests, referrals, or treatments.",
+          "debug_msg": "Any debugging information or notes about the analysis process."
+        }}
+        ```
+        """
+
         try:
-            vlm_analysis = await self.get_vlm_completion(
+            vlm_analysis = await self.get_o1_completion(
                 prompt=vlm_agent_prompt,
                 output_json_schema=vlm_schema,
                 image_data=image_data
@@ -81,6 +172,85 @@ class OpenAIService:
         except Exception as e:
             self.logger.error(f"Error generating VLM report: {str(e)}")
             return f"Error: {str(e)}"
+        
+    async def get_o1_completion(self,
+                               prompt: str,
+                               model: str = "o1",
+                               max_retries: int = 3,
+                               output_json_schema=None,
+                               reasoning_effort: str = "high",
+                               image_data: str = None):
+        """
+        Get completion from OpenAI's o1 model with image analysis capabilities.
+        """
+        def is_json(content):
+            try:
+                json.loads(content)
+                return True
+            except:
+                return False
+
+        for attempt in range(max_retries):
+            try:
+                self.logger.info(f"Attempting o1 analysis (attempt {attempt + 1}/{max_retries})")
+                
+                # First message with system/developer instructions
+                messages = [
+                    {
+                        "role": "developer",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": prompt
+                            }
+                        ]
+                    }
+                ]
+                
+                # Add a separate user message with the image if provided
+                if image_data:
+                    messages.append({
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/jpeg;base64,{image_data}"
+                                }
+                            }
+                        ]
+                    })
+
+                completion_params = {
+                    "model": model,
+                    "messages": messages,
+                    "reasoning_effort": reasoning_effort
+                }
+                
+                # Add response format if schema provided
+                if output_json_schema:
+                    completion_params["response_format"] = {
+                        "type": "json_schema",
+                        "json_schema": output_json_schema
+                    }
+
+                completion = self.client.chat.completions.create(**completion_params)
+                content = completion.choices[0].message.content
+
+                if is_json(content):
+                    parsed_content = json.loads(content)
+                    return parsed_content
+                else:
+                    self.logger.warning("o1 response not valid JSON. Retrying...")
+
+            except Exception as e:
+                self.logger.error(
+                    f"Error in get_o1_completion (attempt {attempt + 1}/{max_retries}): {str(e)}"
+                )
+                if attempt == max_retries - 1:
+                    return None
+                await asyncio.sleep(2 ** attempt)
+        return None
         
     async def get_vlm_completion(self,
                                 prompt: str,
@@ -148,18 +318,16 @@ class OpenAIService:
                 await asyncio.sleep(2 ** attempt)
         return None
 
-    async def get_otiz_report(self, case_history, cv_report, vlm_report):
+    async def get_otiz_report(self, diagnose_report):
         """Combine case history, CV report, and VLM report into an OTIZ report."""
         self.logger.info("Generating OTIZ report")
         try:
             analyse_prompt = f"""
-            Below is the case history and a VLM report.Analyse the case history and the VLM report and provide a diagnosis for the patient.
+            Below is the diagnosis report.Analyse the diagnosis report and provide a diagnosis for the patient.
 
-            User's Case History:
-            {case_history}
+            Diagnosis Report:
+            {diagnose_report}
 
-            Visual Language Model (VLM) Analysis:
-            {vlm_report}
             """
 
             response = self.client.chat.completions.create(
@@ -190,7 +358,7 @@ class OpenAIService:
         except Exception as e:
             self.logger.error(f"Error generating OTIZ report: {str(e)}")
             return f"Error: {str(e)}"
-        
+    
     async def get_accuracy_report(self, otiz_prediction, ground_truth):
         """
         Generate an accuracy report. 
@@ -201,10 +369,12 @@ class OpenAIService:
             accuracy_prompt = f"""
             You have provided two diagnoses: a ground truth diagnosis and a predicted diagnosis.
 
-            Consider that diagnoses can be expressed at different levels of specificity. A specific condition (e.g., "Heart Related issue") may be appropriately categorized under a broader term (e.g., "Medical emergency"). 
+            Diagnoses can be expressed at different levels of specificity. Sometimes, the ground truth diagnosis is a broad condition (e.g., "HPV"), while the predicted diagnosis refers to a specific manifestation or common clinical presentation of that condition (e.g., "genital warts"). 
 
-            If the predicted diagnosis is a broader category that sufficiently covers the ground truth condition, return {{ "match": true }}.
-            If it does not cover the condition, return {{ "match": false }}.
+            Please consider the following:
+            - If the predicted diagnosis is a broader category that sufficiently covers the ground truth condition, return {{ "match": true }}.
+            - If the predicted diagnosis is a specific manifestation or subset that is a recognized clinical presentation of the ground truth condition, return {{ "match": true }}.
+            - Otherwise, if the predicted diagnosis does not sufficiently capture the ground truth condition, return {{ "match": false }}.
 
             - Ground truth condition: {ground_truth}
             - Predicted condition: {otiz_prediction}
@@ -234,6 +404,39 @@ class OpenAIService:
         except Exception as e:
             self.logger.error(f"Error generating accuracy report: {str(e)}")
             return '{"match": false}'
+            
+    async def get_skin_filter_report(self, image_data: str) -> str:
+        """
+        Generate a skin filter report to validate if the image contains human skin.
+        
+        Args:
+            image_data: Base64 encoded image data or image URL
+            
+        Returns:
+            str: JSON formatted skin filter report
+        """
+        self.logger.info("Generating skin filter report for image")
+        
+        try:
+            # Get the skin filter analysis using the VLM completion
+            skin_analysis = await self.get_vlm_completion(
+                prompt=skin_filter_agent_prompt,
+                output_json_schema=otiz_skin_filter_schema,
+                image_data=image_data
+            )
+            
+            if skin_analysis:
+                # Convert the analysis to a formatted string
+                skin_report = json.dumps(skin_analysis, indent=2)
+                self.logger.info("Successfully generated skin filter report")
+                return skin_report
+            else:
+                self.logger.error("Failed to generate skin filter analysis") 
+                return "Error: Unable to analyze image"
+                
+        except Exception as e:
+            self.logger.error(f"Error generating skin filter report: {str(e)}")
+            return f"Error: {str(e)}"
 
 def parse_s3_url(s3_url: str):
     """Parse an S3 URL of the form s3://bucket/key. Returns (bucket, key)."""
@@ -254,14 +457,39 @@ def get_s3_image(bucket: str, key: str) -> bytes:
 async def process_image(openai_service: OpenAIService, image_data: bytes, s3_url: str, case_history: str):
     """Process image: get CV prediction, VLM report, and OTIZ report."""
     try:
-        cv_report = await openai_service.get_prediction(s3_url)
         image_base64 = base64.b64encode(image_data).decode('utf-8') if image_data else ""
-        vlm_report = await openai_service.get_vlm_report(image_base64) if image_data else "No image data for VLM"
-        otiz_report = await openai_service.get_otiz_report(case_history, cv_report, vlm_report)
-        return cv_report, vlm_report, otiz_report
+        
+        # First check if image contains human skin
+        skin_filter_report = await openai_service.get_skin_filter_report(image_base64) if image_data else None
+        
+        # Default values for reports
+        lvrm_diagnosis_report = None
+        otiz_report = None
+        is_human_skin = True  # Default to True if no image data
+        
+        if skin_filter_report and "Error" not in skin_filter_report:
+            try:
+                skin_filter_data = json.loads(skin_filter_report)
+                is_human_skin = skin_filter_data.get("isHumanSkin", True)
+            except json.JSONDecodeError:
+                is_human_skin = True  # Default to True if parsing fails
+        
+        # Only proceed with analysis if human skin is detected
+        if is_human_skin and image_data:
+            lvrm_diagnosis_report = await openai_service.get_lvrm_report(image_base64, case_history)
+            otiz_report = await openai_service.get_otiz_report(lvrm_diagnosis_report)
+        else:
+            # If not human skin, set empty reports
+            if image_data:  # Only set this for non-human skin (not for missing images)
+                lvrm_diagnosis_report = json.dumps({"image_analysis": "Not human skin detected", "main_diagnosis": "Inanimate object"})
+                otiz_report = json.dumps({"diagnosis": "Inanimate object", "differential_diagnosis": []})
+            else:
+                lvrm_diagnosis_report = "No image data for VLM"
+                
+        return lvrm_diagnosis_report, otiz_report, is_human_skin
     except Exception as e:
         st.error(f"Error processing image: {str(e)}")
-        return None, None, None
+        return None, None, True  # Default to True on error
 
 def main():
     st.title("OTIZ Evaluation Dashboard")
@@ -365,7 +593,7 @@ def main():
         gender = demographics.get('gender', 'N/A')  # You may adapt how you fetch the gender
 
         # Process image + predictions
-        cv_report, vlm_report, otiz_report = asyncio.run(
+        lvrm_diagnosis_report, otiz_report, is_human_skin = asyncio.run(
             process_image(openai_service, image_data, row["image_url"], row["medical_case_history"])
         )
 
@@ -394,18 +622,23 @@ def main():
                 otiz_data = json.loads(otiz_report)
                 predicted_condition = otiz_data.get('diagnosis', 'Unknown')
 
-                # Check accuracy
-                accuracy_json = asyncio.run(
-                    openai_service.get_accuracy_report(predicted_condition, ground_truth)
-                )
-                acc_data = json.loads(accuracy_json)
-                if acc_data.get("match") is True:
-                    stats["accurate"] += 1
-                    st.session_state["gender_stats"][gender]["accurate"] += 1
-                    match_indicator = True
-                else:
-                    st.session_state["gender_stats"][gender]["misclassified"] += 1
+                # If not human skin, we already know it's a mismatch
+                if not is_human_skin and image_data:
                     match_indicator = False
+                    st.session_state["gender_stats"][gender]["misclassified"] += 1
+                else:
+                    # Check accuracy for human skin images
+                    accuracy_json = asyncio.run(
+                        openai_service.get_accuracy_report(predicted_condition, ground_truth)
+                    )
+                    acc_data = json.loads(accuracy_json)
+                    if acc_data.get("match") is True:
+                        stats["accurate"] += 1
+                        st.session_state["gender_stats"][gender]["accurate"] += 1
+                        match_indicator = True
+                    else:
+                        st.session_state["gender_stats"][gender]["misclassified"] += 1
+                        match_indicator = False
             except Exception as e:
                 st.error(f"Error parsing OTIZ output or matching for patient {row['Patient ID']}: {e}")
 
@@ -485,28 +718,40 @@ def main():
                         otiz_data = json.loads(otiz_report)
                         if otiz_data.get('diagnosis'):
                             st.markdown(f"**Final Diagnosis:** {otiz_data['diagnosis']}")
-                            st.markdown("\n**Differential Diagnoses:**")
-                            if otiz_data.get('differential_diagnosis'):
+                            # Only show differential diagnoses if it's human skin
+                            if is_human_skin and otiz_data.get('differential_diagnosis'):
+                                st.markdown("\n**Differential Diagnoses:**")
                                 for dd in otiz_data['differential_diagnosis']:
                                     st.write(f"- {dd['diagnostic_possibility']}: {dd['confidence_score']:.2%}")
                     except:
                         st.write("No valid differential diagnosis found.")
                 
                 st.markdown("### Analysis")
-                if otiz_report and "Error" not in otiz_report:
-                    otiz_data = json.loads(otiz_report)
-                    out = otiz_data.get("output", {})
-                    st.markdown(f"**Reasoning Summary:** {out.get('reasoning_summary', '')}")
-                    st.markdown(f"**Response:** {out.get('response', '')}")
+                if otiz_report and "Error" not in otiz_report and is_human_skin:
+                    try:
+                        otiz_data = json.loads(otiz_report)
+                        out = otiz_data.get("output", {})
+                        st.markdown(f"**Reasoning Summary:** {out.get('reasoning_summary', '')}")
+                        st.markdown(f"**Response:** {out.get('response', '')}")
+                    except:
+                        st.write("No valid analysis found.")
+                elif not is_human_skin and image_data:
+                    st.markdown("**Reasoning Summary:** Image does not contain human skin.")
+                    st.markdown("**Response:** Cannot provide medical analysis for non-human skin images.")
 
             with col3:
                 st.markdown("### Reports")
                 with st.expander("OTIZ Report", expanded=True):
-                    st.json(otiz_report if otiz_report else "No OTIZ Report")
-                with st.expander("VLM Report", expanded=True):
-                    st.json(vlm_report if vlm_report else "No VLM Report")
-                with st.expander("CV Report", expanded=True):
-                    st.json(cv_report if cv_report else "No CV Prediction")
+                    if not is_human_skin and image_data:
+                        st.info("No OTIZ Report - Image does not contain human skin")
+                    else:
+                        st.json(otiz_report if otiz_report else "No OTIZ Report")
+                with st.expander("LVRM Diagnosis Report", expanded=True):
+                    if not is_human_skin and image_data:
+                        st.info("No LVRM Report - Image does not contain human skin")
+                    else:
+                        st.json(lvrm_diagnosis_report if lvrm_diagnosis_report else "No VLM Report")
+            
 
             st.markdown("---")
 

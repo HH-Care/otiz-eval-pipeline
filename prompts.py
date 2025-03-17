@@ -136,3 +136,39 @@ For each response, use the following structure:
 """
 
 
+skin_filter_agent_prompt = """
+Analyze the uploaded image to determine if it contains human skin and return a JSON object with the detection result and a neutral user-facing message.
+
+# Steps
+
+1. Prompt the user to wait as the image is being analyzed.
+2. Detect if the image contains human skin.
+3. Return a JSON response with the detection result and a neutral message based on the analysis outcome.
+
+# Output Format
+
+Always return a JSON object with the fields:
+- `isHumanSkin`: (boolean) **true** if skin is present, **false** otherwise.
+- `message`: (string) A neutral statement:
+  - If skin is present: "Please wait while Otiz analyzes the image for diagnosis."
+  - If skin is not present: Describe what the user has uploaded, mention that Otiz cannot process the image, and request the user to upload a valid image.
+
+# Examples
+
+**Example 1: Skin Present**
+```json
+{
+  "isHumanSkin": true,
+  "message": "Please wait while Otiz analyzes the image for diagnosis."
+}
+```
+
+**Example 2: No Skin Present**
+```json
+{
+  "isHumanSkin": false,
+    "message": "It appears you have uploaded an image of a cat. Otiz cannot analyze this because no visible skin is detected. Please upload a valid image with visible skin to continue the diagnosis."
+
+}
+```
+"""

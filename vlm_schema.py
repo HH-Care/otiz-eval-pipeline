@@ -1,157 +1,75 @@
 vlm_schema = {
-  "name": "clinical_visual_findings",
+  "name": "clinical_analysis_report",
   "strict": True,
   "schema": {
     "type": "object",
-    "required": [
-      "visualFindings",
-      "differentialDiagnoses",
-      "visualAssessmentSummary"
-    ],
     "properties": {
-      "visualFindings": {
-        "type": "object",
-        "required": [
-          "lesionDetails",
-          "overallDescription"
-        ],
-        "properties": {
-          "lesionDetails": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "lesionType",
-                "count",
-                "arrangement",
-                "size",
-                "colorPattern",
-                "borders",
-                "surfaceChanges",
-                "exudateOrDischarge",
-                "depthOrElevation",
-                "surroundingSkinChanges",
-                "patternOrShape",
-                "additionalNotes"
-              ],
-              "properties": {
-                "size": {
-                  "type": "string",
-                  "description": "Size of the lesions (e.g., 'approx. 5 mm in diameter')"
-                },
-                "count": {
-                  "type": "string",
-                  "description": "Count of lesions (e.g., 'multiple, more than 10')"
-                },
-                "borders": {
-                  "type": "string",
-                  "description": "Borders of the lesions (e.g., 'well-defined', 'irregular and raised')"
-                },
-                "lesionType": {
-                  "type": "string",
-                  "description": "The type of lesion (e.g., 'papule', 'plaque', 'vesicle', 'pustule', 'ulcer')"
-                },
-                "arrangement": {
-                  "type": "string",
-                  "description": "How the lesions are arranged (e.g., 'clustered', 'grouped', 'linear')"
-                },
-                "colorPattern": {
-                  "type": "string",
-                  "description": "Color pattern of the lesions (e.g., 'uniformly red', 'brown center with pale halo')"
-                },
-                "patternOrShape": {
-                  "type": "string",
-                  "description": "Pattern or shape of the lesions (e.g., 'annular', 'targetoid', 'serpiginous')"
-                },
-                "surfaceChanges": {
-                  "type": "string",
-                  "description": "Changes in the surface of the lesions (e.g., 'scaly', 'crusted', 'smooth', 'lichenified')"
-                },
-                "additionalNotes": {
-                  "type": "string",
-                  "description": "Any other notable features (e.g., 'central dimpling', 'blanching on pressure')"
-                },
-                "depthOrElevation": {
-                  "type": "string",
-                  "description": "Depth or elevation of the lesions (e.g., 'raised', 'pedunculated', 'flat', 'sunken')"
-                },
-                "exudateOrDischarge": {
-                  "type": "string",
-                  "description": "Nature of any exudate or discharge (e.g., 'serous', 'purulent', 'bloody', 'none')"
-                },
-                "surroundingSkinChanges": {
-                  "type": "string",
-                  "description": "Changes in the surrounding skin (e.g., 'red halo', 'edema', 'hypopigmentation')"
-                }
-              },
-              "additionalProperties": False
-            },
-            "description": "List of details about visible lesions."
-          },
-          "overallDescription": {
-            "type": "string",
-            "description": "Overall description of the visual findings (e.g., 'Multiple erythematous, well-demarcated papules in a linear arrangement with some crusting')"
-          }
-        },
-        "additionalProperties": False
+      "image_analysis": {
+        "type": "string",
+        "description": "Detailed description of visual findings."
       },
-      "differentialDiagnoses": {
+      "clinical_correlation": {
+        "type": "string",
+        "description": "Summary of how clinical information was integrated with the visual analysis."
+      },
+      "main_diagnosis": {
+        "type": "string",
+        "description": "Name of the most likely condition."
+      },
+      "main_diagnosis_confidence": {
+        "type": "number",
+        "description": "Confidence level of the main diagnosis, ranging from 0 to 100."
+      },
+      "main_diagnosis_reasoning": {
+        "type": "string",
+        "description": "Explanation of why this diagnosis was chosen, highlighting key visual and clinical factors."
+      },
+      "differential_diagnosis": {
         "type": "array",
+        "description": "List of alternative diagnoses considered.",
         "items": {
           "type": "object",
-          "required": [
-            "condition",
-            "confidenceLevel",
-            "visualIndicators"
-          ],
           "properties": {
-            "condition": {
+            "diagnosis": {
               "type": "string",
-              "enum": [
-          "HSV/Herpes",
-          "Syphilis",
-          "HPV",
-          "Chlamydia",
-          "Gonorrhea",
-          "Trich",
-          "Penile cancer",
-          "Fungal infection",
-          "Eczema",
-          "Psoriasis",
-          "Dermatitis",
-          "Lichen sclerosus",
-          "Balanitis",
-          "Inanimate object",
-          "Contact dermatitis",
-          "Normal",
-          "Pearly papules",
-          "Skin Tag",
-          "Medical emergency"
-        ],
-              "description": "Condition being considered (e.g., 'Tinea Corporis', 'Secondary Syphilis', 'Herpes Zoster')"
+              "description": "Alternative diagnosis."
             },
-            "confidenceLevel": {
+            "confidence_score": {
+              "type": "number",
+              "description": "Confidence score for the alternative diagnosis, ranging from 0 to 100."
+            },
+            "reasoning": {
               "type": "string",
-              "description": "Confidence level of the diagnosis (e.g., 'low', 'moderate', 'high' or percentage)"
-            },
-            "visualIndicators": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "description": "Visual indicator (e.g., 'annular lesion with raised scaly border')"
-              },
-              "description": "List of visual indicators for the condition."
+              "description": "Explanation for considering this alternative."
             }
           },
+          "required": [
+            "diagnosis",
+            "confidence_score",
+            "reasoning"
+          ],
           "additionalProperties": False
-        },
-        "description": "List of differential diagnoses with associated information."
+        }
       },
-      "visualAssessmentSummary": {
+      "recommendations": {
         "type": "string",
-        "description": "Concise synthesis of visual elements guiding differential diagnoses (e.g., 'The presence of ring-shaped lesions with scaly borders suggests a fungal etiology')"
+        "description": "Next steps such as tests, referrals, or treatments."
+      },
+      "debug_msg": {
+        "type": "string",
+        "description": "Response related to debugging."
       }
     },
+    "required": [
+      "image_analysis",
+      "clinical_correlation",
+      "main_diagnosis",
+      "main_diagnosis_confidence",
+      "main_diagnosis_reasoning",
+      "differential_diagnosis",
+      "recommendations",
+      "debug_msg"
+    ],
     "additionalProperties": False
   }
 }

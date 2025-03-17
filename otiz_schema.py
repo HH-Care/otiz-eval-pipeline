@@ -1,4 +1,4 @@
-otiz_schema ={
+otiz_schema = {
   "name": "Dr_Otiz",
   "strict": True,
   "schema": {
@@ -94,27 +94,7 @@ otiz_schema ={
       },
       "diagnosis": {
         "type": "string",
-        "enum": [
-          "HSV/Herpes",
-          "Syphilis",
-          "HPV",
-          "Chlamydia",
-          "Gonorrhea",
-          "Trich",
-          "Penile cancer",
-          "Fungal infection",
-          "Eczema",
-          "Psoriasis",
-          "Dermatitis",
-          "Lichen sclerosus",
-          "Balanitis",
-          "Inanimate object",
-          "Contact dermatitis",
-          "Normal",
-          "Pearly papules",
-          "Skin Tag",
-          "Medical emergency"],
-        "description": "The most likely diagnosis based on final reasoning based on all information.Strictly provide most suitable the term"
+        "description": "The most likely diagnosis based on all information."
       },
       "advice": {
         "type": "string",
